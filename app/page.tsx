@@ -847,10 +847,8 @@ export default function WeddingWebsite() {
   return (
     <div className="min-h-screen bg-[#FFFDFC] text-[#5F6B5C]">
       <header className="sticky top-0 z-20 border-b border-[#D7E0D3] bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-4">
-          <div>
-            <p className="text-xl font-serif text-[#6F7F6A]">{t.names}</p>
-          </div>
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-end gap-4 px-6 py-4">
+
 
           <div className="flex flex-wrap gap-2">
             {languages.map((item) => {
@@ -905,5 +903,5 @@ export default function WeddingWebsite() {
         </div>
       </footer>
     </div>
-  );
+      );
 }
