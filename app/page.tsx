@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-
+import Image from "next/image";
 type EventItem = {
   day: string;
   title: string;
@@ -486,9 +486,9 @@ type LanguageButton = {
 };
 
 const languages: LanguageButton[] = [
-  { code: 'en', label: 'English', symbol: '' },
-  { code: 'de', label: 'Deutsch', symbol: '' },
-  { code: 'es', label: 'Español', symbol: '' },
+  { code: 'en', label: 'EN', symbol: '' },
+  { code: 'de', label: 'DE', symbol: '' },
+  { code: 'es', label: 'ES', symbol: '' },
 ];
 
 function getNavItems(t: TranslationEntry): { id: PageKey; label: string }[] {
@@ -679,7 +679,6 @@ className="absolute inset-0 h-full w-full object-cover object-center"/>
   <div className="absolute inset-0 bg-[linear-gradient(rgba(88,105,82,0.30),rgba(88,105,82,0.18))]" />
 
 <div className="relative w-full px-4 py-12 md:px-10 md:py-32"><div className="mr-auto -ml-6 max-w-2xl rounded-md border border-white/30 bg-white/20 p-5 shadow-2xl backdrop-blur-sm md:-ml-8">     
-      <h1 className="text-3xl font-serif leading-[0.95] text-white md:text-7xl">{t.names}</h1>
       
       <p className="mt-3 text-base text-white/85 md:text-lg">May 15, 2027 · Tuscany, Italy</p>
 <div className="mt-5 grid max-w-md grid-cols-2 gap-2 md:grid-cols-4">  <div className="rounded-md border border-white/30 bg-white/10 px-2 py-2 text-center">
@@ -911,64 +910,100 @@ className="rounded-md bg-[#8D9A89] px-5 py-3 text-sm font-medium text-white shad
 
   return (
     <div className="min-h-screen bg-[#FFFDFC] text-[#5F6B5C]">
-<header className="sticky top-0 z-50 border-b border-[#D7E0D3] bg-white/95 backdrop-blur">
-  <div className="flex w-full items-center justify-between px-4 py-3 md:px-6">
-    <button
-      type="button"
-      onClick={() => setMobileMenuOpen((prev) => !prev)}
-      className="rounded-md border border-[#BFCBB9] bg-white px-3 py-2 text-[#6F7F6A] md:hidden"
-      aria-label="Open menu"
-    >
-      ☰
-    </button>
-
-    <nav className="hidden flex-wrap items-center gap-3 md:flex">
-      {navItems.map((item) => {
-        const active = page === item.id;
-        return (
-          <button
-            key={item.id}
-            type="button"
-            onClick={() => goToPage(item.id)}
-            className={`rounded-md border px-3 py-1.5 text-sm font-medium transition ${
-              active
-                ? 'border-[#6F7F6A] bg-[#6F7F6A] text-white shadow-sm'
-                : 'border-[#BFCBB9] bg-white text-[#6F7F6A] hover:border-[#8D9A89]'
-            }`}
-          >
-            {item.label}
-          </button>
-        );
-      })}
-    </nav>
-
-    <div className="hidden flex-wrap gap-2 md:flex">
-      {languages.map((item) => {
-        const active = language === item.code;
-        return (
-          <button
-            key={item.code}
-            type="button"
-            onClick={() => setLanguage(item.code)}
-            aria-label={item.label}
-            className={`rounded-md border px-3 py-1.5 text-sm font-medium transition ${
-              active
-                ? 'border-[#6F7F6A] bg-[#6F7F6A] text-white shadow-md'
-                : 'border-[#BFCBB9] bg-white text-[#6F7F6A] hover:border-[#8D9A89]'
-            }`}
-          >
-            {item.label}
-          </button>
-        );
-      })}
+<header className="sticky top-0 z-50 border-b border-[#E5E5E5] bg-white/95 backdrop-blur">
+  <div className="w-full px-4 py-3 md:px-8">
+    <div className="relative hidden md:block pb-4">
+<div className="flex flex-col items-center">
+  <Image
+    src="/dv-logo.png"
+    alt="Daniella and Victor logo"
+    width={90}
+    height={90}
+    className="h-auto w-[70px] md:w-[90px]"
+    priority
+  />
+  <p className="mt-2 text-center text-3xl font-serif text-black md:text-4xl">
+    Daniella & Victor
+  </p>
+</div>
+      <div className="absolute right-[-16px] top-2 flex items-center md:right-[-20px]">
+        {languages.map((item, index) => {
+          const active = language === item.code;
+          return (
+            <React.Fragment key={item.code}>
+              {index > 0 && <span className="mx-3 h-5 w-px bg-black/20" />}
+              <button
+                type="button"
+                onClick={() => setLanguage(item.code)}
+                aria-label={item.label}
+                className={`relative pb-1 text-sm font-medium tracking-[0.08em] transition ${
+                  active ? 'text-black' : 'text-black/60 hover:text-black'
+                }`}
+              >
+                {item.label}
+                {active && (
+                  <span className="absolute left-0 right-0 -bottom-0.5 h-[2px] bg-black" />
+                )}
+              </button>
+            </React.Fragment>
+          );
+        })}
+      </div>
     </div>
 
-    <div className="md:hidden" />
+    <div className="flex items-center justify-between md:block">
+      <button
+        type="button"
+        onClick={() => setMobileMenuOpen((prev) => !prev)}
+        className="text-black md:hidden"
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
+
+      <div className="hidden md:flex md:justify-center">
+        <nav className="flex flex-wrap items-center gap-8">
+          {navItems.map((item) => {
+            const active = page === item.id;
+            return (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => goToPage(item.id)}
+                className={`relative pb-2 text-sm font-medium tracking-[0.08em] transition ${
+                  active ? 'text-black' : 'text-black/70 hover:text-black'
+                }`}
+              >
+                {item.label}
+                {active && (
+                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-black" />
+                )}
+              </button>
+            );
+          })}
+        </nav>
+      </div>
+
+      <div className="md:hidden" />
+    </div>
   </div>
 
   {mobileMenuOpen && (
-    <div className="border-t border-[#D7E0D3] bg-white px-4 py-4 md:hidden">
-      <div className="grid grid-cols-2 gap-3">
+    <div className="border-t border-[#E5E5E5] bg-white px-4 py-4 md:hidden">
+      <div className="pb-4">
+        <div className="flex justify-center">
+          <Image
+            src="/dv-logo.png"
+            alt="Daniella and Victor logo"
+            width={70}
+            height={70}
+            className="h-auto w-[60px]"
+            priority
+          />
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-3">
         {navItems.map((item) => {
           const active = page === item.id;
           return (
@@ -979,10 +1014,8 @@ className="rounded-md bg-[#8D9A89] px-5 py-3 text-sm font-medium text-white shad
                 goToPage(item.id);
                 setMobileMenuOpen(false);
               }}
-              className={`rounded-md border px-3 py-2 text-sm font-medium transition ${
-                active
-                  ? 'border-[#6F7F6A] bg-[#6F7F6A] text-white shadow-sm'
-                  : 'border-[#BFCBB9] bg-white text-[#6F7F6A] hover:border-[#8D9A89]'
+              className={`text-left text-sm font-medium transition ${
+                active ? 'text-black underline underline-offset-4' : 'text-black/70 hover:text-black'
               }`}
             >
               {item.label}
@@ -991,29 +1024,32 @@ className="rounded-md bg-[#8D9A89] px-5 py-3 text-sm font-medium text-white shad
         })}
       </div>
 
-      <div className="mt-3 grid grid-cols-3 gap-3">
-        {languages.map((item) => {
+      <div className="mt-4 flex flex-wrap items-center border-t border-[#E5E5E5] pt-4">
+        {languages.map((item, index) => {
           const active = language === item.code;
           return (
-            <button
-              key={item.code}
-              type="button"
-              onClick={() => setLanguage(item.code)}
-              aria-label={item.label}
-              className={`rounded-md border px-3 py-2 text-sm font-medium transition ${
-                active
-                  ? 'border-[#6F7F6A] bg-[#6F7F6A] text-white shadow-sm'
-                  : 'border-[#BFCBB9] bg-white text-[#6F7F6A] hover:border-[#8D9A89]'
-              }`}
-            >
-              {item.label}
-            </button>
+            <React.Fragment key={item.code}>
+              {index > 0 && <span className="mx-3 h-4 w-px bg-black/20" />}
+              <button
+                type="button"
+                onClick={() => setLanguage(item.code)}
+                aria-label={item.label}
+                className={`relative pb-1 text-sm font-medium transition ${
+                  active ? 'text-black' : 'text-black/60 hover:text-black'
+                }`}
+              >
+                {item.label}
+                {active && (
+                  <span className="absolute left-0 right-0 -bottom-0.5 h-[2px] bg-black" />
+                )}
+              </button>
+            </React.Fragment>
           );
         })}
       </div>
     </div>
   )}
-</header>     {renderPage()}
+</header>   {renderPage()}
 
       <footer className="border-t border-[#D7E0D3] bg-white">
 <div className="mr-auto ml-6 md:ml-10 lg:ml-14 max-w-4xl rounded-lg border border-white/40 bg-white/15 p-6 md:p-8 backdrop-blur-md shadow-xl">        </div>
