@@ -486,9 +486,9 @@ type LanguageButton = {
 };
 
 const languages: LanguageButton[] = [
-  { code: 'en', label: 'English', symbol: '🇬🇧' },
-  { code: 'de', label: 'Deutsch', symbol: '🇩🇪' },
-  { code: 'es', label: 'Español', symbol: '🇪🇸' },
+  { code: 'en', label: 'English', symbol: '' },
+  { code: 'de', label: 'Deutsch', symbol: '' },
+  { code: 'es', label: 'Español', symbol: '' },
 ];
 
 function getNavItems(t: TranslationEntry): { id: PageKey; label: string }[] {
@@ -563,7 +563,7 @@ function PageShell({
 }) {
   return (
     <section className="mx-auto max-w-6xl px-6 py-20">
-      <div className="max-w-2xl border-b border-[#E8D2D6] pb-8">
+      <div className="max-w-2xl border-b border-[#D7E0D3] pb-8">
         <h1 className="text-4xl font-serif text-[#5F6B5C]">{title}</h1>
         {subtitle ? <p className="mt-4 text-lg leading-8 text-[#6F7F6A]">{subtitle}</p> : null}
       </div>
@@ -571,11 +571,47 @@ function PageShell({
     </section>
   );
 }
-
 export default function WeddingWebsite() {
   const [language, setLanguage] = React.useState<LanguageCode>('en');
   const [page, setPage] = React.useState<PageKey>(getInitialPage());
+  const [menuOpen, setMenuOpen] = React.useState(false);
+  const [showHeaderMenu, setShowHeaderMenu] = React.useState(true);
+  const [timeLeft, setTimeLeft] = React.useState({
+  days: 0,
+  hours: 0,
+  minutes: 0,
+  seconds: 0,
+});
+React.useEffect(() => {
+  const targetDate = new Date('2027-05-15T00:00:00');
 
+  const updateCountdown = () => {
+    const now = new Date();
+    const difference = targetDate.getTime() - now.getTime();
+
+    if (difference <= 0) {
+      setTimeLeft({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+      });
+      return;
+    }
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((difference / (1000 * 60)) % 60);
+    const seconds = Math.floor((difference / 1000) % 60);
+
+    setTimeLeft({ days, hours, minutes, seconds });
+  };
+
+  updateCountdown();
+  const interval = setInterval(updateCountdown, 1000);
+
+  return () => clearInterval(interval);
+}, []);
   React.useEffect(() => {
     const onHashChange = () => {
       setPage(getInitialPage());
@@ -587,6 +623,27 @@ export default function WeddingWebsite() {
   }, []);
 
   React.useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout>;
+
+    const handleScroll = () => {
+      setShowHeaderMenu(false);
+      setMenuOpen(false);
+
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        setShowHeaderMenu(true);
+      }, 180);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timeout);
+    };
+  }, []);
+
+  React.useEffect(() => {
     scrollToTop();
   }, [page]);
 
@@ -594,10 +651,13 @@ export default function WeddingWebsite() {
   const navItems = getNavItems(t);
 
   const goToPage = (nextPage: PageKey) => {
+    setMenuOpen(false);
+
     if (nextPage === page) {
       scrollToTop();
       return;
     }
+
     setPage(nextPage);
     setPageHash(nextPage);
   };
@@ -608,43 +668,55 @@ export default function WeddingWebsite() {
         return (
           <>
             <section
-              className="relative overflow-hidden"
-              style={{
-                backgroundImage:
-                  "linear-gradient(rgba(88,105,82,0.28), rgba(181,125,138,0.20)), url('/tuscan-hills.png')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-              }}
-            >
-              <div className="mx-auto max-w-6xl px-6 py-32 md:py-44">
-                <div className="max-w-3xl rounded-3xl border border-white/30 bg-white/20 p-8 shadow-2xl backdrop-blur-sm">
-                  <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#F8F1F3]">
-                    {t.togetherWith}
-                  </p>
-                  <h1 className="text-5xl font-serif text-white md:text-7xl">{t.names}</h1>
-                  <p className="mt-6 text-lg text-[#F7F4F2] md:text-xl">{t.gettingMarried}</p>
-                  <p className="mt-3 text-base text-[#F3E7EA] md:text-lg">{t.dateVenue}</p>
-                  <div className="mt-8 flex flex-wrap gap-4">
-                    <button
-                      type="button"
-                      onClick={() => goToPage('schedule')}
-                      className="rounded-2xl bg-[#B57D8A] px-5 py-3 text-sm font-medium text-white shadow-lg transition hover:scale-[1.02] hover:bg-[#A96F7D]"
-                    >
-                      {t.viewSchedule}
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => goToPage('travel')}
-                      className="rounded-2xl border border-white/60 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
-                    >
-                      {t.travelInfo}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </section>
+className="relative overflow-hidden">
+  <img
+  src="/header-website.jpg"
+  alt="Tuscan hills"
+className="absolute inset-0 h-full w-full object-cover object-center"/>
 
+  <div className="absolute inset-0 bg-[linear-gradient(rgba(88,105,82,0.30),rgba(88,105,82,0.18))]" />
+
+<div className="relative w-full px-6 py-24 md:px-10 md:py-32"><div className="mr-auto -ml-2 max-w-2xl rounded-sm border border-white/30 bg-white/20 p-5 shadow-2xl backdrop-blur-sm">      
+      <h1 className="text-5xl font-serif text-white md:text-7xl">{t.names}</h1>
+      
+      <p className="mt-3 text-base text-white/85 md:text-lg">May 15, 2027 · Tuscany, Italy</p>
+      <div className="mt-6 grid grid-cols-4 gap-3 md:max-w-lg">
+  <div className="rounded-md border border-white/30 bg-white/10 px-2 py-2 text-center">
+    <p className="text-lg font-serif text-white md:text-2xl">{timeLeft.days}</p>
+    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-white/75">Days</p>
+  </div>
+  <div className="rounded-md border border-white/30 bg-white/10 px-2 py-2 text-center">
+    <p className="text-lg font-serif text-white md:text-2xl">{timeLeft.hours}</p>
+    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-white/75">Hours</p>
+  </div>
+  <div className="rounded-md border border-white/30 bg-white/10 px-2 py-2 text-center">
+    <p className="text-lg font-serif text-white md:text-2xl">{timeLeft.minutes}</p>
+    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-white/75">Minutes</p>
+  </div>
+  <div className="rounded-md border border-white/30 bg-white/10 px-2 py-2 text-center">
+    <p className="text-lg font-serif text-white md:text-2xl">{timeLeft.seconds}</p>
+    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-white/75">Seconds</p>
+  </div>
+</div>
+      <div className="mt-8 flex flex-wrap gap-4">
+        <button
+          type="button"
+          onClick={() => goToPage('schedule')}
+          className="rounded-md bg-[#8D9A89] px-5 py-3 text-sm font-medium text-white shadow-lg transition hover:scale-[1.02] hover:bg-[#7E8D79]"
+        >
+          {t.viewSchedule}
+        </button>
+        <button
+          type="button"
+          onClick={() => goToPage('travel')}
+          className="rounded-md border border-white/60 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
+        >
+          {t.travelInfo}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
             <section className="mx-auto max-w-5xl px-6 py-20">
               <div className="grid gap-10 md:grid-cols-2 md:items-center">
                 <div>
@@ -662,32 +734,26 @@ export default function WeddingWebsite() {
                   </p>
                 </div>
 
-                <div className="rounded-[2rem] bg-white p-8 shadow-xl ring-1 ring-[#E8D2D6]">
+                <div className="rounded-sm bg-white p-8 shadow-xl ring-1 ring-[#D7E0D3]">
                   <h3 className="text-2xl font-serif text-[#5F6B5C]">{t.glance}</h3>
                   <div className="mt-6 space-y-5 text-[#5F6B5C]">
                     <div>
-                      <p className="text-sm uppercase tracking-[0.2em] text-[#B57D8A]">
+                      <p className="text-sm uppercase tracking-[0.2em] text-[#8D9A89]">
                         {t.date}
                       </p>
                       <p className="mt-1 text-lg">{t.dateValue}</p>
                     </div>
                     <div>
-                      <p className="text-sm uppercase tracking-[0.2em] text-[#B57D8A]">
+                      <p className="text-sm uppercase tracking-[0.2em] text-[#8D9A89]">
                         {t.venue}
                       </p>
                       <p className="mt-1 text-lg">{t.venueValue}</p>
                     </div>
                     <div>
-                      <p className="text-sm uppercase tracking-[0.2em] text-[#B57D8A]">
+                      <p className="text-sm uppercase tracking-[0.2em] text-[#8D9A89]">
                         {t.location}
                       </p>
                       <p className="mt-1 text-lg">{t.locationValue}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm uppercase tracking-[0.2em] text-[#B57D8A]">
-                        {t.weekendStyle}
-                      </p>
-                      <p className="mt-1 text-lg">{t.weekendStyleValue}</p>
                     </div>
                   </div>
                 </div>
@@ -700,37 +766,37 @@ export default function WeddingWebsite() {
         return (
           <PageShell title={t.travelTitle} subtitle={t.accommodationText}>
             <div className="grid gap-6 md:grid-cols-2">
-              <div className="rounded-[2rem] bg-[#6F7F6A] p-8 text-white shadow-xl">
-                <p className="text-sm uppercase tracking-[0.3em] text-[#F3E7EA]">
+              <div className="rounded-sm bg-[#6F7F6A] p-8 text-white shadow-xl">
+                <p className="text-sm uppercase tracking-[0.3em] text-[#E6EEE3]">
                   {t.travelTag}
                 </p>
                 <h2 className="mt-3 text-4xl font-serif text-white">{t.travelTitle}</h2>
                 <ul className="mt-8 space-y-4 text-base leading-7 text-[#F7F3F1]">
                   {t.travelNotes.map((note) => (
                     <li key={note} className="flex gap-3">
-                      <span className="mt-2 h-2 w-2 rounded-full bg-[#F7F3F1]" />
+                      <span className="mt-2 h-2 w-2 rounded-md bg-[#F7F3F1]" />
                       <span>{note}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="rounded-[2rem] bg-white p-8 shadow-xl ring-1 ring-[#E8D2D6]">
+              <div className="rounded-sm bg-white p-8 shadow-xl ring-1 ring-[#D7E0D3]">
                 <p className="text-sm uppercase tracking-[0.3em] text-[#8D9A89]">
                   {t.accommodationTag}
                 </p>
                 <h2 className="mt-3 text-4xl font-serif text-[#5F6B5C]">
                   {t.accommodationTitle}
                 </h2>
-                <div className="mt-8 rounded-3xl bg-[#F8F4F2] p-5">
-                  <p className="text-sm uppercase tracking-[0.2em] text-[#B57D8A]">
+                <div className="mt-8 rounded-sm bg-[#F4F7F2] p-5">
+                  <p className="text-sm uppercase tracking-[0.2em] text-[#8D9A89]">
                     {t.plannedAdditions}
                   </p>
                   <div className="mt-4 grid gap-3 text-[#5F6B5C] sm:grid-cols-2">
-                    <div className="rounded-2xl bg-white p-4 shadow-sm">{t.anchorHotel}</div>
-                    <div className="rounded-2xl bg-white p-4 shadow-sm">{t.overflowOptions}</div>
-                    <div className="rounded-2xl bg-white p-4 shadow-sm">{t.shuttleDetails}</div>
-                    <div className="rounded-2xl bg-white p-4 shadow-sm">{t.townGuide}</div>
+                    <div className="rounded-md bg-white p-4 shadow-sm">{t.anchorHotel}</div>
+                    <div className="rounded-md bg-white p-4 shadow-sm">{t.overflowOptions}</div>
+                    <div className="rounded-md bg-white p-4 shadow-sm">{t.shuttleDetails}</div>
+                    <div className="rounded-md bg-white p-4 shadow-sm">{t.townGuide}</div>
                   </div>
                 </div>
               </div>
@@ -745,9 +811,9 @@ export default function WeddingWebsite() {
               {t.events.map((event) => (
                 <div
                   key={event.title}
-                  className="rounded-[2rem] border border-[#D7E0D3] bg-[#F8F4F2] p-7 shadow-sm"
+                  className="rounded-sm border border-[#D7E0D3] bg-[#F4F7F2] p-7 shadow-sm"
                 >
-                  <p className="text-sm uppercase tracking-[0.25em] text-[#B57D8A]">
+                  <p className="text-sm uppercase tracking-[0.25em] text-[#8D9A89]">
                     {event.day}
                   </p>
                   <h3 className="mt-3 text-2xl font-serif text-[#5F6B5C]">{event.title}</h3>
@@ -762,7 +828,7 @@ export default function WeddingWebsite() {
       case 'registry':
         return (
           <PageShell title={t.registryTitle} subtitle={t.registryText}>
-            <div className="inline-flex rounded-2xl bg-[#6F7F6A] px-6 py-4 text-white shadow-lg">
+            <div className="inline-flex rounded-md bg-[#6F7F6A] px-6 py-4 text-white shadow-lg">
               {t.registryButton}
             </div>
           </PageShell>
@@ -775,9 +841,9 @@ export default function WeddingWebsite() {
               {[0, 1, 2, 3].map((index) => (
                 <div
                   key={index}
-                  className="rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-[#E8D2D6]"
+                  className="rounded-sm bg-white p-6 shadow-sm ring-1 ring-[#D7E0D3]"
                 >
-                  <div className="h-52 rounded-[1.5rem] bg-[#F8F4F2]" />
+                  <div className="h-52 rounded-[1.5rem] bg-[#F4F7F2]" />
                   <h3 className="mt-5 text-xl font-serif text-[#5F6B5C]">
                     {t.weddingPartyPlaceholder}
                   </h3>
@@ -795,7 +861,7 @@ export default function WeddingWebsite() {
               {[1, 2, 3, 4, 5, 6].map((item) => (
                 <div
                   key={item}
-                  className="h-64 rounded-[2rem] bg-[#F8F4F2] shadow-sm ring-1 ring-[#E8D2D6]"
+                  className="h-64 rounded-sm bg-[#F4F7F2] shadow-sm ring-1 ring-[#D7E0D3]"
                 />
               ))}
             </div>
@@ -806,15 +872,15 @@ export default function WeddingWebsite() {
         return (
           <PageShell title={t.thingsToDoTitle} subtitle={t.thingsToDoText}>
             <div className="grid gap-6 md:grid-cols-3">
-              <div className="rounded-[2rem] bg-white p-7 shadow-sm ring-1 ring-[#E8D2D6]">
+              <div className="rounded-sm bg-white p-7 shadow-sm ring-1 ring-[#D7E0D3]">
                 <h3 className="text-2xl font-serif text-[#5F6B5C]">{t.wineTastingTitle}</h3>
                 <p className="mt-3 leading-7 text-[#6F7F6A]">{t.wineTastingText}</p>
               </div>
-              <div className="rounded-[2rem] bg-white p-7 shadow-sm ring-1 ring-[#E8D2D6]">
+              <div className="rounded-sm bg-white p-7 shadow-sm ring-1 ring-[#D7E0D3]">
                 <h3 className="text-2xl font-serif text-[#5F6B5C]">{t.historicTownsTitle}</h3>
                 <p className="mt-3 leading-7 text-[#6F7F6A]">{t.historicTownsText}</p>
               </div>
-              <div className="rounded-[2rem] bg-white p-7 shadow-sm ring-1 ring-[#E8D2D6]">
+              <div className="rounded-sm bg-white p-7 shadow-sm ring-1 ring-[#D7E0D3]">
                 <h3 className="text-2xl font-serif text-[#5F6B5C]">{t.foodViewsTitle}</h3>
                 <p className="mt-3 leading-7 text-[#6F7F6A]">{t.foodViewsText}</p>
               </div>
@@ -829,7 +895,7 @@ export default function WeddingWebsite() {
               {t.faqs.map((item) => (
                 <div
                   key={item.q}
-                  className="rounded-[2rem] bg-white p-7 shadow-sm ring-1 ring-[#E8D2D6]"
+                  className="rounded-sm bg-white p-7 shadow-sm ring-1 ring-[#D7E0D3]"
                 >
                   <h3 className="text-xl font-medium text-[#5F6B5C]">{item.q}</h3>
                   <p className="mt-3 leading-7 text-[#6F7F6A]">{item.a}</p>
@@ -846,61 +912,52 @@ export default function WeddingWebsite() {
 
   return (
     <div className="min-h-screen bg-[#FFFDFC] text-[#5F6B5C]">
-      <header className="sticky top-0 z-20 border-b border-[#D7E0D3] bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-end gap-4 px-6 py-4">
+<header className="sticky top-0 z-20 border-b border-[#D7E0D3] bg-white/95 backdrop-blur">
+  <div className="flex w-full items-center justify-between px-4 py-3 md:px-6">
+    <nav className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium">
+      {navItems.map((item) => {
+        const active = page === item.id;
+        return (
+          <button
+  key={item.id}
+  type="button"
+  onClick={() => goToPage(item.id)}
+  className={`rounded-sm border px-3 py-1.5 text-sm font-medium transition ${
+    active
+      ? 'border-[#6F7F6A] bg-[#6F7F6A] text-white shadow-sm'
+      : 'border-[#BFCBB9] bg-white text-[#6F7F6A] hover:border-[#8D9A89]'
+  }`}
+>
+  {item.label}
+</button>
+        );
+      })}
+    </nav>
 
-
-          <div className="flex flex-wrap gap-2">
-            {languages.map((item) => {
-              const active = language === item.code;
-              return (
-                <button
-                  key={item.code}
-                  type="button"
-                  onClick={() => setLanguage(item.code)}
-                  aria-label={item.label}
-                  className={`rounded-2xl border px-4 py-2 text-sm font-medium transition ${
-                    active
-                      ? 'border-[#B57D8A] bg-[#B57D8A] text-white shadow-md'
-                      : 'border-[#D7E0D3] bg-white text-[#6F7F6A] hover:border-[#B57D8A]'
-                  }`}
-                >
-                  <span className="mr-2">{item.symbol}</span>
-                  {item.label}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="border-t border-[#E8D2D6] bg-[#FFFDFC]">
-          <nav className="mx-auto flex max-w-6xl flex-wrap gap-x-6 gap-y-3 px-6 py-4 text-sm font-medium text-[#6F7F6A]">
-            {navItems.map((item) => {
-              const active = page === item.id;
-              return (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => goToPage(item.id)}
-                  className={`transition ${
-                    active ? 'text-[#B57D8A] underline underline-offset-4' : 'hover:text-[#B57D8A]'
-                  }`}
-                >
-                  {item.label}
-                </button>
-              );
-            })}
-          </nav>
-        </div>
-      </header>
-
-      {renderPage()}
+    <div className="flex flex-wrap gap-2">
+      {languages.map((item) => {
+        const active = language === item.code;
+        return (
+<button
+  key={item.code}
+  type="button"
+  onClick={() => setLanguage(item.code)}
+  aria-label={item.label}
+  className={`rounded-sm border px-3 py-1.5 text-sm font-medium transition ${
+    active
+      ? 'border-[#6F7F6A] bg-[#6F7F6A] text-white shadow-md'
+      : 'border-[#BFCBB9] bg-white text-[#6F7F6A] hover:border-[#8D9A89]'
+  }`}
+>
+  {item.label}
+</button>      );
+      })}
+    </div>
+  </div>
+</header>      {renderPage()}
 
       <footer className="border-t border-[#D7E0D3] bg-white">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-10 text-sm text-[#8D9A89] md:flex-row md:items-center md:justify-between">
-          <p>{t.footerLeft}</p>
-          <p>{t.footerRight}</p>
-        </div>
+<div className="mr-auto ml-6 md:ml-10 lg:ml-14 max-w-4xl rounded-lg border border-white/40 bg-white/15 p-6 md:p-8 backdrop-blur-md shadow-xl">        </div>
       </footer>
     </div>
       );
