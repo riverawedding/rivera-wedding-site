@@ -574,6 +574,7 @@ function PageShell({
 export default function WeddingWebsite() {
   const [language, setLanguage] = React.useState<LanguageCode>('en');
   const [page, setPage] = React.useState<PageKey>(getInitialPage());
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [showHeaderMenu, setShowHeaderMenu] = React.useState(true);
   const [timeLeft, setTimeLeft] = React.useState({
@@ -582,6 +583,7 @@ export default function WeddingWebsite() {
   minutes: 0,
   seconds: 0,
 });
+
 React.useEffect(() => {
   const targetDate = new Date('2027-05-15T00:00:00');
 
@@ -676,12 +678,11 @@ className="absolute inset-0 h-full w-full object-cover object-center"/>
 
   <div className="absolute inset-0 bg-[linear-gradient(rgba(88,105,82,0.30),rgba(88,105,82,0.18))]" />
 
-<div className="relative w-full px-6 py-24 md:px-10 md:py-32"><div className="mr-auto -ml-2 max-w-2xl rounded-sm border border-white/30 bg-white/20 p-5 shadow-2xl backdrop-blur-sm">      
-      <h1 className="text-5xl font-serif text-white md:text-7xl">{t.names}</h1>
+<div className="relative w-full px-4 py-12 md:px-10 md:py-32"><div className="mr-auto -ml-6 max-w-2xl rounded-md border border-white/30 bg-white/20 p-5 shadow-2xl backdrop-blur-sm md:-ml-8">     
+      <h1 className="text-3xl font-serif leading-[0.95] text-white md:text-7xl">{t.names}</h1>
       
       <p className="mt-3 text-base text-white/85 md:text-lg">May 15, 2027 · Tuscany, Italy</p>
-      <div className="mt-6 grid grid-cols-4 gap-3 md:max-w-lg">
-  <div className="rounded-md border border-white/30 bg-white/10 px-2 py-2 text-center">
+<div className="mt-5 grid max-w-md grid-cols-2 gap-2 md:grid-cols-4">  <div className="rounded-md border border-white/30 bg-white/10 px-2 py-2 text-center">
     <p className="text-lg font-serif text-white md:text-2xl">{timeLeft.days}</p>
     <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-white/75">Days</p>
   </div>
@@ -698,8 +699,7 @@ className="absolute inset-0 h-full w-full object-cover object-center"/>
     <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-white/75">Seconds</p>
   </div>
 </div>
-      <div className="mt-8 flex flex-wrap gap-4">
-        <button
+<div className="mt-6 flex flex-col gap-3 sm:flex-row">        <button
           type="button"
           onClick={() => goToPage('schedule')}
           className="rounded-md bg-[#8D9A89] px-5 py-3 text-sm font-medium text-white shadow-lg transition hover:scale-[1.02] hover:bg-[#7E8D79]"
@@ -709,8 +709,7 @@ className="absolute inset-0 h-full w-full object-cover object-center"/>
         <button
           type="button"
           onClick={() => goToPage('travel')}
-          className="rounded-md border border-white/60 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
-        >
+className="rounded-md bg-[#8D9A89] px-5 py-3 text-sm font-medium text-white shadow-lg transition hover:scale-[1.02] hover:bg-[#7E8D79] sm:w-auto"        >
           {t.travelInfo}
         </button>
       </div>
@@ -912,49 +911,109 @@ className="absolute inset-0 h-full w-full object-cover object-center"/>
 
   return (
     <div className="min-h-screen bg-[#FFFDFC] text-[#5F6B5C]">
-<header className="sticky top-0 z-20 border-b border-[#D7E0D3] bg-white/95 backdrop-blur">
+<header className="sticky top-0 z-50 border-b border-[#D7E0D3] bg-white/95 backdrop-blur">
   <div className="flex w-full items-center justify-between px-4 py-3 md:px-6">
-    <nav className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium">
+    <button
+      type="button"
+      onClick={() => setMobileMenuOpen((prev) => !prev)}
+      className="rounded-md border border-[#BFCBB9] bg-white px-3 py-2 text-[#6F7F6A] md:hidden"
+      aria-label="Open menu"
+    >
+      ☰
+    </button>
+
+    <nav className="hidden flex-wrap items-center gap-3 md:flex">
       {navItems.map((item) => {
         const active = page === item.id;
         return (
           <button
-  key={item.id}
-  type="button"
-  onClick={() => goToPage(item.id)}
-  className={`rounded-sm border px-3 py-1.5 text-sm font-medium transition ${
-    active
-      ? 'border-[#6F7F6A] bg-[#6F7F6A] text-white shadow-sm'
-      : 'border-[#BFCBB9] bg-white text-[#6F7F6A] hover:border-[#8D9A89]'
-  }`}
->
-  {item.label}
-</button>
+            key={item.id}
+            type="button"
+            onClick={() => goToPage(item.id)}
+            className={`rounded-md border px-3 py-1.5 text-sm font-medium transition ${
+              active
+                ? 'border-[#6F7F6A] bg-[#6F7F6A] text-white shadow-sm'
+                : 'border-[#BFCBB9] bg-white text-[#6F7F6A] hover:border-[#8D9A89]'
+            }`}
+          >
+            {item.label}
+          </button>
         );
       })}
     </nav>
 
-    <div className="flex flex-wrap gap-2">
+    <div className="hidden flex-wrap gap-2 md:flex">
       {languages.map((item) => {
         const active = language === item.code;
         return (
-<button
-  key={item.code}
-  type="button"
-  onClick={() => setLanguage(item.code)}
-  aria-label={item.label}
-  className={`rounded-sm border px-3 py-1.5 text-sm font-medium transition ${
-    active
-      ? 'border-[#6F7F6A] bg-[#6F7F6A] text-white shadow-md'
-      : 'border-[#BFCBB9] bg-white text-[#6F7F6A] hover:border-[#8D9A89]'
-  }`}
->
-  {item.label}
-</button>      );
+          <button
+            key={item.code}
+            type="button"
+            onClick={() => setLanguage(item.code)}
+            aria-label={item.label}
+            className={`rounded-md border px-3 py-1.5 text-sm font-medium transition ${
+              active
+                ? 'border-[#6F7F6A] bg-[#6F7F6A] text-white shadow-md'
+                : 'border-[#BFCBB9] bg-white text-[#6F7F6A] hover:border-[#8D9A89]'
+            }`}
+          >
+            {item.label}
+          </button>
+        );
       })}
     </div>
+
+    <div className="md:hidden" />
   </div>
-</header>      {renderPage()}
+
+  {mobileMenuOpen && (
+    <div className="border-t border-[#D7E0D3] bg-white px-4 py-4 md:hidden">
+      <div className="grid grid-cols-2 gap-3">
+        {navItems.map((item) => {
+          const active = page === item.id;
+          return (
+            <button
+              key={item.id}
+              type="button"
+              onClick={() => {
+                goToPage(item.id);
+                setMobileMenuOpen(false);
+              }}
+              className={`rounded-md border px-3 py-2 text-sm font-medium transition ${
+                active
+                  ? 'border-[#6F7F6A] bg-[#6F7F6A] text-white shadow-sm'
+                  : 'border-[#BFCBB9] bg-white text-[#6F7F6A] hover:border-[#8D9A89]'
+              }`}
+            >
+              {item.label}
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="mt-3 grid grid-cols-3 gap-3">
+        {languages.map((item) => {
+          const active = language === item.code;
+          return (
+            <button
+              key={item.code}
+              type="button"
+              onClick={() => setLanguage(item.code)}
+              aria-label={item.label}
+              className={`rounded-md border px-3 py-2 text-sm font-medium transition ${
+                active
+                  ? 'border-[#6F7F6A] bg-[#6F7F6A] text-white shadow-sm'
+                  : 'border-[#BFCBB9] bg-white text-[#6F7F6A] hover:border-[#8D9A89]'
+              }`}
+            >
+              {item.label}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  )}
+</header>     {renderPage()}
 
       <footer className="border-t border-[#D7E0D3] bg-white">
 <div className="mr-auto ml-6 md:ml-10 lg:ml-14 max-w-4xl rounded-lg border border-white/40 bg-white/15 p-6 md:p-8 backdrop-blur-md shadow-xl">        </div>
