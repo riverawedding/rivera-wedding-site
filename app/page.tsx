@@ -674,7 +674,7 @@ React.useEffect(() => {
       case 'home':
         return (
           <>
-<section className="relative h-[380px] overflow-hidden md:h-[480px]"><div className="absolute inset-0 grid grid-cols-2">
+<section className="relative h-[440px] overflow-hidden md:h-[560px]"><div className="absolute inset-0 grid grid-cols-2">
 <img
   src="/header-left.jpg"
   alt="Left hero image"
