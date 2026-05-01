@@ -676,47 +676,47 @@ React.useEffect(() => {
           <>
             <section className="relative h-[520px] overflow-hidden md:h-[680px]">
 <div className="absolute inset-0 grid grid-cols-2">
-  <img
-    src="/header-left.jpg"
-    alt="Left hero image"
-    className="h-full w-full object-cover object-center"
-  />
-  <img
-    src="/header-right.jpg"
-    alt="Right hero image"
-    className="h-full w-full object-cover object-center"
-  />
-</div>
+<img
+  src="/header-left.jpg"
+  alt="Left hero image"
+className="h-full w-full object-cover object-top"/>
+<img
+  src="/header-right.jpg"
+  alt="Right hero image"
+className="h-full w-full object-cover object-top"/></div>
   <div className="absolute inset-0 bg-[linear-gradient(rgba(88,105,82,0.30),rgba(88,105,82,0.18))]" />
 
-<div className="relative w-full px-4 py-12 md:px-10 md:py-32">
-  <div className="absolute right-4 top-6 w-[calc(50%-1rem)] max-w-md text-right md:right-[calc(50%+1.5rem)] md:top-10">
-    <p className="mb-4 text-2xl font-serif text-black md:text-4xl">
+</section>
+<section className="mx-auto max-w-5xl px-6 py-10">
+  <div className="text-center">
+    <p className="text-3xl font-serif text-black md:text-4xl">
       Tuscany, Italy
     </p>
 
-    <div className="grid grid-cols-2 gap-2 md:grid-cols-4"> <div className="rounded-md border border-white/30 bg-white/10 px-2 py-2 text-center">
-    <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.days}</p>
-    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Days</p>
-  </div>
-  <div className="rounded-md border border-white/30 bg-white/10 px-2 py-2 text-center">
-    <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.hours}</p>
-    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Hours</p>
-  </div>
-  <div className="rounded-md border border-white/30 bg-white/10 px-2 py-2 text-center">
-    <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.minutes}</p>
-    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Minutes</p>
-  </div>
-  <div className="rounded-md border border-white/30 bg-white/10 px-2 py-2 text-center">
-    <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.minutes}</p>
-    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Seconds</p>
-  </div>
-</div>
+    <div className="mt-6 flex justify-center">
+      <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
+        <div className="rounded-md border border-black/20 bg-white/70 px-2 py-2 text-center">
+          <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.days}</p>
+          <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Days</p>
+        </div>
+        <div className="rounded-md border border-black/20 bg-white/70 px-2 py-2 text-center">
+          <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.hours}</p>
+          <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Hours</p>
+        </div>
+        <div className="rounded-md border border-black/20 bg-white/70 px-2 py-2 text-center">
+          <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.minutes}</p>
+          <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Minutes</p>
+        </div>
+        <div className="rounded-md border border-black/20 bg-white/70 px-2 py-2 text-center">
+          <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.seconds}</p>
+          <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Seconds</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-            <section className="mx-auto max-w-5xl px-6 py-20">
-              <div className="grid gap-10 md:grid-cols-2 md:items-center">
+
+<section className="mx-auto max-w-5xl px-6 py-20">              <div className="grid gap-10 md:grid-cols-2 md:items-center">
                 <div>
                   <p className="text-sm uppercase tracking-[0.3em] text-[#8D9A89]">
                     {t.celebrationTag}
