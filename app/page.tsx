@@ -689,23 +689,27 @@ React.useEffect(() => {
 </div>
   <div className="absolute inset-0 bg-[linear-gradient(rgba(88,105,82,0.30),rgba(88,105,82,0.18))]" />
 
-<div className="relative w-full px-4 py-12 md:px-10 md:py-32"><div className="mr-auto -ml-6 max-w-2xl p-5 md:-ml-8">     
-      
-<div className="mt-5 grid max-w-md grid-cols-2 gap-2 md:grid-cols-4">  <div className="rounded-md border border-white/30 bg-white/10 px-2 py-2 text-center">
-    <p className="text-lg font-serif text-white md:text-2xl">{timeLeft.days}</p>
-    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-white/75">Days</p>
+<div className="relative w-full px-4 py-12 md:px-10 md:py-32">
+  <div className="absolute right-4 top-6 w-[calc(50%-1rem)] max-w-md text-right md:right-[calc(50%+1.5rem)] md:top-10">
+    <p className="mb-4 text-2xl font-serif text-black md:text-4xl">
+      Tuscany, Italy
+    </p>
+
+    <div className="grid grid-cols-2 gap-2 md:grid-cols-4"> <div className="rounded-md border border-white/30 bg-white/10 px-2 py-2 text-center">
+    <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.days}</p>
+    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Days</p>
   </div>
   <div className="rounded-md border border-white/30 bg-white/10 px-2 py-2 text-center">
-    <p className="text-lg font-serif text-white md:text-2xl">{timeLeft.hours}</p>
-    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-white/75">Hours</p>
+    <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.hours}</p>
+    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Hours</p>
   </div>
   <div className="rounded-md border border-white/30 bg-white/10 px-2 py-2 text-center">
-    <p className="text-lg font-serif text-white md:text-2xl">{timeLeft.minutes}</p>
-    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-white/75">Minutes</p>
+    <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.minutes}</p>
+    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Minutes</p>
   </div>
   <div className="rounded-md border border-white/30 bg-white/10 px-2 py-2 text-center">
-    <p className="text-lg font-serif text-white md:text-2xl">{timeLeft.seconds}</p>
-    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-white/75">Seconds</p>
+    <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.minutes}</p>
+    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Seconds</p>
   </div>
 </div>
     </div>
