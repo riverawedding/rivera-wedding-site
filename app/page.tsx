@@ -1,6 +1,11 @@
 'use client';
 
 import React from 'react';
+import { Playfair_Display } from 'next/font/google';
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+});
 import Image from "next/image";
 type EventItem = {
   day: string;
@@ -669,18 +674,23 @@ React.useEffect(() => {
       case 'home':
         return (
           <>
-            <section
-className="relative overflow-hidden">
+            <section className="relative h-[520px] overflow-hidden md:h-[680px]">
+<div className="absolute inset-0 grid grid-cols-2">
   <img
-  src="/header-website.jpg"
-  alt="Tuscan hills"
-className="absolute inset-0 h-full w-full object-cover object-center"/>
-
+    src="/header-left.jpg"
+    alt="Left hero image"
+    className="h-full w-full object-cover object-center"
+  />
+  <img
+    src="/header-right.jpg"
+    alt="Right hero image"
+    className="h-full w-full object-cover object-center"
+  />
+</div>
   <div className="absolute inset-0 bg-[linear-gradient(rgba(88,105,82,0.30),rgba(88,105,82,0.18))]" />
 
-<div className="relative w-full px-4 py-12 md:px-10 md:py-32"><div className="mr-auto -ml-6 max-w-2xl rounded-md border border-white/30 bg-white/20 p-5 shadow-2xl backdrop-blur-sm md:-ml-8">     
+<div className="relative w-full px-4 py-12 md:px-10 md:py-32"><div className="mr-auto -ml-6 max-w-2xl p-5 md:-ml-8">     
       
-      <p className="mt-3 text-base text-white/85 md:text-lg">May 15, 2027 · Tuscany, Italy</p>
 <div className="mt-5 grid max-w-md grid-cols-2 gap-2 md:grid-cols-4">  <div className="rounded-md border border-white/30 bg-white/10 px-2 py-2 text-center">
     <p className="text-lg font-serif text-white md:text-2xl">{timeLeft.days}</p>
     <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-white/75">Days</p>
@@ -698,20 +708,6 @@ className="absolute inset-0 h-full w-full object-cover object-center"/>
     <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-white/75">Seconds</p>
   </div>
 </div>
-<div className="mt-6 flex flex-col gap-3 sm:flex-row">        <button
-          type="button"
-          onClick={() => goToPage('schedule')}
-          className="rounded-md bg-[#8D9A89] px-5 py-3 text-sm font-medium text-white shadow-lg transition hover:scale-[1.02] hover:bg-[#7E8D79]"
-        >
-          {t.viewSchedule}
-        </button>
-        <button
-          type="button"
-          onClick={() => goToPage('travel')}
-className="rounded-md bg-[#8D9A89] px-5 py-3 text-sm font-medium text-white shadow-lg transition hover:scale-[1.02] hover:bg-[#7E8D79] sm:w-auto"        >
-          {t.travelInfo}
-        </button>
-      </div>
     </div>
   </div>
 </section>
@@ -915,17 +911,16 @@ className="rounded-md bg-[#8D9A89] px-5 py-3 text-sm font-medium text-white shad
     <div className="relative hidden md:block pb-4">
 <div className="flex flex-col items-center">
   <Image
-    src="/dv-logo.png"
+    src="/dv-logo3.png"
     alt="Daniella and Victor logo"
     width={90}
     height={90}
     className="h-auto w-[70px] md:w-[90px]"
     priority
   />
-  <p className="mt-2 text-center text-3xl font-serif text-black md:text-4xl">
-    Daniella & Victor
-  </p>
-</div>
+<p className={`${playfair.className} mt-2 text-center text-4xl text-black md:text-5xl`}>
+  Daniella & Victor
+</p></div>
       <div className="absolute right-[-16px] top-2 flex items-center md:right-[-20px]">
         {languages.map((item, index) => {
           const active = language === item.code;
@@ -993,7 +988,7 @@ className="rounded-md bg-[#8D9A89] px-5 py-3 text-sm font-medium text-white shad
       <div className="pb-4">
         <div className="flex justify-center">
           <Image
-            src="/dv-logo.png"
+            src="/dv-logo3.png"
             alt="Daniella and Victor logo"
             width={70}
             height={70}
