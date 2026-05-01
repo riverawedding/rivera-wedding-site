@@ -674,17 +674,15 @@ React.useEffect(() => {
       case 'home':
         return (
           <>
-            <section className="relative h-[520px] overflow-hidden md:h-[680px]">
-<div className="absolute inset-0 grid grid-cols-2">
+<section className="relative h-[500px] overflow-hidden md:h-[620px]"><div className="absolute inset-0 grid grid-cols-2">
 <img
   src="/header-left.jpg"
   alt="Left hero image"
-className="h-full w-full object-cover object-top"/>
-<img
+className="h-full w-full object-cover object-bottom"/><img
   src="/header-right.jpg"
   alt="Right hero image"
-className="h-full w-full object-cover object-top"/></div>
-  <div className="absolute inset-0 bg-[linear-gradient(rgba(88,105,82,0.30),rgba(88,105,82,0.18))]" />
+className="h-full w-full object-cover object-[50%_65%]"/></div>
+  <div className="absolute inset-0 bg-black/10" />
 
 </section>
 <section className="mx-auto max-w-5xl px-6 py-10">
