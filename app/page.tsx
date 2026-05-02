@@ -888,7 +888,7 @@ React.useEffect(() => {
     alt="Daniella and Victor logo"
     width={90}
     height={90}
-    className="h-auto w-[70px] md:w-[90px]"
+    className="ml-5 h-auto w-[78px] md:ml-3 md:w-[102px]"
     priority
   />
 <p className={`${cormorant.className} mt-2 text-center text-4xl font-medium text-black md:text-5xl`}>
