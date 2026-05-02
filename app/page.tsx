@@ -685,7 +685,7 @@ React.useEffect(() => {
       className="h-full w-full object-cover [object-position:50%_92%]"
     />
     <img
-      src="/header-right.jpg"
+      src="/header-mobile.jpg"
       alt="Right hero image"
       className="h-full w-full object-cover object-top"
     />
