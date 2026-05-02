@@ -669,7 +669,7 @@ React.useEffect(() => {
       case 'home':
         return (
           <>
-<section className="relative h-[480px] overflow-hidden md:h-[600px]">
+<section className="relative h-[460px] overflow-hidden md:h-[560px]">
 <div className="absolute inset-0 md:hidden">
   <img
     src="/header-mobile.jpg"
