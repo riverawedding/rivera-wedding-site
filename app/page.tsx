@@ -916,17 +916,33 @@ React.useEffect(() => {
       </div>
     </div>
 
-    <div className="flex items-center justify-between md:block">
-      <button
-        type="button"
-        onClick={() => setMobileMenuOpen((prev) => !prev)}
-        className="text-black md:hidden"
-        aria-label="Open menu"
-      >
-        ☰
-      </button>
+<div className="flex items-center justify-between md:block">
+  <button
+    type="button"
+    onClick={() => setMobileMenuOpen((prev) => !prev)}
+    className="text-3xl leading-none text-black md:hidden"
+    aria-label="Open menu"
+  >
+    ☰
+  </button>
 
-      <div className="hidden md:flex md:justify-center">
+  <div className="flex flex-1 flex-col items-center md:hidden">
+    <Image
+      src="/dv-logo3.png"
+      alt="Daniella and Victor logo"
+      width={52}
+      height={52}
+      className="h-auto w-[42px]"
+      priority
+    />
+    <p className={`${cormorant.className} mt-1 text-center text-3xl font-medium text-black`}>
+      Daniella & Victor
+    </p>
+  </div>
+
+  <div className="w-8 md:hidden" />
+
+  <div className="hidden md:flex md:justify-center">
         <nav className="flex flex-wrap items-center gap-8">
           {navItems.map((item) => {
             const active = page === item.id;
@@ -955,18 +971,6 @@ React.useEffect(() => {
 
   {mobileMenuOpen && (
     <div className="border-t border-[#E5E5E5] bg-white px-4 py-4 md:hidden">
-      <div className="pb-4">
-        <div className="flex justify-center">
-          <Image
-            src="/dv-logo3.png"
-            alt="Daniella and Victor logo"
-            width={70}
-            height={70}
-            className="h-auto w-[60px]"
-            priority
-          />
-        </div>
-      </div>
 
       <div className="flex flex-col gap-3">
         {navItems.map((item) => {
