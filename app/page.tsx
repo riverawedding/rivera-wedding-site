@@ -686,8 +686,7 @@ React.useEffect(() => {
     <img
       src="/header-mobile.jpg"
       alt="Right hero image"
-      className="h-full w-full object-cover object-top"
-    />
+className="h-full w-full object-cover object-center"    />
   </div>
 
   <div className="absolute inset-0 bg-black/10" />
