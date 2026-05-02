@@ -672,7 +672,7 @@ React.useEffect(() => {
 <section className="relative h-[460px] overflow-hidden md:h-[560px]">
 <div className="absolute inset-0 md:hidden">
   <img
-    src="/header-right.jpg"
+    src="/header-mobile.jpg"
     alt="Hero image"
     className="h-full w-full object-cover object-top"
   />
@@ -684,7 +684,7 @@ React.useEffect(() => {
       className="h-full w-full object-cover [object-position:50%_92%]"
     />
     <img
-      src="/header-mobile.jpg"
+      src="/header-right.jpg"
       alt="Right hero image"
 className="h-full w-full object-cover object-center"    />
   </div>
