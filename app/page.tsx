@@ -680,7 +680,7 @@ className="h-full w-full object-cover object-top"/></div>
   <div className="absolute inset-0 bg-black/10" />
 
 </section>
-<section className="mx-auto max-w-5xl px-6 py-10">
+<section className="mx-auto max-w-5xl px-6 pt-4 pb-10">
   <div className="text-center">
    <p className={`${cormorant.className} text-4xl font-medium text-black md:text-5xl`}>
   Tuscany, Italy
@@ -688,7 +688,7 @@ className="h-full w-full object-cover object-top"/></div>
 <p className="mt-3 font-serif italic text-base text-black/75 md:text-lg">
   May 15, 2027
 </p>
-    <div className="mt-3 flex justify-center">
+    <div className="mt-2 flex justify-center">
 <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
   <div className="px-2 py-2 text-center">
     <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.days}</p>
@@ -842,7 +842,7 @@ className="h-full w-full object-cover object-top"/></div>
       case 'faqs':
         return (
           <PageShell title={t.questionsTitle}>
-            <div className="grid gap-5">
+            <div className="grid gap-5">, 
               {t.faqs.map((item) => (
                 <div
                   key={item.q}
@@ -1003,9 +1003,7 @@ className="h-full w-full object-cover object-top"/></div>
   )}
 </header>   {renderPage()}
 
-      <footer className="border-t border-[#D7E0D3] bg-white">
-<div className="mr-auto ml-6 md:ml-10 lg:ml-14 max-w-4xl rounded-lg border border-white/40 bg-white/15 p-6 md:p-8 backdrop-blur-md shadow-xl">        </div>
-      </footer>
+
     </div>
       );
 }
