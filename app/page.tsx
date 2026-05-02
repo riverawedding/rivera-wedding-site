@@ -629,27 +629,22 @@ React.useEffect(() => {
     return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
 
-  React.useEffect(() => {
-    let timeout: ReturnType<typeof setTimeout>;
-
-    const handleScroll = () => {
-      setShowHeaderMenu(false);
+React.useEffect(() => {
+  const handleScroll = () => {
+    setShowHeaderMenu(window.scrollY < 40);
+    if (window.scrollY >= 40) {
       setMenuOpen(false);
+      setMobileMenuOpen(false);
+    }
+  };
 
-      clearTimeout(timeout);
-      timeout = setTimeout(() => {
-        setShowHeaderMenu(true);
-      }, 180);
-    };
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      clearTimeout(timeout);
-    };
-  }, []);
-
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+}, []);
   React.useEffect(() => {
     scrollToTop();
   }, [page]);
@@ -868,7 +863,7 @@ className="h-full w-full object-cover object-top"/></div>
 
   return (
     <div className="min-h-screen bg-[#FFFDFC] text-[#5F6B5C]">
-<header className="sticky top-0 z-50 border-b border-[#E5E5E5] bg-white/95 backdrop-blur">
+<header className="relative z-50 border-b border-[#E5E5E5] bg-white/95">
   <div className="w-full px-4 py-3 md:px-8">
     <div className="relative hidden md:block pb-4">
 <div className="flex flex-col items-center">
