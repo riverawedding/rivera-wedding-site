@@ -590,7 +590,7 @@ export default function WeddingWebsite() {
 });
 
 React.useEffect(() => {
-  const targetDate = new Date('2027-05-15T03:30:00-02:00');
+  const targetDate = new Date('2027-05-15T15:30:00-02:00');
 
   const updateCountdown = () => {
     const now = new Date();
@@ -669,7 +669,7 @@ React.useEffect(() => {
       case 'home':
         return (
           <>
-<section className="relative h-[440px] overflow-hidden md:h-[560px]">
+<section className="relative h-[480px] overflow-hidden md:h-[600px]">
 <div className="absolute inset-0 md:hidden">
   <img
     src="/header-mobile.jpg"
