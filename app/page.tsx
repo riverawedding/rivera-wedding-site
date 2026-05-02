@@ -567,10 +567,12 @@ function PageShell({
   children: React.ReactNode;
 }) {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-20">
-      <div className="max-w-2xl border-b border-[#D7E0D3] pb-8">
-        <h1 className="text-4xl font-serif text-[#5F6B5C]">{title}</h1>
-        {subtitle ? <p className="mt-4 text-lg leading-8 text-[#6F7F6A]">{subtitle}</p> : null}
+    <section className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+      <div className="max-w-3xl border-b border-black/10 pb-8">
+        <h1 className={`${cormorant.className} text-4xl font-medium text-black md:text-5xl`}>
+          {title}
+        </h1>
+        {subtitle ? <p className="mt-4 text-lg leading-8 text-black/70">{subtitle}</p> : null}
       </div>
       <div className="mt-10">{children}</div>
     </section>
@@ -590,7 +592,7 @@ export default function WeddingWebsite() {
 });
 
 React.useEffect(() => {
-  const targetDate = new Date('2027-05-15T15:30:00-02:00');
+  const targetDate = new Date('2027-05-15T09:30:00-04:00');
 
   const updateCountdown = () => {
     const now = new Date();
@@ -669,14 +671,15 @@ React.useEffect(() => {
       case 'home':
         return (
           <>
-<section className="relative h-[460px] overflow-hidden md:h-[560px]">
-<div className="absolute inset-0 md:hidden">
-  <img
-    src="/header-mobile.jpg"
-    alt="Hero image"
-    className="h-full w-full object-cover object-top"
-  />
-</div>
+<section className="relative h-[440px] overflow-hidden md:h-[560px]">
+  <div className="absolute inset-0 md:hidden">
+    <img
+      src="/header-right.jpg"
+      alt="Hero image"
+      className="h-full w-full object-cover object-top"
+    />
+  </div>
+
   <div className="absolute inset-0 hidden md:grid md:grid-cols-2">
     <img
       src="/header-left.jpg"
@@ -684,9 +687,10 @@ React.useEffect(() => {
       className="h-full w-full object-cover [object-position:50%_92%]"
     />
     <img
-      src="/header-right.jpg"
+      src="/header-mobile.jpg"
       alt="Right hero image"
-className="h-full w-full object-cover object-center"    />
+      className="h-full w-full object-cover object-top"
+    />
   </div>
 
   <div className="absolute inset-0 bg-black/10" />
@@ -727,38 +731,42 @@ className="h-full w-full object-cover object-center"    />
       case 'travel':
         return (
           <PageShell title={t.travelTitle} subtitle={t.accommodationText}>
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="rounded-sm bg-[#6F7F6A] p-8 text-white shadow-xl">
-                <p className="text-sm uppercase tracking-[0.3em] text-[#E6EEE3]">
+            <div className="grid gap-12 md:grid-cols-2">
+              <div>
+                <p className="text-sm uppercase tracking-[0.3em] text-black/45">
                   {t.travelTag}
                 </p>
-                <h2 className="mt-3 text-4xl font-serif text-white">{t.travelTitle}</h2>
-                <ul className="mt-8 space-y-4 text-base leading-7 text-[#F7F3F1]">
+                <h2 className={`${cormorant.className} mt-3 text-3xl font-medium text-black md:text-4xl`}>
+                  {t.travelTitle}
+                </h2>
+                <ul className="mt-8 space-y-5 text-base leading-7 text-black/70">
                   {t.travelNotes.map((note) => (
-                    <li key={note} className="flex gap-3">
-                      <span className="mt-2 h-2 w-2 rounded-md bg-[#F7F3F1]" />
+                    <li key={note} className="flex gap-3 border-b border-black/10 pb-5">
+                      <span className="mt-2 h-2 w-2 rounded-full bg-black/60" />
                       <span>{note}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="rounded-sm bg-white p-8 shadow-xl ring-1 ring-[#D7E0D3]">
-                <p className="text-sm uppercase tracking-[0.3em] text-[#8D9A89]">
+              <div>
+                <p className="text-sm uppercase tracking-[0.3em] text-black/45">
                   {t.accommodationTag}
                 </p>
-                <h2 className="mt-3 text-4xl font-serif text-[#5F6B5C]">
+                <h2 className={`${cormorant.className} mt-3 text-3xl font-medium text-black md:text-4xl`}>
                   {t.accommodationTitle}
                 </h2>
-                <div className="mt-8 rounded-sm bg-[#F4F7F2] p-5">
-                  <p className="text-sm uppercase tracking-[0.2em] text-[#8D9A89]">
-                    {t.plannedAdditions}
-                  </p>
-                  <div className="mt-4 grid gap-3 text-[#5F6B5C] sm:grid-cols-2">
-                    <div className="rounded-md bg-white p-4 shadow-sm">{t.anchorHotel}</div>
-                    <div className="rounded-md bg-white p-4 shadow-sm">{t.overflowOptions}</div>
-                    <div className="rounded-md bg-white p-4 shadow-sm">{t.shuttleDetails}</div>
-                    <div className="rounded-md bg-white p-4 shadow-sm">{t.townGuide}</div>
+                <div className="mt-8 space-y-4">
+                  <div className="border-b border-black/10 pb-4">
+                    <p className="text-sm uppercase tracking-[0.2em] text-black/45">
+                      {t.plannedAdditions}
+                    </p>
+                  </div>
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    <div className="border-b border-black/10 pb-3 text-black/75">{t.anchorHotel}</div>
+                    <div className="border-b border-black/10 pb-3 text-black/75">{t.overflowOptions}</div>
+                    <div className="border-b border-black/10 pb-3 text-black/75">{t.shuttleDetails}</div>
+                    <div className="border-b border-black/10 pb-3 text-black/75">{t.townGuide}</div>
                   </div>
                 </div>
               </div>
@@ -769,18 +777,17 @@ className="h-full w-full object-cover object-center"    />
       case 'schedule':
         return (
           <PageShell title={t.scheduleTitle} subtitle={t.scheduleSubtitle}>
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-3">
               {t.events.map((event) => (
-                <div
-                  key={event.title}
-                  className="rounded-sm border border-[#D7E0D3] bg-[#F4F7F2] p-7 shadow-sm"
-                >
-                  <p className="text-sm uppercase tracking-[0.25em] text-[#8D9A89]">
+                <div key={event.title} className="border-b border-black/10 pb-6">
+                  <p className="text-sm uppercase tracking-[0.25em] text-black/45">
                     {event.day}
                   </p>
-                  <h3 className="mt-3 text-2xl font-serif text-[#5F6B5C]">{event.title}</h3>
-                  <p className="mt-2 text-sm font-medium text-[#8D9A89]">{event.time}</p>
-                  <p className="mt-5 leading-7 text-[#6F7F6A]">{event.description}</p>
+                  <h3 className={`${cormorant.className} mt-3 text-2xl font-medium text-black`}>
+                    {event.title}
+                  </h3>
+                  <p className="mt-2 text-sm font-medium text-black/45">{event.time}</p>
+                  <p className="mt-5 leading-7 text-black/70">{event.description}</p>
                 </div>
               ))}
             </div>
@@ -790,7 +797,7 @@ className="h-full w-full object-cover object-center"    />
       case 'registry':
         return (
           <PageShell title={t.registryTitle} subtitle={t.registryText}>
-            <div className="inline-flex rounded-md bg-[#6F7F6A] px-6 py-4 text-white shadow-lg">
+            <div className="inline-flex rounded-sm border border-black bg-black px-6 py-4 text-white shadow-sm">
               {t.registryButton}
             </div>
           </PageShell>
@@ -799,17 +806,14 @@ className="h-full w-full object-cover object-center"    />
       case 'wedding-party':
         return (
           <PageShell title={t.weddingPartyTitle} subtitle={t.weddingPartyText}>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {[0, 1, 2, 3].map((index) => (
-                <div
-                  key={index}
-                  className="rounded-sm bg-white p-6 shadow-sm ring-1 ring-[#D7E0D3]"
-                >
-                  <div className="h-52 rounded-[1.5rem] bg-[#F4F7F2]" />
-                  <h3 className="mt-5 text-xl font-serif text-[#5F6B5C]">
+                <div key={index} className="border-b border-black/10 pb-6">
+                  <div className="h-52 bg-[#F7F7F5]" />
+                  <h3 className={`${cormorant.className} mt-5 text-xl font-medium text-black`}>
                     {t.weddingPartyPlaceholder}
                   </h3>
-                  <p className="mt-2 text-[#6F7F6A]">{t.weddingPartyBioPlaceholder}</p>
+                  <p className="mt-2 text-black/70">{t.weddingPartyBioPlaceholder}</p>
                 </div>
               ))}
             </div>
@@ -819,12 +823,9 @@ className="h-full w-full object-cover object-center"    />
       case 'gallery':
         return (
           <PageShell title={t.galleryTitle} subtitle={t.galleryText}>
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-5 md:grid-cols-3">
               {[1, 2, 3, 4, 5, 6].map((item) => (
-                <div
-                  key={item}
-                  className="h-64 rounded-sm bg-[#F4F7F2] shadow-sm ring-1 ring-[#D7E0D3]"
-                />
+                <div key={item} className="h-64 border-b border-black/10 bg-[#F7F7F5]" />
               ))}
             </div>
           </PageShell>
@@ -833,18 +834,24 @@ className="h-full w-full object-cover object-center"    />
       case 'things-to-do':
         return (
           <PageShell title={t.thingsToDoTitle} subtitle={t.thingsToDoText}>
-            <div className="grid gap-6 md:grid-cols-3">
-              <div className="rounded-sm bg-white p-7 shadow-sm ring-1 ring-[#D7E0D3]">
-                <h3 className="text-2xl font-serif text-[#5F6B5C]">{t.wineTastingTitle}</h3>
-                <p className="mt-3 leading-7 text-[#6F7F6A]">{t.wineTastingText}</p>
+            <div className="grid gap-8 md:grid-cols-3">
+              <div className="border-b border-black/10 pb-6">
+                <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
+                  {t.wineTastingTitle}
+                </h3>
+                <p className="mt-3 leading-7 text-black/70">{t.wineTastingText}</p>
               </div>
-              <div className="rounded-sm bg-white p-7 shadow-sm ring-1 ring-[#D7E0D3]">
-                <h3 className="text-2xl font-serif text-[#5F6B5C]">{t.historicTownsTitle}</h3>
-                <p className="mt-3 leading-7 text-[#6F7F6A]">{t.historicTownsText}</p>
+              <div className="border-b border-black/10 pb-6">
+                <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
+                  {t.historicTownsTitle}
+                </h3>
+                <p className="mt-3 leading-7 text-black/70">{t.historicTownsText}</p>
               </div>
-              <div className="rounded-sm bg-white p-7 shadow-sm ring-1 ring-[#D7E0D3]">
-                <h3 className="text-2xl font-serif text-[#5F6B5C]">{t.foodViewsTitle}</h3>
-                <p className="mt-3 leading-7 text-[#6F7F6A]">{t.foodViewsText}</p>
+              <div className="border-b border-black/10 pb-6">
+                <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
+                  {t.foodViewsTitle}
+                </h3>
+                <p className="mt-3 leading-7 text-black/70">{t.foodViewsText}</p>
               </div>
             </div>
           </PageShell>
@@ -853,14 +860,11 @@ className="h-full w-full object-cover object-center"    />
       case 'faqs':
         return (
           <PageShell title={t.questionsTitle}>
-            <div className="grid gap-5">, 
+            <div className="grid gap-5">
               {t.faqs.map((item) => (
-                <div
-                  key={item.q}
-                  className="rounded-sm bg-white p-7 shadow-sm ring-1 ring-[#D7E0D3]"
-                >
-                  <h3 className="text-xl font-medium text-[#5F6B5C]">{item.q}</h3>
-                  <p className="mt-3 leading-7 text-[#6F7F6A]">{item.a}</p>
+                <div key={item.q} className="border-b border-black/10 pb-6">
+                  <h3 className="text-xl font-medium text-black">{item.q}</h3>
+                  <p className="mt-3 leading-7 text-black/70">{item.a}</p>
                 </div>
               ))}
             </div>
@@ -873,7 +877,7 @@ className="h-full w-full object-cover object-center"    />
   };
 
   return (
-    <div className="min-h-screen bg-[#FFFDFC] text-[#5F6B5C]">
+    <div className="min-h-screen bg-[#FFFDFC] text-black">
 <header className="relative z-50 border-b border-[#E5E5E5] bg-white/95">
   <div className="w-full px-4 py-3 md:px-8">
     <div className="relative hidden md:block pb-4">
