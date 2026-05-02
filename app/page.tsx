@@ -590,7 +590,7 @@ export default function WeddingWebsite() {
 });
 
 React.useEffect(() => {
-  const targetDate = new Date('2027-05-15T00:00:00');
+  const targetDate = new Date('2027-05-15T09:30:00-04:00');
 
   const updateCountdown = () => {
     const now = new Date();
