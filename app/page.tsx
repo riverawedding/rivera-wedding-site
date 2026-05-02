@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Playfair_Display } from 'next/font/google';
-const playfair = Playfair_Display({
+import { Cormorant_Garamond } from 'next/font/google';
+const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
 });
@@ -687,10 +687,10 @@ className="h-full w-full object-cover object-top"/></div>
 </section>
 <section className="mx-auto max-w-5xl px-6 py-10">
   <div className="text-center">
-    <p className="text-3xl font-serif text-black md:text-4xl">
-      Tuscany, Italy
-    </p>
-<p className="mt-3 text-base text-black/75 md:text-lg">
+   <p className={`${cormorant.className} text-4xl font-medium text-black md:text-5xl`}>
+  Tuscany, Italy
+</p>
+<p className="mt-3 font-serif italic text-base text-black/75 md:text-lg">
   May 15, 2027
 </p>
     <div className="mt-3 flex justify-center">
@@ -880,7 +880,7 @@ className="h-full w-full object-cover object-top"/></div>
     className="h-auto w-[70px] md:w-[90px]"
     priority
   />
-<p className={`${playfair.className} mt-2 text-center text-4xl text-black md:text-5xl`}>
+<p className={`${cormorant.className} mt-2 text-center text-4xl font-medium text-black md:text-5xl`}>
   Daniella & Victor
 </p></div>
       <div className="absolute right-[-16px] top-2 flex items-center md:right-[-20px]">
