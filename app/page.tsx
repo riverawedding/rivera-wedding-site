@@ -675,7 +675,7 @@ React.useEffect(() => {
   {/* Mobile: single image */}
   <div className="absolute inset-0 md:hidden">
     <img
-      src="/header-right.jpg"
+      src="/header-mobile.jpg"
       alt="Hero image"
       className="h-full w-full object-cover "
     />
