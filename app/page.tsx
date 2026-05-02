@@ -671,7 +671,7 @@ React.useEffect(() => {
       case 'home':
         return (
           <>
-<section className="relative h-[340px] overflow-hidden md:h-[620px]">
+<section className="relative h-[340px] overflow-hidden md:h-[560px]">
   {/* Mobile: single image */}
   <div className="absolute inset-0 md:hidden">
     <img
