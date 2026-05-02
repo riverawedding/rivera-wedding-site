@@ -671,31 +671,32 @@ React.useEffect(() => {
       case 'home':
         return (
           <>
-<section className="relative h-[440px] overflow-hidden md:h-[560px]">
+<section className="relative h-[340px] overflow-hidden md:h-[620px]">
+  {/* Mobile: single image */}
   <div className="absolute inset-0 md:hidden">
     <img
       src="/header-right.jpg"
       alt="Hero image"
-      className="h-full w-full object-cover object-top"
+      className="h-full w-full object-cover object-[50%_65%]"
     />
   </div>
 
+  {/* Desktop: two matching images */}
   <div className="absolute inset-0 hidden md:grid md:grid-cols-2">
     <img
       src="/header-left.jpg"
       alt="Left hero image"
-      className="h-full w-full object-cover [object-position:50%_92%]"
+      className="h-full w-full object-cover object-[50%_65%]"
     />
     <img
-      src="/header-mobile.jpg"
+      src="/header-right.jpg"
       alt="Right hero image"
-      className="h-full w-full object-cover object-top"
+      className="h-full w-full object-cover object-[50%_65%]"
     />
   </div>
 
   <div className="absolute inset-0 bg-black/10" />
-</section>
-<section className="mx-auto max-w-5xl px-6 pt-4 pb-10">
+</section><section className="mx-auto max-w-5xl px-6 pt-4 pb-10">
   <div className="text-center">
    <p className={`${cormorant.className} text-4xl font-medium text-black md:text-5xl`}>
   Tuscany, Italy
