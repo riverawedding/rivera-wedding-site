@@ -671,58 +671,44 @@ React.useEffect(() => {
       case 'home':
         return (
           <>
-<section className="relative h-[340px] overflow-hidden md:h-[560px]">
-  {/* Mobile: single image */}
-  <div className="absolute inset-0 md:hidden">
-    <img
-      src="/header-mobile.jpg"
-      alt="Hero image"
-      className="h-full w-full object-cover "
-    />
-  </div>
-
-  {/* Desktop: two matching images */}
-  <div className="absolute inset-0 hidden md:grid md:grid-cols-2">
-    <img
-      src="/header-left.jpg"
-      alt="Left hero image"
-      className="h-full w-full object-cover object-[50%_65%]"
-    />
+<section className="mx-auto max-w-6xl px-6 pt-8 md:pt-10">
+  <div className="mx-auto w-full max-w-[760px] overflow-hidden rounded-sm shadow-sm">
     <img
       src="/header-right.jpg"
-      alt="Right hero image"
-      className="h-full w-full object-cover object-[50%_65%]"
+      alt="Hero image"
+      className="h-[320px] w-full object-cover [object-position:50%_78%] md:h-[500px]"
     />
   </div>
+</section>
 
-  <div className="absolute inset-0 bg-black/10" />
-</section><section className="mx-auto max-w-5xl px-6 pt-4 pb-10">
+<section className="mx-auto max-w-5xl px-6 pt-4 pb-10">
   <div className="text-center">
-   <p className={`${cormorant.className} text-4xl font-medium text-black md:text-5xl`}>
-  Tuscany, Italy
-</p>
-<p className="mt-3 font-serif italic text-base text-black/75 md:text-lg">
-  May 15, 2027
-</p>
+    <p className={`${cormorant.className} text-4xl font-medium text-black md:text-5xl`}>
+      Tuscany, Italy
+    </p>
+    <p className="mt-3 font-serif italic text-base text-black/75 md:text-lg">
+      May 15, 2027
+    </p>
     <div className="mt-2 flex justify-center">
-<div className="grid grid-cols-2 gap-2 md:grid-cols-4">
-  <div className="px-2 py-2 text-center">
-    <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.days}</p>
-    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Days</p>
-  </div>
-  <div className="px-2 py-2 text-center">
-    <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.hours}</p>
-    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Hours</p>
-  </div>
-  <div className="px-2 py-2 text-center">
-    <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.minutes}</p>
-    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Minutes</p>
-  </div>
-  <div className="px-2 py-2 text-center">
-    <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.seconds}</p>
-    <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Seconds</p>
-  </div>
-</div>    </div>
+      <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
+        <div className="px-2 py-2 text-center">
+          <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.days}</p>
+          <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Days</p>
+        </div>
+        <div className="px-2 py-2 text-center">
+          <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.hours}</p>
+          <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Hours</p>
+        </div>
+        <div className="px-2 py-2 text-center">
+          <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.minutes}</p>
+          <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Minutes</p>
+        </div>
+        <div className="px-2 py-2 text-center">
+          <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.seconds}</p>
+          <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Seconds</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -878,8 +864,8 @@ React.useEffect(() => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FFFDFC] text-black">
-<header className="relative z-50 border-b border-[#E5E5E5] bg-white/95">
+    <div className="min-h-screen bg-[#F8F1E7] text-black">
+<header className="relative z-50 border-b border-[#E8DDD0] bg-[#F8F1E7]/95">
   <div className="w-full px-4 py-3 md:px-8">
     <div className="relative hidden md:block pb-4">
 <div className="flex flex-col items-center">
