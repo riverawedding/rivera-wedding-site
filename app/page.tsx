@@ -676,7 +676,7 @@ React.useEffect(() => {
     <img
       src="/header-right.jpg"
       alt="Hero image"
-      className="h-[290px] w-full object-cover [object-position:50%_78%] md:h-[440px]"
+className="h-[305px] w-full object-cover [object-position:50%_82%] md:h-[460px]"
     />
   </div>
 </section>
@@ -959,7 +959,7 @@ React.useEffect(() => {
   </div>
 
   {mobileMenuOpen && (
-    <div className="border-t border-[#E5E5E5] bg-white px-4 py-4 md:hidden">
+    <div className="absolute left-0 right-0 top-full z-50 border-t border-[#E8DDD0] bg-[#F8F1E7] px-4 py-4 shadow-md md:hidden">
 
       <div className="flex flex-col gap-3">
         {navItems.map((item) => {
@@ -982,7 +982,7 @@ React.useEffect(() => {
         })}
       </div>
 
-      <div className="mt-4 flex flex-wrap items-center border-t border-[#E5E5E5] pt-4">
+      <div className="mt-4 flex flex-wrap items-center border-t border-[#E8DDD0] pt-4">
         {languages.map((item, index) => {
           const active = language === item.code;
           return (
