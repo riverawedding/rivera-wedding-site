@@ -676,7 +676,7 @@ React.useEffect(() => {
     <img
       src="/header-right.jpg"
       alt="Hero image"
-      className="h-[320px] w-full object-cover [object-position:50%_78%] md:h-[500px]"
+      className="h-[290px] w-full object-cover [object-position:50%_78%] md:h-[440px]"
     />
   </div>
 </section>
