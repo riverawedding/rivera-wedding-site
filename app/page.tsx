@@ -855,7 +855,7 @@ case 'home':
               <img
                 src="/header-right.jpg"
                 alt="Hero image"
-                className="h-[340px] w-full object-cover [object-position:50%_82%] md:h-[520px]"
+                className="h-[260px] w-full object-cover [object-position:50%_82%] md:h-[520px]"
               />
             </div>
           </div>
@@ -901,7 +901,7 @@ case 'home':
   {t.travelNotes.map((note, index) => (
     <li
       key={note}
-      className={index !== t.travelNotes.length - 1 ? 'border-b border-black/10 pb-4 mb-4' : ''}
+      className="border-b border-black/10 pb-4 mb-4"
     >
       {note}
     </li>
@@ -917,7 +917,7 @@ case 'home':
   {t.transportationNotes.map((note, index) => (
     <li
       key={note}
-      className={index !== t.transportationNotes.length - 1 ? 'border-b border-black/10 pb-4 mb-4' : ''}
+      className="border-b border-black/10 pb-4 mb-4"
     >
       {note}
     </li>
@@ -926,7 +926,7 @@ case 'home':
     </div>
   </div>
 
-  <div className="border-t border-black/10 pt-2">
+  <div className="pt-2">
 <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
   {t.accommodationSectionTitle}
 </h2>
@@ -963,6 +963,13 @@ case 'home':
 
                     <div className="border-b border-black/10 pb-5">
   <p className="text-sm uppercase tracking-[0.2em] text-black/45">
+    {t.weekendEventsTitle}
+  </p>
+  <p className="mt-3 leading-7 text-black/70">{t.weekendEventsText}</p>
+</div>
+
+<div className="border-b border-black/10 pb-5">
+  <p className="text-sm uppercase tracking-[0.2em] text-black/45">
     {t.bookingInstructionsTitle}
   </p>
   <p className="mt-3 leading-7 text-black/70">{t.bookingInstructionsText}</p>
@@ -985,14 +992,6 @@ case 'home':
       {t.bookingFormLinkLabel}
     </a>
   </div>
-</div>
-
-                   <div className="border-b border-black/10 pb-5">
-  <p className="text-sm uppercase tracking-[0.2em] text-black/45">
-    {t.weekendEventsTitle}
-  </p>
-  <p className="mt-3 leading-7 text-black/70">{t.weekendEventsText}</p>
-  <p className="mt-3 leading-7 text-black/70"></p>
 </div>
                   </div>
                 </div>
