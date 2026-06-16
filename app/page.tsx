@@ -1296,51 +1296,51 @@ case 'home':
       case 'gallery':
   return (
     <PageShell title={t.galleryTitle}>
-      <div className="space-y-5">
-        <div className="grid gap-5 lg:grid-cols-[1.75fr_1fr] lg:items-stretch">
+      <div className="mx-auto max-w-[840px] space-y-3">
+        <div className="grid gap-3 lg:grid-cols-[2.15fr_0.78fr]">
           <button
             type="button"
             onClick={() => openGallery(0)}
-            className="overflow-hidden rounded-[18px] text-left"
+            className="overflow-hidden rounded-[16px] text-left"
           >
             <img
               src={galleryImages[0]}
               alt="Gallery image 1"
-              className="h-[320px] w-full object-cover transition hover:opacity-95 lg:h-[500px]"
+              className="h-[300px] w-full object-cover transition hover:opacity-95 sm:h-[400px] lg:h-[625px]"
             />
           </button>
 
-          <div className="grid gap-5">
+          <div className="grid gap-3">
             {[1, 2, 3].map((index) => (
               <button
                 key={index}
                 type="button"
                 onClick={() => openGallery(index)}
-                className="overflow-hidden rounded-[18px] text-left"
+                className="overflow-hidden rounded-[16px] text-left"
               >
                 <img
                   src={galleryImages[index]}
                   alt={`Gallery image ${index + 1}`}
-                  className="h-[120px] w-full object-cover transition hover:opacity-95 sm:h-[145px] lg:h-[153px]"
+                  className="aspect-[1/0.88] w-full object-cover transition hover:opacity-95"
                 />
               </button>
             ))}
           </div>
         </div>
 
-        <div className="grid gap-5 lg:grid-cols-[1.35fr_1fr] lg:items-stretch">
-          <div className="grid grid-cols-2 gap-5">
+        <div className="grid gap-3 lg:grid-cols-[1fr_0.98fr] lg:items-start">
+          <div className="grid grid-cols-2 gap-3">
             {[4, 5, 6, 7].map((index) => (
               <button
                 key={index}
                 type="button"
                 onClick={() => openGallery(index)}
-                className="overflow-hidden rounded-[18px] text-left"
+                className="overflow-hidden rounded-[16px] text-left"
               >
                 <img
                   src={galleryImages[index]}
                   alt={`Gallery image ${index + 1}`}
-                  className="h-[120px] w-full object-cover transition hover:opacity-95 sm:h-[145px] lg:h-[150px]"
+                  className="aspect-square w-full object-cover transition hover:opacity-95"
                 />
               </button>
             ))}
@@ -1349,12 +1349,12 @@ case 'home':
           <button
             type="button"
             onClick={() => openGallery(8)}
-            className="overflow-hidden rounded-[18px] text-left"
+            className="overflow-hidden rounded-[16px] text-left"
           >
             <img
               src={galleryImages[8]}
               alt="Gallery image 9"
-              className="h-[255px] w-full object-cover transition hover:opacity-95 sm:h-[300px] lg:h-[320px]"
+              className="h-[190px] w-full object-cover transition hover:opacity-95 sm:h-[230px] lg:h-[420px]"
             />
           </button>
         </div>
@@ -1509,11 +1509,12 @@ default:
     <div className="relative hidden md:block pb-4">
 <div className="flex flex-col items-center">
   <Image
-    src="/dv-logo3.png"
+    src="/dv-logo5.png"
     alt="Daniella and Victor logo"
-    width={90}
-    height={90}
-    className="ml-5 h-auto w-[90px] md:ml-3 md:w-[190px]"
+    width={416}
+    height={504}
+    unoptimized
+    className="h-auto w-[62px] md:w-[102px]"
     priority
   />
 <p className={`${cormorant.className} mt-2 text-center text-4xl font-medium text-black md:text-5xl`}>
@@ -1556,11 +1557,12 @@ default:
 
   <div className="flex flex-1 flex-col items-center md:hidden">
     <Image
-      src="/dv-logo3.png"
+      src="/dv-logo5.png"
       alt="Daniella and Victor logo"
-      width={52}
-      height={52}
-      className="h-auto w-[42px]"
+      width={416}
+      height={504}
+      unoptimized
+      className="h-auto w-[34px]"
       priority
     />
     <p className={`${cormorant.className} mt-1 text-center text-3xl font-medium text-black`}>
