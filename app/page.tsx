@@ -250,6 +250,7 @@ nav: {
 travelNotes: [
   'Florence Airport (FLR) — approximately 45 minutes away.',
   'Pisa International Airport (PSA) — approximately 1 hour away.',
+  'Bologna Airport (BLQ) — approximately 2 hours away.',
   'Rome Fiumicino Airport (FCO) — approximately 3 hours away.',
 ],    events: [
   {
@@ -422,6 +423,7 @@ nav: {
 travelNotes: [
   'Flughafen Florenz (FLR) — etwa 45 Minuten entfernt.',
   'Pisa International Airport (PSA) — etwa 1 Stunde entfernt.',
+  'Flughafen Bologna (BLQ) — etwa 2 Stunden entfernt.',
   'Rom Fiumicino (FCO) — etwa 3 Stunden entfernt.',
 ],   events: [
   {
@@ -595,6 +597,7 @@ nav: {
 travelNotes: [
   'Aeropuerto de Florencia (FLR) — aproximadamente a 45 minutos.',
   'Aeropuerto Internacional de Pisa (PSA) — aproximadamente a 1 hora.',
+  'Aeropuerto de Bolonia (BLQ) — aproximadamente a 2 horas.',
   'Roma Fiumicino (FCO) — aproximadamente a 3 horas.',
 ],    events: [
   {
