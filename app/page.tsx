@@ -10,6 +10,10 @@ import Image from "next/image";
 type EventItem = {
   day: string;
   title: string;
+  date: string;
+  venue: string;
+  address?: string;
+  addressUrl?: string;
   time: string;
   description: string;
 };
@@ -160,9 +164,9 @@ const translations: Record<'en' | 'de' | 'es', TranslationEntry> = {
     weekendStyleValue: 'Destination wedding with multiple events',
     scheduleTag: 'Weekend Schedule',
     scheduleTitle: 'What to expect',
-    scheduleSubtitle:
-      'A full itinerary with exact times will be posted here closer to the wedding.',
-    travelTag: 'Travel & Stay',
+scheduleSubtitle:
+  'Below is an overview of the wedding weekend. A detailed itinerary, including exact times and locations, will be shared closer to the wedding date.',
+      travelTag: 'Travel & Stay',
     travelTitle: 'Getting there',
     accommodationTag: 'Accommodations',
     accommodationTitle: 'Hotel details coming soon',
@@ -204,11 +208,10 @@ bookingInstructionsText:
     shuttleDetails: 'Shuttle details',
     townGuide: 'Nearby town guide',
     registryTag: 'Registry',
-    registryTitle: 'Registry details to follow',
-    registryText:
-      'We’ll share registry information here if and when it becomes available. Your presence in Tuscany with us is what matters most.',
-    registryButton: 'Registry Coming Soon',
-    weddingPartyTag: 'Wedding Party',
+registryTitle: 'Registry',
+registryText:
+  'Having you with us in Tuscany is truly the greatest gift. For those who have asked, we’ll also be sharing a registry with contributions toward our honeymoon, newlywed fund, and future home.',
+registryButton: 'View Our Registry',    weddingPartyTag: 'Wedding Party',
     weddingPartyTitle: 'Meet our favorite people',
     weddingPartyText:
       'This section can feature your bridesmaids, groomsmen, family, and anyone special you want guests to know.',
@@ -249,28 +252,36 @@ travelNotes: [
   'Pisa International Airport (PSA) — approximately 1 hour away.',
   'Rome Fiumicino Airport (FCO) — approximately 3 hours away.',
 ],    events: [
-      {
-        day: 'Friday',
-        title: 'Welcome Event',
-        time: 'Evening',
-        description:
-          'Kick off the weekend with a relaxed pizza party and time to settle in, meet everyone, and enjoy Tuscany together.',
-      },
-      {
-        day: 'Saturday',
-        title: 'Wedding Day',
-        time: 'May 15, 2027',
-        description:
-          'Our wedding celebration at Antica Fattoria di Paterno in Tuscany. Ceremony, cocktails, dinner, and dancing to follow.',
-      },
-      {
-        day: 'Sunday',
-        title: 'Farewell Gathering',
-        time: 'Late Morning / Early Afternoon',
-        description:
-          'A final get-together to enjoy time with family and friends before departures.',
-      },
-    ],
+  {
+    day: 'Friday',
+    title: 'Welcome Dinner',
+    date: 'May 14, 2027',
+    venue: 'San Gimignano',
+    time: 'Evening',
+    description:
+      'Join us as we kick off the wedding weekend with a relaxed welcome dinner. Enjoy great food, drinks, and the opportunity to reconnect with family and friends before the big day.',
+  },
+  {
+    day: 'Saturday',
+    title: 'Wedding Day',
+    date: 'May 15, 2027',
+    venue: 'Antica Fattoria di Paterno',
+    address: 'Via Paterno 48 - 50025 Montespertoli (Toscana)',
+    addressUrl: 'https://maps.google.com/?q=Via+Paterno+48,+50025+Montespertoli,+Toscana,+Italy',
+    time: 'Early Evening',
+    description:
+      'Our wedding celebration will take place at Antica Fattoria di Paterno near Montespertoli. Ceremony, cocktails, dinner, and dancing to follow.',
+  },
+  {
+    day: 'Sunday',
+    title: 'Farewell Lunch & Pool Party',
+    date: 'May 16, 2027',
+    venue: 'San Gimignano',
+    time: 'Early Afternoon',
+    description:
+      'Before everyone heads home, join us for one last gathering to relax, enjoy lunch by the pool, and soak in the Tuscan sunshine with family and friends.',
+  },
+],
     faqs: [
       {
         q: 'When should I arrive?',
@@ -369,10 +380,10 @@ bookingInstructionsText:
     shuttleDetails: 'Shuttle-Details',
     townGuide: 'Guide zur Umgebung',
     registryTag: 'Geschenkeliste',
-    registryTitle: 'Infos zur Geschenkeliste folgen',
-    registryText:
-      'Falls wir eine Geschenkeliste bereitstellen, findet ihr die Informationen hier. Am wichtigsten ist uns, dieses Wochenende in der Toskana mit euch zu verbringen.',
-    registryButton: 'Geschenkeliste folgt',
+   registryTitle: 'Geschenkeliste',
+registryText:
+  'Euch in der Toskana bei uns zu haben, ist für uns wirklich das größte Geschenk. Für alle, die gefragt haben, werden wir außerdem eine Geschenkeliste mit Beiträgen zu unserer Hochzeitsreise, unserem Newlywed Fund und unserem zukünftigen Zuhause teilen.',
+registryButton: 'Zur Geschenkeliste',
     weddingPartyTag: 'Hochzeitsgesellschaft',
     weddingPartyTitle: 'Unsere liebsten Menschen',
     weddingPartyText:
@@ -412,29 +423,37 @@ travelNotes: [
   'Flughafen Florenz (FLR) — etwa 45 Minuten entfernt.',
   'Pisa International Airport (PSA) — etwa 1 Stunde entfernt.',
   'Rom Fiumicino (FCO) — etwa 3 Stunden entfernt.',
-],    events: [
-      {
-        day: 'Freitag',
-        title: 'Willkommensevent',
-        time: 'Abend',
-        description:
-          'Wir starten das Wochenende mit einer entspannten Pizza-Party, Zeit zum Ankommen, Kennenlernen und gemeinsamen Genießen der Toskana.',
-      },
-      {
-        day: 'Samstag',
-        title: 'Hochzeitstag',
-        time: '15. Mai 2027',
-        description:
-          'Unsere Hochzeitsfeier in der Antica Fattoria di Paterno in der Toskana. Mit Trauung, Aperitif, Dinner und anschließender Feier.',
-      },
-      {
-        day: 'Sonntag',
-        title: 'Abschlusstreffen',
-        time: 'Später Vormittag / früher Nachmittag',
-        description:
-          'Ein letztes Beisammensein mit Familie und Freunden vor der Abreise.',
-      },
-    ],
+],   events: [
+  {
+    day: 'Freitag',
+    title: 'Welcome Dinner',
+    date: '14. Mai 2027',
+    venue: 'San Gimignano',
+    time: 'Abend',
+    description:
+      'Gemeinsam starten wir mit einem entspannten Welcome Dinner in das Hochzeitswochenende. Freut euch auf gutes Essen, Getränke und die Gelegenheit, Familie und Freunde vor dem großen Tag wiederzusehen.',
+  },
+  {
+    day: 'Samstag',
+    title: 'Hochzeitstag',
+    date: '15. Mai 2027',
+    venue: 'Antica Fattoria di Paterno',
+    address: 'Via Paterno 48 - 50025 Montespertoli (Toskana)',
+    addressUrl: 'https://maps.google.com/?q=Via+Paterno+48,+50025+Montespertoli,+Toscana,+Italy',
+    time: 'Früher Abend',
+    description:
+      'Unsere Hochzeitsfeier findet in der Antica Fattoria di Paterno bei Montespertoli statt. Anschließend folgen Trauung, Aperitif, Dinner und Tanz.',
+  },
+  {
+    day: 'Sonntag',
+    title: 'Farewell Lunch & Pool Party',
+    date: '16. Mai 2027',
+    venue: 'San Gimignano',
+    time: 'Früher Nachmittag',
+    description:
+      'Bevor sich alle wieder auf den Heimweg machen, freuen wir uns auf ein letztes gemeinsames Treffen mit Mittagessen am Pool und entspannten Stunden in der toskanischen Sonne mit Familie und Freunden.',
+  },
+],
     faqs: [
       {
         q: 'Wann sollten wir anreisen?',
@@ -532,10 +551,10 @@ bookingInstructionsText:
     overflowOptions: 'Opciones adicionales',
     shuttleDetails: 'Detalles del transporte',
     townGuide: 'Guía del pueblo cercano',    registryTag: 'Mesa de regalos',
-    registryTitle: 'Detalles de la mesa de regalos próximamente',
-    registryText:
-      'Si compartimos una mesa de regalos, la información aparecerá aquí. Lo más importante para nosotros es celebrar este fin de semana en la Toscana con ustedes.',
-    registryButton: 'Mesa de regalos próximamente',
+   registryTitle: 'Mesa de Regalos',
+registryText:
+  'Tenerlos con nosotros en la Toscana es verdaderamente el mejor regalo. Para quienes nos lo han preguntado, también compartiremos una mesa de regalos con contribuciones para nuestra luna de miel, nuestro fondo de recién casados y nuestro futuro hogar.',
+registryButton: 'Ver Nuestra Mesa de Regalos',
     weddingPartyTag: 'Cortejo nupcial',
     weddingPartyTitle: 'Nuestra gente favorita',
     weddingPartyText:
@@ -578,28 +597,36 @@ travelNotes: [
   'Aeropuerto Internacional de Pisa (PSA) — aproximadamente a 1 hora.',
   'Roma Fiumicino (FCO) — aproximadamente a 3 horas.',
 ],    events: [
-      {
-        day: 'Viernes',
-        title: 'Evento de bienvenida',
-        time: 'Noche',
-        description:
-          'Comenzaremos el fin de semana con una relajada fiesta de pizza, tiempo para instalarse, conocerse y disfrutar juntos de la Toscana.',
-      },
-      {
-        day: 'Sábado',
-        title: 'Día de la boda',
-        time: '15 de mayo de 2027',
-        description:
-          'Nuestra celebración de boda en Antica Fattoria di Paterno, en la Toscana. Después de la ceremonia habrá cocteles, cena y baile.',
-      },
-      {
-        day: 'Domingo',
-        title: 'Despedida',
-        time: 'Última mañana / primeras horas de la tarde',
-        description:
-          'Un último encuentro para disfrutar con familiares y amigos antes de partir.',
-      },
-    ],
+  {
+    day: 'Viernes',
+    title: 'Cena de Bienvenida',
+    date: '14 de mayo de 2027',
+    venue: 'San Gimignano',
+    time: 'Por la noche',
+    description:
+      'Acompáñennos mientras damos inicio al fin de semana de la boda con una cena de bienvenida relajada. Disfruten de buena comida, bebidas y la oportunidad de reencontrarse con familiares y amigos antes del gran día.',
+  },
+  {
+    day: 'Sábado',
+    title: 'Día de la Boda',
+    date: '15 de mayo de 2027',
+    venue: 'Antica Fattoria di Paterno',
+    address: 'Via Paterno 48 - 50025 Montespertoli (Toscana)',
+    addressUrl: 'https://maps.google.com/?q=Via+Paterno+48,+50025+Montespertoli,+Toscana,+Italy',
+    time: 'A primeras horas de la noche',
+    description:
+      'Nuestra celebración de boda tendrá lugar en Antica Fattoria di Paterno, cerca de Montespertoli. Después seguirán la ceremonia, los cócteles, la cena y el baile.',
+  },
+  {
+    day: 'Domingo',
+    title: 'Almuerzo de Despedida y Pool Party',
+    date: '16 de mayo de 2027',
+    venue: 'San Gimignano',
+    time: 'A primeras horas de la tarde',
+    description:
+      'Antes de que todos regresen a casa, acompáñennos en una última reunión para relajarnos, disfrutar de un almuerzo junto a la piscina y aprovechar el sol de la Toscana con familiares y amigos.',
+  },
+],
     faqs: [
       {
         q: '¿Cuándo deberíamos llegar?',
@@ -910,10 +937,10 @@ case 'home':
     </div>
 
     <div>
-      <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
-        {t.transportationTitle}
-      </h2>
- <ul className="mt-8 list-disc pl-6 text-base leading-7 text-black/70 marker:text-black/60">
+  <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
+    {t.transportationTitle}
+  </h2>
+ <ul className="mt-4 list-disc pl-6 text-base leading-7 text-black/70 marker:text-black/60">
   {t.transportationNotes.map((note, index) => (
     <li
       key={note}
@@ -1003,30 +1030,47 @@ case 'home':
         return (
           <PageShell title={t.scheduleTitle} subtitle={t.scheduleSubtitle}>
             <div className="grid gap-8 md:grid-cols-3">
-              {t.events.map((event) => (
-                <div key={event.title} className="border-b border-black/10 pb-6">
-                  <p className="text-sm uppercase tracking-[0.25em] text-black/45">
-                    {event.day}
-                  </p>
-                  <h3 className={`${cormorant.className} mt-3 text-2xl font-medium text-black`}>
-                    {event.title}
-                  </h3>
-                  <p className="mt-2 text-sm font-medium text-black/45">{event.time}</p>
-                  <p className="mt-5 leading-7 text-black/70">{event.description}</p>
-                </div>
-              ))}
-            </div>
+  {t.events.map((event) => (
+    <div key={event.title} className="border-b border-black/10 pb-6">
+      <p className="text-sm uppercase tracking-[0.25em] text-black/45">
+        {event.day}
+      </p>
+      <h3 className={`${cormorant.className} mt-3 text-2xl font-medium text-black`}>
+        {event.title}
+      </h3>
+      <p className="mt-4 text-sm font-medium text-black/45">{event.date}</p>
+      <p className="mt-1 text-sm font-medium text-black/45">{event.venue}</p>
+      {event.address && event.addressUrl ? (
+        <a
+          href={event.addressUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-1 block text-sm text-black/60 underline underline-offset-4 hover:text-black"
+        >
+          {event.address}
+        </a>
+      ) : null}
+      <p className="mt-3 text-sm font-medium text-black/45">{event.time}</p>
+      <p className="mt-5 leading-7 text-black/70">{event.description}</p>
+    </div>
+  ))}
+</div>
           </PageShell>
         );
 
-      case 'registry':
-        return (
-          <PageShell title={t.registryTitle} subtitle={t.registryText}>
-            <div className="inline-flex rounded-sm border border-black bg-black px-6 py-4 text-white shadow-sm">
-              {t.registryButton}
-            </div>
-          </PageShell>
-        );
+     case 'registry':
+  return (
+    <PageShell title={t.registryTitle} subtitle={t.registryText}>
+      <a
+        href="https://www.zola.com/wedding/victoranddaniella/registry"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex rounded-sm border border-black bg-black px-6 py-4 text-white shadow-sm transition hover:opacity-90"
+      >
+        {t.registryButton}
+      </a>
+    </PageShell>
+  );
 
       case 'wedding-party':
         return (
