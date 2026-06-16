@@ -1104,7 +1104,6 @@ case 'rsvp':
       </div>
     </PageShell>
   );
-
 default:
   return null;
     }
@@ -1121,7 +1120,7 @@ default:
     alt="Daniella and Victor logo"
     width={90}
     height={90}
-    className="ml-5 h-auto w-[78px] md:ml-3 md:w-[102px]"
+    className="ml-5 h-auto w-[90px] md:ml-3 md:w-[190px]"
     priority
   />
 <p className={`${cormorant.className} mt-2 text-center text-4xl font-medium text-black md:text-5xl`}>
