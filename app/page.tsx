@@ -890,97 +890,91 @@ case 'home':
       </section>
     </>
   );
-      case 'travel':
+       case 'travel':
         return (
-          <section className="mx-auto max-w-6xl px-6 py-16 md:py-20">
-<div className="grid gap-12">
-  <div className="grid gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-start">
-    <div>
-      <p className="text-sm uppercase tracking-[0.3em] text-black/45">
-        {t.travelTag}
-      </p>
-      <h2 className={`${cormorant.className} mt-3 text-3xl font-medium text-black md:text-4xl`}>
-        {t.homeBaseTitle}
-      </h2>
-      <p className="mt-6 text-base leading-7 text-black/70">
-        {t.homeBaseText}
-      </p>
-    </div>
+          <section className="mx-auto max-w-6xl px-6 py-14 md:py-18">
+            <div className="space-y-14 md:space-y-16">
+              <div className="grid gap-8 md:grid-cols-[1.05fr_0.95fr] md:gap-12 md:items-start">
+                <div>
+                  <p className="text-sm uppercase tracking-[0.3em] text-black/45">
+                    {t.travelTag}
+                  </p>
+                  <h2 className={`${cormorant.className} mt-3 text-3xl font-medium text-black md:text-4xl`}>
+                    {t.homeBaseTitle}
+                  </h2>
+                  <p className="mt-5 text-base leading-7 text-black/70">
+                    {t.homeBaseText}
+                  </p>
+                </div>
 
-    <div className="md:-mt-6">
+                <div className="md:-mt-6">
   <img
     src="/sangimignano.jpg"
-    alt="San Gimignano"
-    className="h-[220px] w-full rounded-sm object-cover md:h-[280px]"
-  />
-</div>
-  </div>
+                    alt="San Gimignano"
+                    className="h-[220px] w-full rounded-sm object-cover md:h-[280px]"
+                  />
+                </div>
+              </div>
 
-  <div className="grid gap-4 md:grid-cols-2">
-    <div>
-      <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
-        {t.airportsTitle}
-      </h2>
-      <p className="mt-4 text-base leading-7 text-black/70">
-        {t.airportsIntro}
-      </p>
- <ul className="mt-6 list-disc pl-6 text-base leading-7 text-black/70 marker:text-black/60">
-  {t.travelNotes.map((note, index) => (
-    <li
-      key={note}
-      className="border-b border-black/10 pb-4 mb-4"
-    >
-      {note}
-    </li>
-  ))}
-</ul>
-    </div>
+              <div className="grid gap-10 md:grid-cols-2 md:gap-12 md:items-start">
+                <div>
+                  <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
+                    {t.airportsTitle}
+                  </h2>
+                  <p className="mt-4 text-base leading-7 text-black/70">
+                    {t.airportsIntro}
+                  </p>
+                  <ul className="mt-5 list-disc pl-6 text-base leading-7 text-black/70 marker:text-black/60">
+                    {t.travelNotes.map((note) => (
+                      <li key={note} className="border-b border-black/10 pb-4 mb-4">
+                        {note}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-    <div>
-  <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
-    {t.transportationTitle}
-  </h2>
- <ul className="mt-4 list-disc pl-6 text-base leading-7 text-black/70 marker:text-black/60">
-  {t.transportationNotes.map((note, index) => (
-    <li
-      key={note}
-      className="border-b border-black/10 pb-4 mb-4"
-    >
-      {note}
-    </li>
-  ))}
-</ul>
-    </div>
-  </div>
+                <div>
+                  <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
+                    {t.transportationTitle}
+                  </h2>
+                  <ul className="mt-4 list-disc pl-6 text-base leading-7 text-black/70 marker:text-black/60">
+                    {t.transportationNotes.map((note) => (
+                      <li key={note} className="border-b border-black/10 pb-4 mb-4">
+                        {note}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
 
-  <div className="pt-2">
-<h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
-  {t.accommodationSectionTitle}
-</h2>
+              <div className="space-y-8">
+                <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
+                  {t.accommodationSectionTitle}
+                </h2>
 
-  <div className="mt-1 grid gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-center">
-    <div>
-      <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
-        {t.hotelName}
-      </h3>
-      <p className="mt-4 leading-7 text-black/70">{t.hotelIntro}</p>
-    </div>
+                <div className="grid gap-8 md:grid-cols-[1.05fr_0.95fr] md:gap-12 md:items-start">
+                  <div>
+                    <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
+                      {t.hotelName}
+                    </h3>
+                    <p className="mt-4 leading-7 text-black/70">{t.hotelIntro}</p>
+                  </div>
 
-    <div className="md:-mt-8">
+                  <div className="md:-mt-20">
   <img
     src="/cappuccina.jpg"
-    alt="Cappuccina Country Resort & Spa"
-    className="h-[220px] w-full rounded-sm object-cover md:h-[280px]"
-  />
-</div>
-  </div>
+                      alt="Cappuccina Country Resort & Spa"
+                      className="h-[220px] w-full rounded-sm object-cover md:h-[280px]"
+                    />
+                  </div>
+                </div>
 
-                <div className="mt-6">
-  <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
-    {t.whyStayTitle}
-  </h3>
+                <div className="space-y-6">
+                  <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
+                    {t.whyStayTitle}
+                  </h3>
 
-                  <div className="mt-6 grid gap-6 md:grid-cols-2">
+                  <div className="grid gap-6 md:grid-cols-2">
                     <div className="border-b border-black/10 pb-5">
                       <p className="text-sm uppercase tracking-[0.2em] text-black/45">
                         {t.specialRatesTitle}
@@ -989,37 +983,37 @@ case 'home':
                     </div>
 
                     <div className="border-b border-black/10 pb-5">
-  <p className="text-sm uppercase tracking-[0.2em] text-black/45">
-    {t.weekendEventsTitle}
-  </p>
-  <p className="mt-3 leading-7 text-black/70">{t.weekendEventsText}</p>
-</div>
+                      <p className="text-sm uppercase tracking-[0.2em] text-black/45">
+                        {t.weekendEventsTitle}
+                      </p>
+                      <p className="mt-3 leading-7 text-black/70">{t.weekendEventsText}</p>
+                    </div>
 
-<div className="border-b border-black/10 pb-5">
-  <p className="text-sm uppercase tracking-[0.2em] text-black/45">
-    {t.bookingInstructionsTitle}
-  </p>
-  <p className="mt-3 leading-7 text-black/70">{t.bookingInstructionsText}</p>
+                    <div className="border-b border-black/10 pb-5">
+                      <p className="text-sm uppercase tracking-[0.2em] text-black/45">
+                        {t.bookingInstructionsTitle}
+                      </p>
+                      <p className="mt-3 leading-7 text-black/70">{t.bookingInstructionsText}</p>
 
-  <div className="mt-4 flex flex-col gap-3">
-    <a
-      href="/Cappuccina Country Resort Brochure.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-sm underline underline-offset-4 text-black/80 hover:text-black"
-    >
-      {t.brochureLinkLabel}
-    </a>
-    <a
-      href="/Cappuccina Country Resort Booking Form.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-sm underline underline-offset-4 text-black/80 hover:text-black"
-    >
-      {t.bookingFormLinkLabel}
-    </a>
-  </div>
-</div>
+                      <div className="mt-4 flex flex-col gap-3">
+                        <a
+                          href="/Cappuccina Country Resort Brochure.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm underline underline-offset-4 text-black/80 hover:text-black"
+                        >
+                          {t.brochureLinkLabel}
+                        </a>
+                        <a
+                          href="/Cappuccina Country Resort Booking Form.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm underline underline-offset-4 text-black/80 hover:text-black"
+                        >
+                          {t.bookingFormLinkLabel}
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
