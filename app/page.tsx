@@ -176,11 +176,11 @@ const translations: Record<'en' | 'de' | 'es', TranslationEntry> = {
     venueValue: 'Antica Fattoria di Paterno',
     locationValue: 'Tuscany, Italy',
     weekendStyleValue: 'Destination wedding with multiple events',
-    scheduleTag: 'Weekend Schedule',
-    scheduleTitle: 'What to expect',
+scheduleTag: 'Weekend Schedule',
+scheduleTitle: 'Weekend Schedule',
 scheduleSubtitle:
-  'Below is an overview of the wedding weekend. A detailed itinerary, including exact times and locations, will be shared closer to the wedding date.',
-      travelTag: 'Travel & Stay',
+  'Below you’ll find an overview of the wedding weekend. Exact times and locations will be shared closer to the celebration.',
+        travelTag: 'Travel & Stay',
     travelTitle: 'Getting there',
     accommodationTag: 'Accommodations',
     accommodationTitle: 'Hotel details coming soon',
@@ -326,20 +326,44 @@ travelNotes: [
 ],
     faqs: [
       {
+        q: 'Can I bring my children?',
+        a: 'While we love your little ones, our wedding weekend will be adults-only, with the exception of children in the wedding party. Thank you so much for understanding.',
+      },
+      {
+        q: 'Can I bring a plus one?',
+        a: 'If a guest has been reserved for you, it will be reflected on your invitation and RSVP. Unfortunately, we’re only able to accommodate the guests listed.',
+      },
+      {
         q: 'When should I arrive?',
-        a: 'We recommend arriving by Friday so you can enjoy the full wedding weekend. However, you may stay additional days before or after the wedding weekend by contacting the hotel.',
+        a: 'We recommend arriving by Friday afternoon so you can join us for the Welcome Dinner that evening.',
       },
       {
-        q: 'Is transportation being provided?',
-        a: 'Transportation details are still being finalized and will be added here once confirmed.',
+        q: 'When should I depart?',
+        a: 'Our Farewell Lunch & Pool Party will take place on Sunday, so we recommend departing on Monday if your schedule allows.',
       },
       {
-        q: 'Can I bring a plus-one?',
-        a: 'Your invitation will indicate exactly who is included in your party.',
+        q: 'Where should I stay?',
+        a: 'We recommend staying in or near San Gimignano, as our Friday and Sunday events will be held there. We have specially negotiated rates with our recommended hotel, Cappuccina Country Resort & Spa, and wedding-day transportation will be provided to and from this location. Please visit the Travel page for additional details.',
       },
       {
-        q: 'What should I wear?',
-        a: 'Dress code details will be shared here closer to the wedding date.',
+        q: 'Can I stay extra nights at the hotel before or after the wedding weekend?',
+        a: 'Yes. If you would like to extend your stay, you can indicate that on the booking form or speak directly with the hotel to adjust your reservation.',
+      },
+      {
+        q: 'Will transportation be provided on the wedding day?',
+        a: 'Yes. Transportation will be provided on the wedding day, with pick-up and drop-off at Cappuccina Country Resort & Spa.',
+      },
+      {
+        q: 'Can I drive myself to the wedding and weekend events?',
+        a: 'Yes. Parking will be available on site.',
+      },
+      {
+        q: 'Do I need a rental car?',
+        a: 'A rental car is recommended if you plan to explore Tuscany during your stay. Otherwise, we suggest arranging private transportation through your hotel or a local transfer company for travel between the airport and San Gimignano.',
+      },
+      {
+        q: 'When will RSVP be due?',
+        a: 'An RSVP deadline will be shared once formal invitations have been sent.',
       },
     ],
   },
@@ -376,11 +400,11 @@ travelNotes: [
     venueValue: 'Antica Fattoria di Paterno',
     locationValue: 'Toskana, Italien',
     weekendStyleValue: 'Destination Wedding mit mehreren Events',
-    scheduleTag: 'Wochenendablauf',
-    scheduleTitle: 'Was euch erwartet',
-    scheduleSubtitle:
-      'Ein vollständiger Ablaufplan mit genauen Uhrzeiten wird näher am Hochzeitstermin veröffentlicht.',
-    travelTag: 'Reise & Aufenthalt',
+scheduleTag: 'Wochenendablauf',
+scheduleTitle: 'Wochenendablauf',
+scheduleSubtitle:
+  'Unten findet ihr einen Überblick über das Hochzeitswochenende. Genaue Uhrzeiten und Orte werden näher an der Feier bekannt gegeben.',
+      travelTag: 'Reise & Aufenthalt',
     travelTitle: 'Anreise',
     accommodationTag: 'Unterkünfte',
     accommodationTitle: 'Hoteldetails folgen',
@@ -528,20 +552,44 @@ travelNotes: [
 ],
     faqs: [
       {
-        q: 'Wann sollten wir anreisen?',
-        a: 'Wir empfehlen eine Anreise bis Freitag, damit ihr das gesamte Hochzeitswochenende genießen könnt.',
-      },
-      {
-        q: 'Wird es einen Transport geben?',
-        a: 'Die Transportdetails werden derzeit finalisiert und hier ergänzt, sobald sie bestätigt sind.',
+        q: 'Können wir unsere Kinder mitbringen?',
+        a: 'So sehr wir eure Kleinen auch mögen, unser Hochzeitswochenende wird – mit Ausnahme der Kinder in der Hochzeitsgesellschaft – adults-only sein. Vielen Dank für euer Verständnis.',
       },
       {
         q: 'Darf ich eine Begleitperson mitbringen?',
-        a: 'Auf eurer Einladung wird genau angegeben, wer zu eurer Einladung gehört.',
+        a: 'Falls für euch eine Begleitperson vorgesehen ist, wird dies auf eurer Einladung und beim RSVP entsprechend angegeben. Leider können wir nur die dort aufgeführten Gäste berücksichtigen.',
       },
       {
-        q: 'Was soll ich anziehen?',
-        a: 'Details zum Dresscode werden näher am Hochzeitstermin veröffentlicht.',
+        q: 'Wann sollten wir anreisen?',
+        a: 'Wir empfehlen eine Anreise bis Freitagnachmittag, damit ihr am Abend beim Welcome Dinner dabei sein könnt.',
+      },
+      {
+        q: 'Wann sollten wir abreisen?',
+        a: 'Unser Farewell Lunch & Pool Party findet am Sonntag statt. Wenn es euer Zeitplan zulässt, empfehlen wir daher eine Abreise am Montag.',
+      },
+      {
+        q: 'Wo sollten wir übernachten?',
+        a: 'Wir empfehlen eine Unterkunft in oder bei San Gimignano, da unsere Veranstaltungen am Freitag und Sonntag dort stattfinden. Für unser empfohlenes Hotel, das Cappuccina Country Resort & Spa, haben wir Sonderkonditionen vereinbart. Der Hochzeitstransport wird ebenfalls von und zu diesem Hotel angeboten. Weitere Informationen findet ihr auf der Travel-Seite.',
+      },
+      {
+        q: 'Können wir vor oder nach dem Hochzeitswochenende zusätzliche Nächte im Hotel bleiben?',
+        a: 'Ja. Wenn ihr euren Aufenthalt verlängern möchtet, könnt ihr dies im Buchungsformular angeben oder direkt mit dem Hotel Kontakt aufnehmen, um eure Reservierung anzupassen.',
+      },
+      {
+        q: 'Wird es am Hochzeitstag einen Transport geben?',
+        a: 'Ja. Am Hochzeitstag wird ein Transport mit Abholung und Rückfahrt ab dem Cappuccina Country Resort & Spa angeboten.',
+      },
+      {
+        q: 'Können wir selbst zu den Veranstaltungen fahren?',
+        a: 'Ja. Parkplätze werden vor Ort verfügbar sein.',
+      },
+      {
+        q: 'Brauchen wir einen Mietwagen?',
+        a: 'Ein Mietwagen ist empfehlenswert, wenn ihr die Toskana während eures Aufenthalts erkunden möchtet. Andernfalls empfehlen wir, private Transfers über euer Hotel oder ein lokales Transferunternehmen zwischen dem Flughafen und San Gimignano zu organisieren.',
+      },
+      {
+        q: 'Bis wann müssen wir zusagen?',
+        a: 'Die RSVP-Frist wird mit dem Versand der formellen Einladungen bekannt gegeben.',
       },
     ],
   },
@@ -578,11 +626,11 @@ travelNotes: [
     venueValue: 'Antica Fattoria di Paterno',
     locationValue: 'Toscana, Italia',
     weekendStyleValue: 'Boda destino con varios eventos',
-    scheduleTag: 'Itinerario del fin de semana',
-    scheduleTitle: 'Qué esperar',
-    scheduleSubtitle:
-      'Un itinerario completo con horarios exactos se publicará más cerca de la boda.',
-    travelTag: 'Viaje y estadía',
+scheduleTag: 'Itinerario del fin de semana',
+scheduleTitle: 'Itinerario del Fin de Semana',
+scheduleSubtitle:
+  'A continuación encontrarán un resumen del fin de semana de la boda. Los horarios y lugares exactos se compartirán más cerca de la celebración.',
+      travelTag: 'Viaje y estadía',
     travelTitle: 'Cómo llegar',
     accommodationTag: 'Alojamiento',
     accommodationTitle: 'Próximamente detalles del hotel',
@@ -729,20 +777,44 @@ travelNotes: [
 ],
     faqs: [
       {
-        q: '¿Cuándo deberíamos llegar?',
-        a: 'Recomendamos llegar el viernes para poder disfrutar de todo el fin de semana de la boda.',
-      },
-      {
-        q: '¿Habrá transporte?',
-        a: 'Los detalles del transporte todavía se están definiendo y se añadirán aquí una vez confirmados.',
+        q: '¿Puedo llevar a mis hijos?',
+        a: 'Aunque queremos mucho a sus pequeños, nuestro fin de semana de boda será solo para adultos, con la excepción de los niños que formen parte del cortejo nupcial. Muchas gracias por su comprensión.',
       },
       {
         q: '¿Puedo llevar acompañante?',
-        a: 'Su invitación indicará exactamente quiénes están incluidos en su grupo.',
+        a: 'Si se les ha reservado un acompañante, aparecerá reflejado en su invitación y en el RSVP. Lamentablemente, solo podremos acomodar a los invitados que figuren allí.',
       },
       {
-        q: '¿Qué debo ponerme?',
-        a: 'Los detalles del código de vestimenta se compartirán más cerca de la fecha de la boda.',
+        q: '¿Cuándo deberíamos llegar?',
+        a: 'Recomendamos llegar el viernes por la tarde para que puedan acompañarnos en la Cena de Bienvenida esa noche.',
+      },
+      {
+        q: '¿Cuándo deberíamos regresar?',
+        a: 'Nuestro Almuerzo de Despedida y Pool Party será el domingo, por lo que recomendamos regresar el lunes si su horario se lo permite.',
+      },
+      {
+        q: '¿Dónde deberíamos hospedarnos?',
+        a: 'Recomendamos hospedarse en San Gimignano o sus alrededores, ya que nuestros eventos del viernes y domingo se celebrarán allí. Hemos negociado tarifas especiales con nuestro hotel recomendado, Cappuccina Country Resort & Spa, y el transporte del día de la boda saldrá y regresará a esta ubicación. Por favor visiten la página de Travel para más detalles.',
+      },
+      {
+        q: '¿Podemos quedarnos noches adicionales en el hotel antes o después del fin de semana de la boda?',
+        a: 'Sí. Si desean extender su estancia, pueden indicarlo en el formulario de reserva o comunicarse directamente con el hotel para ajustar su reservación.',
+      },
+      {
+        q: '¿Habrá transporte el día de la boda?',
+        a: 'Sí. El transporte del día de la boda incluirá recogida y regreso en Cappuccina Country Resort & Spa.',
+      },
+      {
+        q: '¿Podemos conducir nosotros mismos a la boda y a los eventos del fin de semana?',
+        a: 'Sí. Habrá estacionamiento disponible en el lugar.',
+      },
+      {
+        q: '¿Necesitamos alquilar un coche?',
+        a: 'Se recomienda alquilar un coche si planean explorar la Toscana durante su estancia. De lo contrario, sugerimos organizar transporte privado a través de su hotel o de una empresa local de traslados para moverse entre el aeropuerto y San Gimignano.',
+      },
+      {
+        q: '¿Cuándo será la fecha límite para confirmar asistencia?',
+        a: 'La fecha límite para confirmar asistencia se compartirá una vez que se hayan enviado las invitaciones formales.',
       },
     ],
   },
@@ -1119,35 +1191,35 @@ case 'home':
         );
       case 'schedule':
   return (
-    <section className="mx-auto max-w-6xl px-6 py-16 md:py-20">
-            <div className="grid gap-8 md:grid-cols-3">
-  {t.events.map((event) => (
-    <div key={event.title} className="border-b border-black/10 pb-6">
-      <p className="text-sm uppercase tracking-[0.25em] text-black/45">
-        {event.day}
-      </p>
-      <h3 className={`${cormorant.className} mt-3 text-2xl font-medium text-black`}>
-        {event.title}
-      </h3>
-      <p className="mt-4 text-sm font-medium text-black/45">{event.date}</p>
-      <p className="mt-1 text-sm font-medium text-black/45">{event.venue}</p>
-      {event.address && event.addressUrl ? (
-        <a
-          href={event.addressUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-1 block text-sm text-black/60 underline underline-offset-4 hover:text-black"
-        >
-          {event.address}
-        </a>
-      ) : null}
-      <p className="mt-3 text-sm font-medium text-black/45">{event.time}</p>
-      <p className="mt-5 leading-7 text-black/70">{event.description}</p>
-    </div>
-  ))}
-</div>
-          </section>
-        );
+    <PageShell title={t.scheduleTitle} subtitle={t.scheduleSubtitle}>
+      <div className="grid gap-8 md:grid-cols-3">
+        {t.events.map((event) => (
+          <div key={event.title} className="border-b border-black/10 pb-6">
+            <p className="text-sm uppercase tracking-[0.25em] text-black/45">
+              {event.day}
+            </p>
+            <h3 className={`${cormorant.className} mt-3 text-2xl font-medium text-black`}>
+              {event.title}
+            </h3>
+            <p className="mt-4 text-sm font-medium text-black/45">{event.date}</p>
+            <p className="mt-1 text-sm font-medium text-black/45">{event.venue}</p>
+            {event.address && event.addressUrl ? (
+              <a
+                href={event.addressUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 block text-sm text-black/60 underline underline-offset-4 hover:text-black"
+              >
+                {event.address}
+              </a>
+            ) : null}
+            <p className="mt-3 text-sm font-medium text-black/45">{event.time}</p>
+            <p className="mt-5 leading-7 text-black/70">{event.description}</p>
+          </div>
+        ))}
+      </div>
+    </PageShell>
+  );
 
      case 'registry':
   return (
@@ -1181,15 +1253,27 @@ case 'home':
         );
 
       case 'gallery':
-        return (
-          <PageShell title={t.galleryTitle} subtitle={t.galleryText}>
-            <div className="grid gap-5 md:grid-cols-3">
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <div key={item} className="h-64 border-b border-black/10 bg-[#F7F7F5]" />
-              ))}
-            </div>
-          </PageShell>
-        );
+  return (
+    <PageShell title={t.galleryTitle}>
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
+          <a
+            key={item}
+            href={`/gallery-${item}.jpg`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block overflow-hidden rounded-sm"
+          >
+            <img
+              src={`/gallery-${item}.jpg`}
+              alt={`Gallery image ${item}`}
+              className="aspect-[4/5] w-full object-cover transition duration-300 group-hover:opacity-95"
+            />
+          </a>
+        ))}
+      </div>
+    </PageShell>
+  );
 
             case 'things-to-do':
         return (
