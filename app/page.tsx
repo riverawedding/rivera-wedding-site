@@ -970,9 +970,6 @@ case 'home':
                 </div>
 
                 <div className="space-y-6">
-                  <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
-                    {t.whyStayTitle}
-                  </h3>
 
                   <div className="grid gap-6 md:grid-cols-2">
                     <div className="border-b border-black/10 pb-5">
