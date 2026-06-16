@@ -112,12 +112,26 @@ accommodationSectionTitle: string;  hotelName: string;
   thingsToDoTag: string;
   thingsToDoTitle: string;
   thingsToDoText: string;
-  wineTastingTitle: string;
-  wineTastingText: string;
-  historicTownsTitle: string;
-  historicTownsText: string;
-  foodViewsTitle: string;
-  foodViewsText: string;
+  highlightsLabel: string;
+  sanGimignanoTitle: string;
+  sanGimignanoText: string;
+  sanGimignanoHighlights: string;
+  florenceTitle: string;
+  florenceText: string;
+  florenceHighlights: string;
+  luccaTitle: string;
+  luccaText: string;
+  sienaTitle: string;
+  sienaText: string;
+  pisaTitle: string;
+  pisaText: string;
+  experiencesTitle: string;
+  experiencesList: string[];
+  foodsDrinksTitle: string;
+  foodsTitle: string;
+  foodsText: string;
+  drinksTitle: string;
+  drinksText: string;
   questionsTag: string;
   questionsTitle: string;
   footerLeft: string;
@@ -222,17 +236,44 @@ registryButton: 'View Our Registry',    weddingPartyTag: 'Wedding Party',
     galleryText:
       'Add engagement photos, travel memories, or favorite candid shots to make the site feel more personal.',
     thingsToDoTag: 'Things To Do',
-    thingsToDoTitle: 'Make a weekend of it',
+    thingsToDoTitle: 'Things to Do',
     thingsToDoText:
-      'This is the perfect place for winery suggestions, day trips, restaurants, scenic viewpoints, and nearby towns for guests to explore.',
-    wineTastingTitle: 'Wine Tasting',
-    wineTastingText: 'Recommend a few standout vineyards and tastings nearby.',
-    historicTownsTitle: 'Historic Towns',
-    historicTownsText:
-      'Highlight San Gimignano, Florence, and other favorite day trip options.',
-    foodViewsTitle: 'Food & Views',
-    foodViewsText: 'Point guests toward memorable meals, scenic terraces, and sunset spots.',
-    questionsTag: 'Questions',
+      'If you’re spending extra time in Tuscany, here are a few of our favorite nearby places and experiences to enjoy during your trip.',
+    highlightsLabel: 'Highlights',
+    sanGimignanoTitle: 'San Gimignano',
+    sanGimignanoText:
+      'Our home base for the wedding weekend, known for its medieval towers, beautiful views, Vernaccia wine, and gelato.',
+    sanGimignanoHighlights:
+      'Torre Grossa, Piazza della Cisterna, Vernaccia wine, and Gelateria Dondoli.',
+    florenceTitle: 'Florence',
+    florenceText:
+      'A city we’ve come to know well throughout the wedding planning process, filled with incredible art, architecture, shopping, and food.',
+    florenceHighlights:
+      'The Duomo, Ponte Vecchio, Uffizi Gallery, leather shopping, and rooftop aperitivos.',
+    luccaTitle: 'Lucca',
+    luccaText:
+      'A relaxed and charming walled city, perfect for strolling, biking, and enjoying a quieter side of Tuscany.',
+    sienaTitle: 'Siena',
+    sienaText:
+      'A beautiful medieval city full of history, charm, and classic Tuscan character.',
+    pisaTitle: 'Pisa',
+    pisaText:
+      'Much more than its famous tower, Pisa offers beautiful historic sites, riverside walks, and lively cafés.',
+    experiencesTitle: 'Experiences',
+    experiencesList: [
+      'Wine tastings',
+      'Cooking classes',
+      'Vespa tours',
+      'Hot air balloon rides',
+      'Truffle hunting',
+    ],
+    foodsDrinksTitle: 'Foods & Drinks to Try',
+    foodsTitle: 'Foods',
+    foodsText:
+      'Bistecca alla Fiorentina, pappardelle al cinghiale, pici cacio e pepe, pecorino Toscano, truffle dishes, gelato',
+    drinksTitle: 'Drinks',
+    drinksText:
+      'Chianti Classico, Vernaccia di San Gimignano, spritzes, and Negronis',    questionsTag: 'Questions',
     questionsTitle: 'Frequently asked questions',
     footerLeft: 'Daniella & Victor · May 15, 2027',
     footerRight: 'More details coming as the weekend plans are finalized.',
@@ -395,16 +436,45 @@ registryButton: 'Zur Geschenkeliste',
     galleryTitle: 'Ein paar Momente von uns',
     galleryText:
       'Fügt Verlobungsfotos, Reisemomente oder Lieblingsbilder hinzu, damit sich die Website persönlicher anfühlt.',
-    thingsToDoTag: 'Aktivitäten',
-    thingsToDoTitle: 'Macht ein ganzes Wochenende daraus',
+     thingsToDoTag: 'Aktivitäten',
+    thingsToDoTitle: 'Aktivitäten',
     thingsToDoText:
-      'Hier passen Empfehlungen für Weingüter, Tagesausflüge, Restaurants, Aussichtspunkte und nahegelegene Orte perfekt hinein.',
-    wineTastingTitle: 'Weinprobe',
-    wineTastingText: 'Empfehlt hier ein paar besondere Weingüter und Verkostungen in der Nähe.',
-    historicTownsTitle: 'Historische Orte',
-    historicTownsText: 'Hebt San Gimignano, Florenz und andere schöne Ausflugsziele hervor.',
-    foodViewsTitle: 'Kulinarik & Ausblicke',
-    foodViewsText: 'Gebt Tipps zu besonderen Restaurants, Terrassen und Sonnenuntergangs-Spots.',
+      'Wenn ihr etwas mehr Zeit in der Toskana verbringt, findet ihr hier einige unserer Lieblingsorte und Erlebnisse für euren Aufenthalt.',
+    highlightsLabel: 'Highlights',
+    sanGimignanoTitle: 'San Gimignano',
+    sanGimignanoText:
+      'Unser Ausgangspunkt für das Hochzeitswochenende, bekannt für mittelalterliche Türme, schöne Ausblicke, Vernaccia-Wein und Gelato.',
+    sanGimignanoHighlights:
+      'Torre Grossa, Piazza della Cisterna, Vernaccia-Wein und Gelateria Dondoli.',
+    florenceTitle: 'Florenz',
+    florenceText:
+      'Eine Stadt, die wir im Laufe der Hochzeitsplanung gut kennengelernt haben – voller beeindruckender Kunst, Architektur, Shopping und Kulinarik.',
+    florenceHighlights:
+      'Der Dom, Ponte Vecchio, die Uffizien, Leder-Shopping und Rooftop-Aperitivos.',
+    luccaTitle: 'Lucca',
+    luccaText:
+      'Eine entspannte und charmante Stadt mit Stadtmauer – ideal zum Spazierengehen, Radfahren und um eine ruhigere Seite der Toskana zu genießen.',
+    sienaTitle: 'Siena',
+    sienaText:
+      'Eine wunderschöne mittelalterliche Stadt voller Geschichte, Charme und typisch toskanischem Charakter.',
+    pisaTitle: 'Pisa',
+    pisaText:
+      'Pisa ist weit mehr als nur sein berühmter Turm und bietet schöne historische Sehenswürdigkeiten, Spaziergänge am Fluss und lebhafte Cafés.',
+    experiencesTitle: 'Erlebnisse',
+    experiencesList: [
+      'Weinverkostungen',
+      'Kochkurse',
+      'Vespa-Touren',
+      'Heißluftballonfahrten',
+      'Trüffelsuche',
+    ],
+    foodsDrinksTitle: 'Kulinarisches zum Probieren',
+    foodsTitle: 'Essen',
+    foodsText:
+      'Bistecca alla Fiorentina, Pappardelle al Cinghiale, Pici Cacio e Pepe, Pecorino Toscano, Trüffelgerichte, Gelato',
+    drinksTitle: 'Getränke',
+    drinksText:
+      'Chianti Classico, Vernaccia di San Gimignano, Spritzes und Negronis',
     questionsTag: 'Fragen',
     questionsTitle: 'Häufige Fragen',
     footerLeft: 'Daniella & Victor · 15. Mai 2027',
@@ -567,18 +637,45 @@ registryButton: 'Ver Nuestra Mesa de Regalos',
     galleryTitle: 'Algunos momentos de nosotros',
     galleryText:
       'Agrega fotos de compromiso, recuerdos de viajes o imágenes espontáneas favoritas para que el sitio se sienta más personal.',
-    thingsToDoTag: 'Qué hacer',
-    thingsToDoTitle: 'Conviertan esto en un fin de semana completo',
+     thingsToDoTag: 'Qué Hacer',
+    thingsToDoTitle: 'Qué Hacer',
     thingsToDoText:
-      'Este es el lugar perfecto para sugerencias de bodegas, excursiones, restaurantes, miradores y pueblos cercanos para explorar.',
-    wineTastingTitle: 'Cata de vinos',
-    wineTastingText: 'Recomienden algunas bodegas y degustaciones destacadas cerca de la zona.',
-    historicTownsTitle: 'Pueblos históricos',
-    historicTownsText: 'Destaquen San Gimignano, Florencia y otras excursiones favoritas.',
-    foodViewsTitle: 'Comida y vistas',
-    foodViewsText:
-      'Guíen a los invitados hacia comidas memorables, terrazas escénicas y lugares para ver el atardecer.',
-    questionsTag: 'Preguntas',
+      'Si van a pasar más tiempo en la Toscana, aquí tienen algunos de nuestros lugares y experiencias favoritas para disfrutar durante su viaje.',
+    highlightsLabel: 'Lo más destacado',
+    sanGimignanoTitle: 'San Gimignano',
+    sanGimignanoText:
+      'Nuestra base para el fin de semana de la boda, conocida por sus torres medievales, hermosas vistas, vino Vernaccia y gelato.',
+    sanGimignanoHighlights:
+      'Torre Grossa, Piazza della Cisterna, vino Vernaccia y Gelateria Dondoli.',
+    florenceTitle: 'Florencia',
+    florenceText:
+      'Una ciudad que hemos llegado a conocer bien durante el proceso de planificación de la boda, llena de arte, arquitectura, compras y comida increíble.',
+    florenceHighlights:
+      'El Duomo, Ponte Vecchio, la Galería Uffizi, compras de cuero y aperitivos en terrazas.',
+    luccaTitle: 'Lucca',
+    luccaText:
+      'Una ciudad amurallada, relajada y encantadora, perfecta para pasear, andar en bicicleta y disfrutar de un lado más tranquilo de la Toscana.',
+    sienaTitle: 'Siena',
+    sienaText:
+      'Una hermosa ciudad medieval llena de historia, encanto y el clásico carácter toscano.',
+    pisaTitle: 'Pisa',
+    pisaText:
+      'Mucho más que su famosa torre, Pisa ofrece hermosos sitios históricos, paseos junto al río y cafés animados.',
+    experiencesTitle: 'Experiencias',
+    experiencesList: [
+      'Catas de vino',
+      'Clases de cocina',
+      'Tours en Vespa',
+      'Paseos en globo aerostático',
+      'Búsqueda de trufas',
+    ],
+    foodsDrinksTitle: 'Comidas y Bebidas para Probar',
+    foodsTitle: 'Comidas',
+    foodsText:
+      'Bistecca alla Fiorentina, pappardelle al cinghiale, pici cacio e pepe, pecorino Toscano, platos con trufa, gelato',
+    drinksTitle: 'Bebidas',
+    drinksText:
+      'Chianti Classico, Vernaccia di San Gimignano, spritzes y Negronis', questionsTag:'Preguntas',
     questionsTitle: 'Preguntas frecuentes',
     footerLeft: 'Daniella & Victor · 15 de mayo de 2027',
     footerRight:
@@ -1021,8 +1118,8 @@ case 'home':
           </section>
         );
       case 'schedule':
-        return (
-          <PageShell title={t.scheduleTitle} subtitle={t.scheduleSubtitle}>
+  return (
+    <section className="mx-auto max-w-6xl px-6 py-16 md:py-20">
             <div className="grid gap-8 md:grid-cols-3">
   {t.events.map((event) => (
     <div key={event.title} className="border-b border-black/10 pb-6">
@@ -1049,7 +1146,7 @@ case 'home':
     </div>
   ))}
 </div>
-          </PageShell>
+          </section>
         );
 
      case 'registry':
@@ -1094,27 +1191,114 @@ case 'home':
           </PageShell>
         );
 
-      case 'things-to-do':
+            case 'things-to-do':
         return (
           <PageShell title={t.thingsToDoTitle} subtitle={t.thingsToDoText}>
-            <div className="grid gap-8 md:grid-cols-3">
-              <div className="border-b border-black/10 pb-6">
-                <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
-                  {t.wineTastingTitle}
-                </h3>
-                <p className="mt-3 leading-7 text-black/70">{t.wineTastingText}</p>
+            <div className="space-y-12">
+              <div className="grid gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-start">
+                <div>
+                  <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
+                    {t.sanGimignanoTitle}
+                  </h2>
+                  <p className="mt-6 text-base leading-7 text-black/70">
+                    {t.sanGimignanoText}
+                  </p>
+                  <p className="mt-4 text-base leading-7 text-black/70">
+                    <span className="font-medium text-black">{t.highlightsLabel}:</span>{' '}
+                    {t.sanGimignanoHighlights}
+                  </p>
+                </div>
+
+                <div className="md:-mt-6">
+                  <img
+                    src="/san-gimignano-1.jpg"
+                    alt="San Gimignano"
+                    className="h-[220px] w-full rounded-sm object-cover md:h-[280px]"
+                  />
+                </div>
               </div>
-              <div className="border-b border-black/10 pb-6">
-                <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
-                  {t.historicTownsTitle}
-                </h3>
-                <p className="mt-3 leading-7 text-black/70">{t.historicTownsText}</p>
+
+              <div className="grid gap-10 border-t border-black/10 pt-10 md:grid-cols-[1.05fr_0.95fr] md:items-start">
+                <div>
+                  <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
+                    {t.florenceTitle}
+                  </h2>
+                  <p className="mt-6 text-base leading-7 text-black/70">
+                    {t.florenceText}
+                  </p>
+                  <p className="mt-4 text-base leading-7 text-black/70">
+                    <span className="font-medium text-black">{t.highlightsLabel}:</span>{' '}
+                    {t.florenceHighlights}
+                  </p>
+                </div>
+
+                <div className="md:-mt-6">
+                  <img
+                    src="/florence.jpg"
+                    alt="Florence"
+                    className="h-[220px] w-full rounded-sm object-cover md:h-[280px]"
+                  />
+                </div>
               </div>
-              <div className="border-b border-black/10 pb-6">
-                <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
-                  {t.foodViewsTitle}
-                </h3>
-                <p className="mt-3 leading-7 text-black/70">{t.foodViewsText}</p>
+
+              <div className="grid gap-8 border-t border-black/10 pt-10 md:grid-cols-3">
+                <div className="border-b border-black/10 pb-6 md:border-b-0 md:pb-0">
+                  <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
+                    {t.luccaTitle}
+                  </h3>
+                  <p className="mt-3 leading-7 text-black/70">{t.luccaText}</p>
+                </div>
+
+                <div className="border-b border-black/10 pb-6 md:border-b-0 md:pb-0">
+                  <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
+                    {t.sienaTitle}
+                  </h3>
+                  <p className="mt-3 leading-7 text-black/70">{t.sienaText}</p>
+                </div>
+
+                <div className="border-b border-black/10 pb-6 md:border-b-0 md:pb-0">
+                  <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
+                    {t.pisaTitle}
+                  </h3>
+                  <p className="mt-3 leading-7 text-black/70">{t.pisaText}</p>
+                </div>
+              </div>
+
+              <div className="grid gap-10 border-t border-black/10 pt-10 md:grid-cols-2 md:gap-12">
+                <div className="border-b border-black/10 pb-6">
+                  <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
+                    {t.experiencesTitle}
+                  </h2>
+                  <ul className="mt-6 list-disc pl-6 text-base leading-7 text-black/70 marker:text-black/60">
+                    {t.experiencesList.map((item) => (
+                      <li key={item} className="pb-2">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="border-b border-black/10 pb-6">
+                  <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
+                    {t.foodsDrinksTitle}
+                  </h2>
+
+                  <div className="mt-6 space-y-5">
+                    <div>
+                      <h3 className="text-sm uppercase tracking-[0.2em] text-black/45">
+                        {t.foodsTitle}
+                      </h3>
+                      <p className="mt-3 leading-7 text-black/70">{t.foodsText}</p>
+                    </div>
+
+                    <div>
+                      <h3 className="text-sm uppercase tracking-[0.2em] text-black/45">
+                        {t.drinksTitle}
+                      </h3>
+                      <p className="mt-3 leading-7 text-black/70">{t.drinksText}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </PageShell>
