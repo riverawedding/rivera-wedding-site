@@ -916,14 +916,14 @@ function PageShell({
   children: React.ReactNode;
 }) {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+    <section className="mx-auto max-w-6xl px-6 pt-8 pb-16 md:pt-10 md:pb-20">
       <div className="max-w-3xl border-b border-black/10 pb-8">
         <h1 className={`${cormorant.className} text-4xl font-medium text-black md:text-5xl`}>
           {title}
         </h1>
         {subtitle ? <p className="mt-4 text-lg leading-8 text-black/70">{subtitle}</p> : null}
       </div>
-      <div className="mt-10">{children}</div>
+      <div className="mt-4">{children}</div>
     </section>
   );
 }
@@ -1380,13 +1380,13 @@ case 'home':
                   </p>
                 </div>
 
-                <div className="md:-mt-6">
-                  <img
-                    src="/san-gimignano-1.jpg"
-                    alt="San Gimignano"
-                    className="h-[220px] w-full rounded-sm object-cover md:h-[280px]"
-                  />
-                </div>
+                <div>
+  <img
+    src="/san-gimignano-1.jpg"
+    alt="San Gimignano"
+    className="h-[220px] w-full rounded-sm object-cover md:h-[280px]"
+  />
+</div>
               </div>
 
               <div className="grid gap-10 border-t border-black/10 pt-10 md:grid-cols-[1.05fr_0.95fr] md:items-start">
@@ -1514,7 +1514,7 @@ default:
     width={416}
     height={504}
     unoptimized
-    className="h-auto w-[62px] md:w-[102px]"
+    className="h-auto w-[44px] md:w-[66px]"
     priority
   />
 <p className={`${cormorant.className} mt-2 text-center text-4xl font-medium text-black md:text-5xl`}>
