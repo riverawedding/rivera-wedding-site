@@ -930,9 +930,23 @@ function PageShell({
 export default function WeddingWebsite() {
   const [language, setLanguage] = React.useState<LanguageCode>('en');
   const [page, setPage] = React.useState<PageKey>('home');
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-  const [timeLeft, setTimeLeft] = React.useState({
-  days: 0,
+const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+const [selectedGalleryIndex, setSelectedGalleryIndex] = React.useState<number | null>(null);
+
+const galleryImages = [
+  '/gallery-1.jpg',
+  '/gallery-2.jpg',
+  '/gallery-3.jpg',
+  '/gallery-4.jpg',
+  '/gallery-5.jpg',
+  '/gallery-6.jpg',
+  '/gallery-7.jpg',
+  '/gallery-8.jpg',
+  '/gallery-9.jpg',
+];
+
+const [timeLeft, setTimeLeft] = React.useState({
+    days: 0,
   hours: 0,
   minutes: 0,
   seconds: 0,
@@ -985,9 +999,36 @@ React.useEffect(() => {
   React.useEffect(() => {
     scrollToTop();
   }, [page]);
+  React.useEffect(() => {
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (selectedGalleryIndex === null) return;
+
+    if (event.key === 'Escape') closeGallery();
+    if (event.key === 'ArrowLeft') showPrevImage();
+    if (event.key === 'ArrowRight') showNextImage();
+  };
+
+  window.addEventListener('keydown', handleKeyDown);
+  return () => window.removeEventListener('keydown', handleKeyDown);
+}, [selectedGalleryIndex]);
 
 const t = translations[language];
 const navItems = getNavItems(t);
+
+const openGallery = (index: number) => setSelectedGalleryIndex(index);
+const closeGallery = () => setSelectedGalleryIndex(null);
+
+const showPrevImage = () => {
+  setSelectedGalleryIndex((prev) =>
+    prev === null ? 0 : (prev - 1 + galleryImages.length) % galleryImages.length
+  );
+};
+
+const showNextImage = () => {
+  setSelectedGalleryIndex((prev) =>
+    prev === null ? 0 : (prev + 1) % galleryImages.length
+  );
+};
 
   const goToPage = (nextPage: PageKey) => {
     if (nextPage === page) {
@@ -1255,22 +1296,68 @@ case 'home':
       case 'gallery':
   return (
     <PageShell title={t.galleryTitle}>
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-          <a
-            key={item}
-            href={`/gallery-${item}.jpg`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block overflow-hidden rounded-sm"
+      <div className="space-y-5">
+        <div className="grid gap-5 lg:grid-cols-[1.75fr_1fr] lg:items-stretch">
+          <button
+            type="button"
+            onClick={() => openGallery(0)}
+            className="overflow-hidden rounded-[18px] text-left"
           >
             <img
-              src={`/gallery-${item}.jpg`}
-              alt={`Gallery image ${item}`}
-              className="aspect-[4/5] w-full object-cover transition duration-300 group-hover:opacity-95"
+              src={galleryImages[0]}
+              alt="Gallery image 1"
+              className="h-[320px] w-full object-cover transition hover:opacity-95 lg:h-[500px]"
             />
-          </a>
-        ))}
+          </button>
+
+          <div className="grid gap-5">
+            {[1, 2, 3].map((index) => (
+              <button
+                key={index}
+                type="button"
+                onClick={() => openGallery(index)}
+                className="overflow-hidden rounded-[18px] text-left"
+              >
+                <img
+                  src={galleryImages[index]}
+                  alt={`Gallery image ${index + 1}`}
+                  className="h-[120px] w-full object-cover transition hover:opacity-95 sm:h-[145px] lg:h-[153px]"
+                />
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid gap-5 lg:grid-cols-[1.35fr_1fr] lg:items-stretch">
+          <div className="grid grid-cols-2 gap-5">
+            {[4, 5, 6, 7].map((index) => (
+              <button
+                key={index}
+                type="button"
+                onClick={() => openGallery(index)}
+                className="overflow-hidden rounded-[18px] text-left"
+              >
+                <img
+                  src={galleryImages[index]}
+                  alt={`Gallery image ${index + 1}`}
+                  className="h-[120px] w-full object-cover transition hover:opacity-95 sm:h-[145px] lg:h-[150px]"
+                />
+              </button>
+            ))}
+          </div>
+
+          <button
+            type="button"
+            onClick={() => openGallery(8)}
+            className="overflow-hidden rounded-[18px] text-left"
+          >
+            <img
+              src={galleryImages[8]}
+              alt="Gallery image 9"
+              className="h-[255px] w-full object-cover transition hover:opacity-95 sm:h-[300px] lg:h-[320px]"
+            />
+          </button>
+        </div>
       </div>
     </PageShell>
   );
@@ -1559,9 +1646,63 @@ default:
       </div>
     </div>
   )}
-</header>   {renderPage()}
+</header>
+      {renderPage()}
 
+      {selectedGalleryIndex !== null && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/80 px-4 py-8"
+          onClick={closeGallery}
+        >
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              closeGallery();
+            }}
+            className="absolute right-5 top-5 text-3xl text-white/90 hover:text-white"
+            aria-label="Close gallery"
+          >
+            ×
+          </button>
+
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              showPrevImage();
+            }}
+            className="absolute left-4 top-1/2 z-[101] -translate-y-1/2 rounded-full bg-white px-4 py-3 text-2xl text-black shadow-md hover:bg-white/90 md:left-8"
+            aria-label="Previous image"
+          >
+            ‹
+          </button>
+
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              showNextImage();
+            }}
+            className="absolute right-4 top-1/2 z-[101] -translate-y-1/2 rounded-full bg-white px-4 py-3 text-2xl text-black shadow-md hover:bg-white/90 md:right-8"
+            aria-label="Next image"
+          >
+            ›
+          </button>
+
+          <div
+            className="flex h-full items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={galleryImages[selectedGalleryIndex]}
+              alt={`Gallery image ${selectedGalleryIndex + 1}`}
+              className="max-h-[88vh] max-w-[88vw] rounded-sm object-contain shadow-2xl"
+            />
+          </div>
+        </div>
+      )}
 
     </div>
-      );
+  );
 }
