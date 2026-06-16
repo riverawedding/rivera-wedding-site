@@ -28,6 +28,7 @@ type NavLabels = {
   gallery: string;
   thingsToDo: string;
   faqs: string;
+  rsvp: string;
 };
 
 type TranslationEntry = {
@@ -42,6 +43,15 @@ type TranslationEntry = {
   celebrationTitle: string;
   celebrationText1: string;
   celebrationText2: string;
+  travelSubtitle: string;
+  rsvpTitle: string;
+  rsvpSubtitle: string;
+  rsvpBody: string;
+  rsvpButton: string;
+  countdownDays: string;
+  countdownHours: string;
+  countdownMinutes: string;
+  countdownSeconds: string;
   glance: string;
   date: string;
   venue: string;
@@ -59,6 +69,25 @@ type TranslationEntry = {
   accommodationTag: string;
   accommodationTitle: string;
   accommodationText: string;
+   homeBaseTitle: string;
+  homeBaseText: string;
+  airportsTitle: string;
+  airportsIntro: string;
+  transportationTitle: string;
+transportationNotes: string[];
+accommodationSectionTitle: string;  hotelName: string;
+  hotelIntro: string;
+  whyStayTitle: string;
+  specialRatesTitle: string;
+  specialRatesText: string;
+  bookingInstructionsTitle: string;
+  bookingInstructionsText: string;
+  brochureLinkLabel: string;
+  bookingFormLinkLabel: string;
+  weddingTransportationTitle: string;
+  weddingTransportationText: string;
+  weekendEventsTitle: string;
+  weekendEventsText: string;
   plannedAdditions: string;
   anchorHotel: string;
   overflowOptions: string;
@@ -110,6 +139,16 @@ const translations: Record<'en' | 'de' | 'es', TranslationEntry> = {
       'We’re so excited to celebrate with the people we love most. This website will be your home base for wedding weekend details, travel guidance, accommodations, and updates as everything comes together.',
     celebrationText2:
       'For now, save the date and start dreaming of an unforgettable weekend in Italy with us.',
+    travelSubtitle:
+      'We’ve gathered the key travel details for the wedding weekend in one place, including accommodations, transportation, airport recommendations, and booking information to help make your trip as smooth as possible.',
+    rsvpTitle: 'RSVP',
+    rsvpSubtitle: 'RSVP details will be shared closer to the wedding date.',
+    rsvpBody: 'Please check back later for updates.',
+    rsvpButton: 'RSVP',
+    countdownDays: 'Days',
+    countdownHours: 'Hours',
+    countdownMinutes: 'Minutes',
+    countdownSeconds: 'Seconds',
     glance: 'At a glance',
     date: 'Date',
     venue: 'Venue',
@@ -128,7 +167,37 @@ const translations: Record<'en' | 'de' | 'es', TranslationEntry> = {
     accommodationTag: 'Accommodations',
     accommodationTitle: 'Hotel details coming soon',
     accommodationText:
-      'We’re currently finalizing the best hotel setup for our guests. Once confirmed, this section will include where to stay, booking guidance, and any group rates or recommended nearby options.',
+      'We’ve gathered the key travel details for the wedding weekend in one place, including accommodations, transportation, airport recommendations, and booking information to help make your trip as smooth as possible.',
+    homeBaseTitle: 'Our Home Base: San Gimignano',
+    homeBaseText:
+      'San Gimignano, a historic hilltop town in the heart of Tuscany, will be our home base for the wedding weekend. Known for its medieval towers, cobblestone streets, and beautiful countryside views, it offers the perfect setting to experience the charm of Tuscany.',
+    airportsTitle: 'Airports',
+    airportsIntro:
+      'We typically recommend flying into Florence for the most convenient travel experience, but please feel free to choose whichever airport works best for your plans.',
+    transportationTitle: 'Transportation',
+    transportationNotes: [
+      'Complimentary transportation will be provided between Cappuccina Country Resort & Spa and Antica Fattoria di Paterno on the wedding day.',
+      'If you plan to explore Tuscany before or after the wedding weekend, we recommend renting a car, as taxis and rideshare services are limited in the area.',
+      'For airport transfer requests, you may reach out directly to the concierge team at Cappuccina or review other transportation options here.',
+    ],
+    accommodationSectionTitle: 'Accommodation',
+    hotelName: 'Cappuccina Country Resort & Spa',
+    hotelIntro:
+      'While there are many accommodation options in and around San Gimignano, Cappuccina Country Resort & Spa is our recommended hotel for the wedding weekend. The resort offers beautiful Tuscan countryside views, complimentary breakfast, a spa, and convenient access to all wedding festivities.',
+    whyStayTitle: 'Why Stay Here?',
+    specialRatesTitle: 'Special Guest Rates',
+    specialRatesText:
+      'We have secured special negotiated rates for our guests. Rooms are available on a first-come, first-served basis, so we encourage booking early.',
+    bookingInstructionsTitle: 'Booking Instructions',
+bookingInstructionsText:
+  'Please complete and submit the reservation form provided below to secure your room at the wedding rate.',    brochureLinkLabel: 'Cappuccina Country Resort Brochure',
+    bookingFormLinkLabel: 'Cappuccina Country Resort Booking Form',
+    weddingTransportationTitle: 'Wedding Transportation',
+    weddingTransportationText:
+      'Complimentary shuttles will be provided between Cappuccina Country Resort & Spa and Antica Fattoria di Paterno on the wedding day.',
+    weekendEventsTitle: 'Weekend Events',
+    weekendEventsText:
+      'Our Welcome Party and Pool Party will take place nearby, making Cappuccina Country Resort & Spa the most convenient place to stay throughout the wedding weekend.',
     plannedAdditions: 'Planned additions',
     anchorHotel: 'Anchor hotel',
     overflowOptions: 'Overflow options',
@@ -164,22 +233,22 @@ const translations: Record<'en' | 'de' | 'es', TranslationEntry> = {
     questionsTitle: 'Frequently asked questions',
     footerLeft: 'Daniella & Victor · May 15, 2027',
     footerRight: 'More details coming as the weekend plans are finalized.',
-    nav: {
-      home: 'Home',
-      travel: 'Travel',
-      schedule: 'Schedule',
-      registry: 'Registry',
-      weddingParty: 'Wedding Party',
-      gallery: 'Gallery',
-      thingsToDo: 'Things To Do',
-      faqs: 'FAQs',
-    },
-    travelNotes: [
-      'Nearest major airport options will be shared here once travel logistics are finalized.',
-      'Hotel recommendations and room block details will be added as soon as they are confirmed.',
-      'Transportation guidance for the wedding day will be listed here for guests staying nearby.',
-    ],
-    events: [
+nav: {
+  home: 'Home',
+  travel: 'Travel',
+  schedule: 'Schedule',
+  registry: 'Registry',
+  weddingParty: 'Wedding Party',
+  gallery: 'Gallery',
+  thingsToDo: 'Things To Do',
+  faqs: 'FAQs',
+  rsvp: 'RSVP',
+},
+travelNotes: [
+  'Florence Airport (FLR) — approximately 45 minutes away.',
+  'Pisa International Airport (PSA) — approximately 1 hour away.',
+  'Rome Fiumicino Airport (FCO) — approximately 3 hours away.',
+],    events: [
       {
         day: 'Friday',
         title: 'Welcome Event',
@@ -205,7 +274,7 @@ const translations: Record<'en' | 'de' | 'es', TranslationEntry> = {
     faqs: [
       {
         q: 'When should I arrive?',
-        a: 'We recommend arriving by Friday so you can enjoy the full wedding weekend.',
+        a: 'We recommend arriving by Friday so you can enjoy the full wedding weekend. However, you may stay additional days before or after the wedding weekend by contacting the hotel.',
       },
       {
         q: 'Is transportation being provided?',
@@ -235,6 +304,16 @@ const translations: Record<'en' | 'de' | 'es', TranslationEntry> = {
       'Wir freuen uns sehr, dieses besondere Wochenende mit den Menschen zu feiern, die wir lieben. Diese Website ist eure zentrale Anlaufstelle für alle Details rund um das Hochzeitswochenende, die Reiseplanung, Unterkünfte und weitere Updates.',
     celebrationText2:
       'Merkt euch das Datum schon jetzt und freut euch mit uns auf ein unvergessliches Wochenende in Italien.',
+    travelSubtitle:
+      'Wir haben alle wichtigen Reisedetails für das Hochzeitswochenende an einem Ort zusammengestellt, einschließlich Unterkünften, Transportinformationen, Flughafenvorschlägen und Buchungshinweisen, um eure Reise so reibungslos wie möglich zu gestalten.',
+    rsvpTitle: 'Antwort',
+    rsvpSubtitle: 'Die RSVP-Details werden näher am Hochzeitstermin bekannt gegeben.',
+    rsvpBody: 'Bitte schauen Sie später noch einmal vorbei, um Updates zu erhalten.',
+    rsvpButton: 'Antwort',
+    countdownDays: 'Tage',
+    countdownHours: 'Stunden',
+    countdownMinutes: 'Minuten',
+    countdownSeconds: 'Sekunden',
     glance: 'Auf einen Blick',
     date: 'Datum',
     venue: 'Location',
@@ -253,7 +332,37 @@ const translations: Record<'en' | 'de' | 'es', TranslationEntry> = {
     accommodationTag: 'Unterkünfte',
     accommodationTitle: 'Hoteldetails folgen',
     accommodationText:
-      'Wir finalisieren gerade die beste Hotelaufteilung für unsere Gäste. Sobald alles bestätigt ist, findet ihr hier Übernachtungsmöglichkeiten, Buchungshinweise und empfohlene Hotels in der Nähe.',
+      'Wir haben alle wichtigen Reisedetails für das Hochzeitswochenende an einem Ort zusammengestellt, darunter Unterkünfte, Transportinformationen, Flughafenvorschläge und Buchungshinweise, um eure Reise so reibungslos wie möglich zu gestalten.',
+    homeBaseTitle: 'Unser Ausgangspunkt: San Gimignano',
+    homeBaseText:
+      'San Gimignano, eine historische Hügellandschaftsstadt im Herzen der Toskana, wird unser Ausgangspunkt für das Hochzeitswochenende sein. Bekannt für ihre mittelalterlichen Türme, gepflasterten Straßen und wunderschönen Ausblicke auf die toskanische Landschaft, bietet sie den perfekten Rahmen, um den Charme der Toskana zu erleben.',
+    airportsTitle: 'Flughäfen',
+    airportsIntro:
+      'Für die einfachste Anreise empfehlen wir in der Regel einen Flug nach Florenz, aber selbstverständlich könnt ihr auch den Flughafen wählen, der am besten zu euren Reiseplänen passt.',
+    transportationTitle: 'Transport',
+    transportationNotes: [
+      'Am Hochzeitstag wird ein kostenloser Transfer zwischen dem Cappuccina Country Resort & Spa und Antica Fattoria di Paterno angeboten.',
+      'Wenn ihr die Toskana vor oder nach dem Hochzeitswochenende erkunden möchtet, empfehlen wir einen Mietwagen, da Taxis und Fahrdienste in der Gegend nur eingeschränkt verfügbar sind.',
+      'Für Flughafentransfers könnt ihr euch direkt an das Concierge-Team von Cappuccina wenden oder hier weitere Transportmöglichkeiten ansehen.',
+    ],
+    accommodationSectionTitle: 'Unterkunft',
+    hotelName: 'Cappuccina Country Resort & Spa',
+    hotelIntro:
+      'Obwohl es viele Unterkunftsmöglichkeiten in und um San Gimignano gibt, ist das Cappuccina Country Resort & Spa unser empfohlenes Hotel für das Hochzeitswochenende. Das Resort bietet einen wunderschönen Blick auf die toskanische Landschaft, Frühstück inklusive, ein Spa und eine praktische Lage in der Nähe aller Hochzeitsveranstaltungen.',
+    whyStayTitle: 'Warum hier übernachten?',
+    specialRatesTitle: 'Sonderkonditionen für Gäste',
+    specialRatesText:
+      'Wir haben für unsere Gäste spezielle ausgehandelte Raten gesichert. Die Zimmer werden nach dem Prinzip „first come, first served“ vergeben, daher empfehlen wir eine frühzeitige Buchung.',
+    bookingInstructionsTitle: 'Buchungshinweise',
+bookingInstructionsText:
+  'Bitte füllt das untenstehende Reservierungsformular aus und sendet es ab, um euer Zimmer zum Hochzeitsrabatt zu sichern.',    brochureLinkLabel: 'Cappuccina Country Resort Broschüre',
+    bookingFormLinkLabel: 'Cappuccina Country Resort Buchungsformular',
+    weddingTransportationTitle: 'Hochzeitstransport',
+    weddingTransportationText:
+      'Am Hochzeitstag wird ein kostenloser Shuttle zwischen dem Cappuccina Country Resort & Spa und Antica Fattoria di Paterno angeboten.',
+    weekendEventsTitle: 'Wochenendveranstaltungen',
+    weekendEventsText:
+      'Unsere Welcome Party und Pool Party finden in der Nähe statt, sodass das Cappuccina Country Resort & Spa die bequemste Unterkunft für das gesamte Hochzeitswochenende ist.',
     plannedAdditions: 'Geplante Ergänzungen',
     anchorHotel: 'Haupthotel',
     overflowOptions: 'Weitere Optionen',
@@ -288,22 +397,22 @@ const translations: Record<'en' | 'de' | 'es', TranslationEntry> = {
     questionsTitle: 'Häufige Fragen',
     footerLeft: 'Daniella & Victor · 15. Mai 2027',
     footerRight: 'Weitere Details folgen, sobald die Wochenendplanung finalisiert ist.',
-    nav: {
-      home: 'Startseite',
-      travel: 'Reise',
-      schedule: 'Ablauf',
-      registry: 'Geschenkeliste',
-      weddingParty: 'Hochzeitsgesellschaft',
-      gallery: 'Galerie',
-      thingsToDo: 'Aktivitäten',
-      faqs: 'FAQs',
-    },
-    travelNotes: [
-      'Die nächstgelegenen großen Flughäfen werden hier geteilt, sobald die Reiseplanung finalisiert ist.',
-      'Hotelempfehlungen und Informationen zu Zimmerkontingenten werden ergänzt, sobald sie bestätigt sind.',
-      'Hinweise zur Anreise am Hochzeitstag werden hier für Gäste in der Umgebung veröffentlicht.',
-    ],
-    events: [
+nav: {
+  home: 'Startseite',
+  travel: 'Reise',
+  schedule: 'Ablauf',
+  registry: 'Geschenkeliste',
+  weddingParty: 'Hochzeitsgesellschaft',
+  gallery: 'Galerie',
+  thingsToDo: 'Aktivitäten',
+  faqs: 'FAQs',
+  rsvp: 'Antwort',
+},
+travelNotes: [
+  'Flughafen Florenz (FLR) — etwa 45 Minuten entfernt.',
+  'Pisa International Airport (PSA) — etwa 1 Stunde entfernt.',
+  'Rom Fiumicino (FCO) — etwa 3 Stunden entfernt.',
+],    events: [
       {
         day: 'Freitag',
         title: 'Willkommensevent',
@@ -359,6 +468,16 @@ const translations: Record<'en' | 'de' | 'es', TranslationEntry> = {
       'Estamos muy emocionados de celebrar con las personas que más queremos. Este sitio será su punto principal para encontrar detalles del fin de semana de la boda, guía de viaje, hospedaje y actualizaciones a medida que todo vaya tomando forma.',
     celebrationText2:
       'Por ahora, reserven la fecha y comiencen a imaginar un fin de semana inolvidable en Italia con nosotros.',
+    travelSubtitle:
+      'Hemos reunido toda la información clave de viaje para el fin de semana de la boda en un solo lugar, incluyendo alojamiento, transporte, recomendaciones de aeropuertos e instrucciones de reserva para que su viaje sea lo más sencillo posible.',
+    rsvpTitle: 'RSVP',
+    rsvpSubtitle: 'Los detalles para confirmar asistencia se compartirán más cerca de la fecha de la boda.',
+    rsvpBody: 'Por favor, vuelve a consultar más adelante para ver actualizaciones.',
+    rsvpButton: 'RSVP',
+    countdownDays: 'Días',
+    countdownHours: 'Horas',
+    countdownMinutes: 'Minutos',
+    countdownSeconds: 'Segundos',
     glance: 'Resumen',
     date: 'Fecha',
     venue: 'Lugar',
@@ -374,16 +493,45 @@ const translations: Record<'en' | 'de' | 'es', TranslationEntry> = {
       'Un itinerario completo con horarios exactos se publicará más cerca de la boda.',
     travelTag: 'Viaje y estadía',
     travelTitle: 'Cómo llegar',
-    accommodationTag: 'Hospedaje',
-    accommodationTitle: 'Detalles del hotel próximamente',
+    accommodationTag: 'Alojamiento',
+    accommodationTitle: 'Próximamente detalles del hotel',
     accommodationText:
-      'Actualmente estamos definiendo la mejor opción de hospedaje para nuestros invitados. Una vez confirmado, esta sección incluirá dónde hospedarse, cómo reservar y cualquier tarifa grupal u opciones cercanas recomendadas.',
+      'Hemos reunido toda la información clave de viaje para el fin de semana de la boda en un solo lugar, incluyendo alojamiento, transporte, recomendaciones de aeropuertos e instrucciones de reserva para que su viaje sea lo más sencillo posible.',
+    homeBaseTitle: 'Nuestra Base: San Gimignano',
+    homeBaseText:
+      'San Gimignano, un histórico pueblo medieval en lo alto de una colina en el corazón de la Toscana, será nuestra base durante el fin de semana de la boda. Conocido por sus torres medievales, calles empedradas y hermosas vistas al campo toscano, ofrece el entorno perfecto para disfrutar del encanto de la Toscana.',
+    airportsTitle: 'Aeropuertos',
+    airportsIntro:
+      'Normalmente recomendamos volar a Florencia por ser la opción más conveniente, aunque pueden elegir el aeropuerto que mejor se ajuste a sus planes de viaje.',
+    transportationTitle: 'Transporte',
+    transportationNotes: [
+      'Se ofrecerá transporte de cortesía entre Cappuccina Country Resort & Spa y Antica Fattoria di Paterno el día de la boda.',
+      'Si planean explorar la Toscana antes o después del fin de semana de la boda, recomendamos alquilar un coche, ya que los taxis y servicios de transporte compartido son limitados en la zona.',
+      'Para solicitar traslados desde el aeropuerto, pueden comunicarse directamente con el equipo de concierge de Cappuccina o consultar otras opciones de transporte aquí.',
+    ],
+    accommodationSectionTitle: 'Alojamiento',
+    hotelName: 'Cappuccina Country Resort & Spa',
+    hotelIntro:
+      'Aunque hay muchas opciones de alojamiento en San Gimignano y sus alrededores, Cappuccina Country Resort & Spa es nuestro hotel recomendado para el fin de semana de la boda. El resort ofrece hermosas vistas al campo toscano, desayuno incluido, spa y acceso conveniente a todas las celebraciones de la boda.',
+    whyStayTitle: '¿Por Qué Hospedarse Aquí?',
+    specialRatesTitle: 'Tarifas Especiales para Invitados',
+    specialRatesText:
+      'Hemos conseguido tarifas especiales negociadas para nuestros invitados. Las habitaciones estarán disponibles por orden de reserva, por lo que recomendamos reservar con anticipación.',
+    bookingInstructionsTitle: 'Instrucciones de Reserva',
+bookingInstructionsText:
+  'Por favor completen y envíen el formulario de reserva que aparece a continuación para asegurar su habitación con la tarifa de la boda.',    brochureLinkLabel: 'Folleto de Cappuccina Country Resort',
+    bookingFormLinkLabel: 'Formulario de Reserva de Cappuccina Country Resort',
+    weddingTransportationTitle: 'Transporte para la Boda',
+    weddingTransportationText:
+      'Se ofrecerán traslados de cortesía entre Cappuccina Country Resort & Spa y Antica Fattoria di Paterno el día de la boda.',
+    weekendEventsTitle: 'Eventos del Fin de Semana',
+    weekendEventsText:
+      'Nuestra Fiesta de Bienvenida y Pool Party se llevarán a cabo cerca, lo que convierte a Cappuccina Country Resort & Spa en el lugar más conveniente para hospedarse durante todo el fin de semana de la boda.',
     plannedAdditions: 'Próximamente',
     anchorHotel: 'Hotel principal',
     overflowOptions: 'Opciones adicionales',
     shuttleDetails: 'Detalles del transporte',
-    townGuide: 'Guía del pueblo cercano',
-    registryTag: 'Mesa de regalos',
+    townGuide: 'Guía del pueblo cercano',    registryTag: 'Mesa de regalos',
     registryTitle: 'Detalles de la mesa de regalos próximamente',
     registryText:
       'Si compartimos una mesa de regalos, la información aparecerá aquí. Lo más importante para nosotros es celebrar este fin de semana en la Toscana con ustedes.',
@@ -414,22 +562,22 @@ const translations: Record<'en' | 'de' | 'es', TranslationEntry> = {
     footerLeft: 'Daniella & Victor · 15 de mayo de 2027',
     footerRight:
       'Pronto compartiremos más detalles a medida que se finalice la planificación del fin de semana.',
-    nav: {
-      home: 'Inicio',
-      travel: 'Viaje',
-      schedule: 'Itinerario',
-      registry: 'Mesa de regalos',
-      weddingParty: 'Cortejo nupcial',
-      gallery: 'Galería',
-      thingsToDo: 'Qué hacer',
-      faqs: 'Preguntas',
-    },
-    travelNotes: [
-      'Las opciones de aeropuertos principales más cercanos se compartirán aquí una vez que se definan los detalles del viaje.',
-      'Las recomendaciones de hoteles y detalles de bloque de habitaciones se añadirán tan pronto como estén confirmados.',
-      'La guía de transporte para el día de la boda aparecerá aquí para los invitados que se hospeden cerca.',
-    ],
-    events: [
+nav: {
+  home: 'Inicio',
+  travel: 'Viaje',
+  schedule: 'Agenda',
+  registry: 'Registro',
+  weddingParty: 'Cortejo',
+  gallery: 'Galería',
+  thingsToDo: 'Qué Hacer',
+  faqs: 'FAQs',
+  rsvp: 'RSVP',
+},
+travelNotes: [
+  'Aeropuerto de Florencia (FLR) — aproximadamente a 45 minutos.',
+  'Aeropuerto Internacional de Pisa (PSA) — aproximadamente a 1 hora.',
+  'Roma Fiumicino (FCO) — aproximadamente a 3 horas.',
+],    events: [
       {
         day: 'Viernes',
         title: 'Evento de bienvenida',
@@ -482,7 +630,8 @@ type PageKey =
   | 'wedding-party'
   | 'gallery'
   | 'things-to-do'
-  | 'faqs';
+  | 'faqs'
+  | 'rsvp';
 
 type LanguageButton = {
   code: LanguageCode;
@@ -502,10 +651,10 @@ function getNavItems(t: TranslationEntry): { id: PageKey; label: string }[] {
     { id: 'travel', label: t.nav.travel },
     { id: 'schedule', label: t.nav.schedule },
     { id: 'registry', label: t.nav.registry },
-    { id: 'wedding-party', label: t.nav.weddingParty },
     { id: 'gallery', label: t.nav.gallery },
     { id: 'things-to-do', label: t.nav.thingsToDo },
     { id: 'faqs', label: t.nav.faqs },
+    { id: 'rsvp', label: t.nav.rsvp },
   ];
 }
 
@@ -519,6 +668,7 @@ function isPageKey(value: string): value is PageKey {
     'gallery',
     'things-to-do',
     'faqs',
+    'rsvp',
   ].includes(value);
 }
 
@@ -580,10 +730,8 @@ function PageShell({
 }
 export default function WeddingWebsite() {
   const [language, setLanguage] = React.useState<LanguageCode>('en');
-  const [page, setPage] = React.useState<PageKey>(getInitialPage());
+  const [page, setPage] = React.useState<PageKey>('home');
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-  const [menuOpen, setMenuOpen] = React.useState(false);
-  const [showHeaderMenu, setShowHeaderMenu] = React.useState(true);
   const [timeLeft, setTimeLeft] = React.useState({
   days: 0,
   hours: 0,
@@ -592,7 +740,7 @@ export default function WeddingWebsite() {
 });
 
 React.useEffect(() => {
-  const targetDate = new Date('2027-05-15T09:30:00-04:00');
+  const targetDate = new Date('2027-05-15T15:30:00+02:00');
 
   const updateCountdown = () => {
     const now = new Date();
@@ -619,44 +767,30 @@ React.useEffect(() => {
   updateCountdown();
   const interval = setInterval(updateCountdown, 1000);
 
-  return () => clearInterval(interval);
+return () => clearInterval(interval);
 }, []);
-  React.useEffect(() => {
-    const onHashChange = () => {
-      setPage(getInitialPage());
-      scrollToTop();
-    };
-
-    window.addEventListener('hashchange', onHashChange);
-    return () => window.removeEventListener('hashchange', onHashChange);
-  }, []);
 
 React.useEffect(() => {
-  const handleScroll = () => {
-    setShowHeaderMenu(window.scrollY < 40);
-    if (window.scrollY >= 40) {
-      setMenuOpen(false);
-      setMobileMenuOpen(false);
-    }
+  setPage(getInitialPage());
+}, []);
+
+React.useEffect(() => {
+  const onHashChange = () => {
+    setPage(getInitialPage());
+    scrollToTop();
   };
 
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll();
-
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-  };
+  window.addEventListener('hashchange', onHashChange);
+  return () => window.removeEventListener('hashchange', onHashChange);
 }, []);
   React.useEffect(() => {
     scrollToTop();
   }, [page]);
 
-  const t = translations[language];
-  const navItems = getNavItems(t);
+const t = translations[language];
+const navItems = getNavItems(t);
 
   const goToPage = (nextPage: PageKey) => {
-    setMenuOpen(false);
-
     if (nextPage === page) {
       scrollToTop();
       return;
@@ -668,99 +802,204 @@ React.useEffect(() => {
 
   const renderPage = () => {
     switch (page) {
-      case 'home':
-        return (
-          <>
-<section className="mx-auto max-w-6xl px-6 pt-8 md:pt-10">
-  <div className="mx-auto w-full max-w-[760px] overflow-hidden rounded-sm shadow-sm">
-    <img
-      src="/header-right.jpg"
-      alt="Hero image"
-className="h-[305px] w-full object-cover [object-position:50%_82%] md:h-[460px]"
-    />
-  </div>
-</section>
+case 'home':
+  return (
+    <>
+      <section className="mx-auto max-w-6xl px-6 pt-8 pb-10 md:pt-12 md:pb-14">
+        <div className="grid gap-10 md:grid-cols-[1fr_1.15fr] md:items-center">
+          <div className="order-2 md:order-1">
+   <h1 className={`${cormorant.className} text-4xl font-medium leading-[0.95] text-black md:text-6xl`}>
+  {t.locationValue}
+</h1>
+<p className={`${cormorant.className} mt-3 text-xl font-medium text-black/75 md:text-2xl`}>
+  {t.dateValue}
+</p>
 
-<section className="mx-auto max-w-5xl px-6 pt-4 pb-10">
-  <div className="text-center">
-    <p className={`${cormorant.className} text-4xl font-medium text-black md:text-5xl`}>
-      Tuscany, Italy
-    </p>
-    <p className="mt-3 font-serif italic text-base text-black/75 md:text-lg">
-      May 15, 2027
-    </p>
-    <div className="mt-2 flex justify-center">
-      <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
-        <div className="px-2 py-2 text-center">
-          <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.days}</p>
-          <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Days</p>
-        </div>
-        <div className="px-2 py-2 text-center">
-          <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.hours}</p>
-          <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Hours</p>
-        </div>
-        <div className="px-2 py-2 text-center">
-          <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.minutes}</p>
-          <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Minutes</p>
-        </div>
-        <div className="px-2 py-2 text-center">
-          <p className="text-lg font-serif text-black md:text-2xl">{timeLeft.seconds}</p>
-          <p className="mt-1 text-[9px] uppercase tracking-[0.15em] text-black/70">Seconds</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<p className="mt-6 max-w-[540px] text-[15px] leading-7 text-black/70">
+  {t.celebrationText1}
+</p>
 
-          </>
-        );
+            <div className="mt-7 flex flex-wrap items-center gap-4">
+<a
+  href="#rsvp"
+  className="inline-flex items-center justify-center rounded-sm border border-black bg-black px-6 py-3 text-sm font-medium tracking-[0.08em] text-white transition hover:opacity-90"
+>
+  {t.rsvpButton}
+</a>
+            </div>
 
+            <div className="mt-8">
+              <div className="grid max-w-[420px] grid-cols-4 gap-3">
+                <div className="text-center">
+                  <p className="text-2xl font-serif text-black md:text-3xl">{timeLeft.days}</p>
+                  <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-black/55">{t.countdownDays}</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-2xl font-serif text-black md:text-3xl">{timeLeft.hours}</p>
+                  <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-black/55">{t.countdownHours}</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-2xl font-serif text-black md:text-3xl">{timeLeft.minutes}</p>
+                  <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-black/55">{t.countdownMinutes}</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-2xl font-serif text-black md:text-3xl">{timeLeft.seconds}</p>
+                  <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-black/55">{t.countdownSeconds}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="order-1 md:order-2">
+            <div className="mx-auto w-full max-w-[760px] overflow-hidden rounded-sm shadow-sm">
+              <img
+                src="/header-right.jpg"
+                alt="Hero image"
+                className="h-[340px] w-full object-cover [object-position:50%_82%] md:h-[520px]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
       case 'travel':
         return (
-          <PageShell title={t.travelTitle} subtitle={t.accommodationText}>
-            <div className="grid gap-12 md:grid-cols-2">
-              <div>
-                <p className="text-sm uppercase tracking-[0.3em] text-black/45">
-                  {t.travelTag}
-                </p>
-                <h2 className={`${cormorant.className} mt-3 text-3xl font-medium text-black md:text-4xl`}>
-                  {t.travelTitle}
-                </h2>
-                <ul className="mt-8 space-y-5 text-base leading-7 text-black/70">
-                  {t.travelNotes.map((note) => (
-                    <li key={note} className="flex gap-3 border-b border-black/10 pb-5">
-                      <span className="mt-2 h-2 w-2 rounded-full bg-black/60" />
-                      <span>{note}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <section className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+<div className="grid gap-12">
+  <div className="grid gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-start">
+    <div>
+      <p className="text-sm uppercase tracking-[0.3em] text-black/45">
+        {t.travelTag}
+      </p>
+      <h2 className={`${cormorant.className} mt-3 text-3xl font-medium text-black md:text-4xl`}>
+        {t.homeBaseTitle}
+      </h2>
+      <p className="mt-6 text-base leading-7 text-black/70">
+        {t.homeBaseText}
+      </p>
+    </div>
 
-              <div>
-                <p className="text-sm uppercase tracking-[0.3em] text-black/45">
-                  {t.accommodationTag}
-                </p>
-                <h2 className={`${cormorant.className} mt-3 text-3xl font-medium text-black md:text-4xl`}>
-                  {t.accommodationTitle}
-                </h2>
-                <div className="mt-8 space-y-4">
-                  <div className="border-b border-black/10 pb-4">
-                    <p className="text-sm uppercase tracking-[0.2em] text-black/45">
-                      {t.plannedAdditions}
-                    </p>
-                  </div>
-                  <div className="grid gap-3 sm:grid-cols-2">
-                    <div className="border-b border-black/10 pb-3 text-black/75">{t.anchorHotel}</div>
-                    <div className="border-b border-black/10 pb-3 text-black/75">{t.overflowOptions}</div>
-                    <div className="border-b border-black/10 pb-3 text-black/75">{t.shuttleDetails}</div>
-                    <div className="border-b border-black/10 pb-3 text-black/75">{t.townGuide}</div>
+    <div className="md:-mt-6">
+  <img
+    src="/sangimignano.jpg"
+    alt="San Gimignano"
+    className="h-[220px] w-full rounded-sm object-cover md:h-[280px]"
+  />
+</div>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-2">
+    <div>
+      <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
+        {t.airportsTitle}
+      </h2>
+      <p className="mt-4 text-base leading-7 text-black/70">
+        {t.airportsIntro}
+      </p>
+ <ul className="mt-6 list-disc pl-6 text-base leading-7 text-black/70 marker:text-black/60">
+  {t.travelNotes.map((note, index) => (
+    <li
+      key={note}
+      className={index !== t.travelNotes.length - 1 ? 'border-b border-black/10 pb-4 mb-4' : ''}
+    >
+      {note}
+    </li>
+  ))}
+</ul>
+    </div>
+
+    <div>
+      <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
+        {t.transportationTitle}
+      </h2>
+ <ul className="mt-8 list-disc pl-6 text-base leading-7 text-black/70 marker:text-black/60">
+  {t.transportationNotes.map((note, index) => (
+    <li
+      key={note}
+      className={index !== t.transportationNotes.length - 1 ? 'border-b border-black/10 pb-4 mb-4' : ''}
+    >
+      {note}
+    </li>
+  ))}
+</ul>
+    </div>
+  </div>
+
+  <div className="border-t border-black/10 pt-2">
+<h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
+  {t.accommodationSectionTitle}
+</h2>
+
+  <div className="mt-1 grid gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-center">
+    <div>
+      <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
+        {t.hotelName}
+      </h3>
+      <p className="mt-4 leading-7 text-black/70">{t.hotelIntro}</p>
+    </div>
+
+    <div className="md:-mt-8">
+  <img
+    src="/cappuccina.jpg"
+    alt="Cappuccina Country Resort & Spa"
+    className="h-[220px] w-full rounded-sm object-cover md:h-[280px]"
+  />
+</div>
+  </div>
+
+                <div className="mt-6">
+  <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
+    {t.whyStayTitle}
+  </h3>
+
+                  <div className="mt-6 grid gap-6 md:grid-cols-2">
+                    <div className="border-b border-black/10 pb-5">
+                      <p className="text-sm uppercase tracking-[0.2em] text-black/45">
+                        {t.specialRatesTitle}
+                      </p>
+                      <p className="mt-3 leading-7 text-black/70">{t.specialRatesText}</p>
+                    </div>
+
+                    <div className="border-b border-black/10 pb-5">
+  <p className="text-sm uppercase tracking-[0.2em] text-black/45">
+    {t.bookingInstructionsTitle}
+  </p>
+  <p className="mt-3 leading-7 text-black/70">{t.bookingInstructionsText}</p>
+
+  <div className="mt-4 flex flex-col gap-3">
+    <a
+      href="/Cappuccina Country Resort Brochure.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm underline underline-offset-4 text-black/80 hover:text-black"
+    >
+      {t.brochureLinkLabel}
+    </a>
+    <a
+      href="/Cappuccina Country Resort Booking Form.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm underline underline-offset-4 text-black/80 hover:text-black"
+    >
+      {t.bookingFormLinkLabel}
+    </a>
+  </div>
+</div>
+
+                   <div className="border-b border-black/10 pb-5">
+  <p className="text-sm uppercase tracking-[0.2em] text-black/45">
+    {t.weekendEventsTitle}
+  </p>
+  <p className="mt-3 leading-7 text-black/70">{t.weekendEventsText}</p>
+  <p className="mt-3 leading-7 text-black/70"></p>
+</div>
                   </div>
                 </div>
               </div>
             </div>
-          </PageShell>
+          </section>
         );
-
       case 'schedule':
         return (
           <PageShell title={t.scheduleTitle} subtitle={t.scheduleSubtitle}>
@@ -844,28 +1083,37 @@ className="h-[305px] w-full object-cover [object-position:50%_82%] md:h-[460px]"
           </PageShell>
         );
 
-      case 'faqs':
-        return (
-          <PageShell title={t.questionsTitle}>
-            <div className="grid gap-5">
-              {t.faqs.map((item) => (
-                <div key={item.q} className="border-b border-black/10 pb-6">
-                  <h3 className="text-xl font-medium text-black">{item.q}</h3>
-                  <p className="mt-3 leading-7 text-black/70">{item.a}</p>
-                </div>
-              ))}
-            </div>
-          </PageShell>
-        );
+case 'faqs':
+  return (
+    <PageShell title={t.questionsTitle}>
+      <div className="grid gap-5">
+        {t.faqs.map((item) => (
+          <div key={item.q} className="border-b border-black/10 pb-6">
+            <h3 className="text-xl font-medium text-black">{item.q}</h3>
+            <p className="mt-3 leading-7 text-black/70">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </PageShell>
+  );
 
-      default:
-        return null;
+case 'rsvp':
+  return (
+    <PageShell title={t.rsvpTitle} subtitle={t.rsvpSubtitle}>
+      <div className="border-b border-black/10 pb-6">
+        <p className="leading-7 text-black/70">{t.rsvpBody}</p>
+      </div>
+    </PageShell>
+  );
+
+default:
+  return null;
     }
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F1E7] text-black">
-<header className="relative z-50 border-b border-[#E8DDD0] bg-[#F8F1E7]/95">
+    <div className="min-h-screen bg-[#FCF8F2] text-black">
+<header className="relative z-50 border-b border-[#EEE5DA] bg-[#FCF8F2]/95">
   <div className="w-full px-4 py-3 md:px-8">
     <div className="relative hidden md:block pb-4">
 <div className="flex flex-col items-center">
@@ -959,7 +1207,7 @@ className="h-[305px] w-full object-cover [object-position:50%_82%] md:h-[460px]"
   </div>
 
   {mobileMenuOpen && (
-    <div className="absolute left-0 right-0 top-full z-50 border-t border-[#E8DDD0] bg-[#F8F1E7] px-4 py-4 shadow-md md:hidden">
+    <div className="absolute left-0 right-0 top-full z-50 border-t border-[#EEE5DA] bg-[#FCF8F2] px-4 py-4 shadow-md md:hidden">
 
       <div className="flex flex-col gap-3">
         {navItems.map((item) => {
@@ -982,7 +1230,7 @@ className="h-[305px] w-full object-cover [object-position:50%_82%] md:h-[460px]"
         })}
       </div>
 
-      <div className="mt-4 flex flex-wrap items-center border-t border-[#E8DDD0] pt-4">
+      <div className="mt-4 flex flex-wrap items-center border-t border-[#EEE5DA] pt-4">
         {languages.map((item, index) => {
           const active = language === item.code;
           return (
