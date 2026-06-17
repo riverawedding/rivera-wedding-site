@@ -27,6 +27,7 @@ type NavLabels = {
   home: string;
   travel: string;
   schedule: string;
+  attire: string;
   registry: string;
   weddingParty: string;
   gallery: string;
@@ -68,6 +69,14 @@ type TranslationEntry = {
   scheduleTag: string;
   scheduleTitle: string;
   scheduleSubtitle: string;
+  attireTitle: string;
+  attireSubtitle: string;
+  weddingAttireTitle: string;
+  weddingAttireText: string;
+  fridayAttireTitle: string;
+  fridayAttireText: string;
+  sundayAttireTitle: string;
+  sundayAttireText: string;
   travelTag: string;
   travelTitle: string;
   accommodationTag: string;
@@ -180,7 +189,19 @@ scheduleTag: 'Weekend Schedule',
 scheduleTitle: 'Weekend Schedule',
 scheduleSubtitle:
   'Below you’ll find an overview of the wedding weekend. Exact times and locations will be shared closer to the celebration.',
-        travelTag: 'Travel & Stay',
+attireTitle: 'Attire',
+attireSubtitle:
+  'Dress code details for each event throughout the wedding weekend.',
+weddingAttireTitle: 'Wedding Day',
+weddingAttireText:
+  'Black Tie Optional. We invite guests to dress in formal evening attire. Floor-length gowns, elegant midi dresses, and elevated cocktail dresses are all lovely options. Suits are absolutely appropriate, and tuxedos are certainly encouraged. Please also keep in mind that portions of the celebration will take place outdoors on grass, gravel, and stone pathways.',
+fridayAttireTitle: 'Friday Pizza Party',
+fridayAttireText:
+  'Casual, but polished. Think relaxed and stylish dinner attire that feels comfortable for a Tuscan evening.',
+sundayAttireTitle: 'Sunday Pool Party',
+sundayAttireText:
+  'Pool party / resort casual. Swimwear, cover-ups, linen, sundresses, sandals, and easy warm-weather pieces are all perfect.',
+travelTag: 'Travel & Stay',
     travelTitle: 'Getting there',
     accommodationTag: 'Accommodations',
     accommodationTitle: 'Hotel details coming soon',
@@ -281,6 +302,7 @@ nav: {
   home: 'Home',
   travel: 'Travel',
   schedule: 'Schedule',
+  attire: 'Attire',
   registry: 'Registry',
   weddingParty: 'Wedding Party',
   gallery: 'Gallery',
@@ -404,7 +426,19 @@ scheduleTag: 'Wochenendablauf',
 scheduleTitle: 'Wochenendablauf',
 scheduleSubtitle:
   'Unten findet ihr einen Überblick über das Hochzeitswochenende. Genaue Uhrzeiten und Orte werden näher an der Feier bekannt gegeben.',
-      travelTag: 'Reise & Aufenthalt',
+attireTitle: 'Dresscode',
+attireSubtitle:
+  'Hier findet ihr die Dresscode-Infos für die einzelnen Veranstaltungen des Hochzeitswochenendes.',
+weddingAttireTitle: 'Hochzeitstag',
+weddingAttireText:
+  'Black Tie Optional. Wir freuen uns über elegante Abendgarderobe. Bodenlange Kleider, elegante Midikleider oder sehr festliche Cocktailkleider passen wunderbar. Anzüge sind absolut passend, Smokings ebenfalls sehr willkommen. Bitte beachtet außerdem, dass Teile der Feier im Freien auf Rasen, Kies und Steinwegen stattfinden.',
+fridayAttireTitle: 'Freitag · Pizza Party',
+fridayAttireText:
+  'Casual, aber gepflegt. Denkt an ein entspanntes, stilvolles Dinner-Outfit, das zu einem toskanischen Abend passt.',
+sundayAttireTitle: 'Sonntag · Pool Party',
+sundayAttireText:
+  'Pool Party / Resort Casual. Badesachen, Cover-ups, Leinen, Sommerkleider, Sandalen und luftige Outfits sind ideal.',
+travelTag: 'Reise & Aufenthalt',
     travelTitle: 'Anreise',
     accommodationTag: 'Unterkünfte',
     accommodationTitle: 'Hoteldetails folgen',
@@ -507,6 +541,7 @@ nav: {
   home: 'Startseite',
   travel: 'Reise',
   schedule: 'Ablauf',
+  attire: 'Dresscode',
   registry: 'Geschenkeliste',
   weddingParty: 'Hochzeitsgesellschaft',
   gallery: 'Galerie',
@@ -630,7 +665,19 @@ scheduleTag: 'Itinerario del fin de semana',
 scheduleTitle: 'Itinerario del Fin de Semana',
 scheduleSubtitle:
   'A continuación encontrarán un resumen del fin de semana de la boda. Los horarios y lugares exactos se compartirán más cerca de la celebración.',
-      travelTag: 'Viaje y estadía',
+attireTitle: 'Vestimenta',
+attireSubtitle:
+  'Aquí encontrarán el código de vestimenta para cada evento del fin de semana de la boda.',
+weddingAttireTitle: 'Día de la Boda',
+weddingAttireText:
+  'Black Tie Optional. Los invitamos a vestirse con atuendo formal de noche. Los vestidos largos, vestidos midi elegantes y vestidos de cóctel muy arreglados son excelentes opciones. Los trajes son completamente apropiados y los esmóquines son más que bienvenidos. También tengan en cuenta que parte de la celebración será al aire libre sobre césped, grava y caminos de piedra.',
+fridayAttireTitle: 'Viernes · Pizza Party',
+fridayAttireText:
+  'Casual, pero arreglado. Piensen en un look relajado y con estilo para una cena cómoda en una noche toscana.',
+sundayAttireTitle: 'Domingo · Pool Party',
+sundayAttireText:
+  'Pool party / resort casual. Trajes de baño, salidas de playa, lino, vestidos frescos, sandalias y prendas ligeras son perfectos.',
+travelTag: 'Viaje y estadía',
     travelTitle: 'Cómo llegar',
     accommodationTag: 'Alojamiento',
     accommodationTitle: 'Próximamente detalles del hotel',
@@ -732,6 +779,7 @@ nav: {
   home: 'Inicio',
   travel: 'Viaje',
   schedule: 'Agenda',
+  attire: 'Vestimenta',
   registry: 'Registro',
   weddingParty: 'Cortejo',
   gallery: 'Galería',
@@ -825,6 +873,7 @@ type PageKey =
   | 'home'
   | 'travel'
   | 'schedule'
+  | 'attire'
   | 'registry'
   | 'wedding-party'
   | 'gallery'
@@ -849,6 +898,7 @@ function getNavItems(t: TranslationEntry): { id: PageKey; label: string }[] {
     { id: 'home', label: t.nav.home },
     { id: 'travel', label: t.nav.travel },
     { id: 'schedule', label: t.nav.schedule },
+    { id: 'attire', label: t.nav.attire },
     { id: 'registry', label: t.nav.registry },
     { id: 'gallery', label: t.nav.gallery },
     { id: 'things-to-do', label: t.nav.thingsToDo },
@@ -862,6 +912,7 @@ function isPageKey(value: string): value is PageKey {
     'home',
     'travel',
     'schedule',
+    'attire',
     'registry',
     'wedding-party',
     'gallery',
@@ -900,7 +951,7 @@ function runSanityChecks() {
     console.assert(entry.events.length === 3, `Expected 3 events for ${code}`);
     console.assert(entry.faqs.length >= 4, `Expected 4+ FAQs for ${code}`);
     console.assert(entry.travelNotes.length >= 3, `Expected 3+ travel notes for ${code}`);
-    console.assert(getNavItems(entry).length === 8, `Expected 8 nav items for ${code}`);
+    console.assert(getNavItems(entry).length === 9, `Expected 9 nav items for ${code}`);
   });
 }
 
@@ -1261,7 +1312,51 @@ case 'home':
       </div>
     </PageShell>
   );
+case 'attire':
+  return (
+    <section className="mx-auto max-w-6xl px-6 pt-8 pb-16 md:pt-10 md:pb-20">
+      <div className="space-y-10">
+        <div className="grid gap-8 md:grid-cols-[1.05fr_0.95fr] md:items-start">
+          <div>
+            <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
+              {t.weddingAttireTitle}
+            </h2>
+            <p className="mt-5 leading-7 text-black/70">
+              {t.weddingAttireText}
+            </p>
+          </div>
 
+          <div className="rounded-sm bg-[#F7F7F5] p-3">
+            <img
+              src="/attire.jpg"
+              alt="Wedding attire inspiration"
+              className="h-[260px] w-full rounded-sm object-cover [object-position:center] md:h-[400px]"
+            />
+          </div>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="border-b border-black/10 pb-6">
+            <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
+              {t.fridayAttireTitle}
+            </h3>
+            <p className="mt-3 leading-7 text-black/70">
+              {t.fridayAttireText}
+            </p>
+          </div>
+
+          <div className="border-b border-black/10 pb-6">
+            <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
+              {t.sundayAttireTitle}
+            </h3>
+            <p className="mt-3 leading-7 text-black/70">
+              {t.sundayAttireText}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
      case 'registry':
   return (
     <PageShell title={t.registryTitle} subtitle={t.registryText}>
