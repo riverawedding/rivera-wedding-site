@@ -1174,11 +1174,11 @@ case 'home':
           </div>
 
           <div className="order-1 md:order-2">
-  <div className="mx-auto w-full max-w-[760px] overflow-hidden rounded-sm bg-[#F7F7F5] shadow-sm">
+  <div className="mx-auto w-full max-w-[760px] overflow-hidden rounded-sm shadow-sm">
     <img
       src="/header-right.jpg"
       alt="Hero image"
-      className="h-[220px] w-full object-contain object-center md:h-[520px] md:object-cover md:[object-position:50%_82%]"
+      className="h-[240px] w-full object-cover object-[50%_24%] md:h-[520px] md:[object-position:50%_82%]"
     />
   </div>
 </div>
