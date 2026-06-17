@@ -642,6 +642,14 @@ travelNotes: [
         a: 'Ein Mietwagen ist empfehlenswert, wenn ihr die Toskana während eures Aufenthalts erkunden möchtet. Andernfalls empfehlen wir, private Transfers über euer Hotel oder ein lokales Transferunternehmen zwischen dem Flughafen und San Gimignano zu organisieren.',
       },
       {
+        q: 'Wie wird das Wetter sein?',
+        a: 'Mitte Mai ist das Wetter in der Toskana in der Regel mild und wunderschön, mit Tagestemperaturen von etwa 18–24 °C (65–75 °F). Abends kann es kühler werden, daher empfehlen wir einen leichten Schal, ein Tuch oder eine Jacke.',
+      },
+      {
+        q: 'Finden die Veranstaltungen drinnen oder draußen statt?',
+        a: 'Unsere Veranstaltungen am Hochzeitswochenende finden im Freien statt. Für den Fall von schlechtem Wetter haben wir Ausweichmöglichkeiten, dennoch empfehlen wir geeignetes Schuhwerk, eine leichte Schicht für kühlere Abende und eine Sonnenbrille für tagsüber.',
+      },
+      {
         q: 'Bis wann müssen wir zusagen?',
         a: 'Die RSVP-Frist wird mit dem Versand der formellen Einladungen bekannt gegeben.',
       },
@@ -882,6 +890,14 @@ travelNotes: [
       {
         q: '¿Necesitamos alquilar un coche?',
         a: 'Se recomienda alquilar un coche si planean explorar la Toscana durante su estancia. De lo contrario, sugerimos organizar transporte privado a través de su hotel o de una empresa local de traslados para moverse entre el aeropuerto y San Gimignano.',
+      },
+      {
+        q: '¿Cómo será el clima?',
+        a: 'A mediados de mayo, el clima en la Toscana suele ser templado y muy agradable, con temperaturas durante el día de aproximadamente 18–24 °C (65–75 °F). Por la noche puede refrescar, así que recomendamos llevar un chal, una capa ligera o una chaqueta.',
+      },
+      {
+        q: '¿Los eventos serán al aire libre o en interiores?',
+        a: 'Los eventos de nuestro fin de semana de boda se llevarán a cabo al aire libre. Aunque contamos con planes de contingencia en caso de mal tiempo, recomendamos traer calzado adecuado, una capa ligera para las noches más frescas y gafas de sol para los eventos durante el día.',
       },
       {
         q: '¿Cuándo será la fecha límite para confirmar asistencia?',
