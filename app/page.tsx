@@ -1120,7 +1120,7 @@ case 'home':
   return (
     <>
       <section className="mx-auto max-w-6xl px-6 pt-8 pb-10 md:pt-12 md:pb-14">
-        <div className="grid gap-10 md:grid-cols-[1fr_1.15fr] md:items-center">
+        <div className="grid gap-6 md:grid-cols-[1fr_1.15fr] md:gap-10 md:items-center">
           <div className="order-2 md:order-1">
    <h1 className={`${cormorant.className} text-4xl font-medium leading-[0.95] text-black md:text-6xl`}>
   {t.locationValue}
@@ -1174,14 +1174,14 @@ case 'home':
           </div>
 
           <div className="order-1 md:order-2">
-            <div className="mx-auto w-full max-w-[760px] overflow-hidden rounded-sm shadow-sm">
-              <img
-  src="/header-right.jpg"
-  alt="Hero image"
-  className="h-[320px] w-full object-cover object-[50%_18%] md:h-[520px] md:[object-position:50%_82%]"
-/>
-            </div>
-          </div>
+  <div className="mx-auto w-full max-w-[760px] overflow-hidden rounded-sm bg-[#F7F7F5] shadow-sm">
+    <img
+      src="/header-right.jpg"
+      alt="Hero image"
+      className="h-[220px] w-full object-contain object-center md:h-[520px] md:object-cover md:[object-position:50%_82%]"
+    />
+  </div>
+</div>
         </div>
       </section>
     </>
