@@ -1178,7 +1178,7 @@ case 'home':
     <img
       src="/header-right.jpg"
       alt="Hero image"
-      className="h-[240px] w-full object-cover object-[50%_30%] md:h-[520px] md:[object-position:50%_82%]"
+      className="h-[240px] w-full object-cover object-center md:h-[520px] md:[object-position:50%_82%]"
     />
   </div>
 </div>
