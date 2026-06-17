@@ -1176,10 +1176,10 @@ case 'home':
           <div className="order-1 md:order-2">
             <div className="mx-auto w-full max-w-[760px] overflow-hidden rounded-sm shadow-sm">
               <img
-                src="/header-right.jpg"
-                alt="Hero image"
-                className="h-[260px] w-full object-cover [object-position:50%_82%] md:h-[520px]"
-              />
+  src="/header-right.jpg"
+  alt="Hero image"
+  className="h-[320px] w-full object-cover object-[50%_18%] md:h-[520px] md:[object-position:50%_82%]"
+/>
             </div>
           </div>
         </div>
@@ -1348,33 +1348,32 @@ case 'attire':
   return (
     <section className="mx-auto max-w-6xl px-6 pt-8 pb-16 md:pt-10 md:pb-20">
       <div className="space-y-10">
-        <div className="grid gap-8 md:grid-cols-[1.05fr_0.95fr] md:items-start">
-          <div>
-            <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
-              {t.weddingAttireTitle}
-            </h2>
-            <p className="mt-4 text-sm uppercase tracking-[0.3em] text-black/45">
-              Black Tie Optional
-            </p>
-            <ul className="mt-5 list-disc space-y-3 pl-6 leading-7 text-black/70 marker:text-black/60">
-              <li>
-                <span className="font-medium text-black">Women:</span> {t.womenAttireText}
-              </li>
-              <li>
-                <span className="font-medium text-black">Men:</span> {t.menAttireText}
-              </li>
-            </ul>
-          </div>
+        <div className="grid gap-8 border-b border-black/10 pb-8 md:grid-cols-[1.05fr_0.95fr] md:items-start md:pb-10">
+  <div>
+    <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
+      {t.weddingAttireTitle}
+    </h2>
+    <p className="mt-4 text-sm uppercase tracking-[0.3em] text-black/45">
+      Black Tie Optional
+    </p>
+    <ul className="mt-5 list-disc space-y-3 pl-6 leading-7 text-black/70 marker:text-black/60">
+      <li>
+        <span className="font-medium text-black">Women:</span> {t.womenAttireText}
+      </li>
+      <li>
+        <span className="font-medium text-black">Men:</span> {t.menAttireText}
+      </li>
+    </ul>
+  </div>
 
-          <div className="overflow-hidden rounded-sm bg-[#F7F7F5]">
-            <img
-              src="/attire.jpg"
-              alt="Wedding attire inspiration"
-              className="h-[260px] w-full object-cover object-center md:h-[320px]"
-            />
-          </div>
-        </div>
-
+  <div className="overflow-hidden rounded-sm bg-[#F7F7F5]">
+    <img
+      src="/attire.jpg"
+      alt="Wedding attire inspiration"
+      className="h-[260px] w-full object-contain object-center md:h-[320px] md:object-cover"
+    />
+  </div>
+</div>
         <div className="grid gap-6 md:grid-cols-2">
           <div className="border-b border-black/10 pb-6">
             <h3 className={`${cormorant.className} text-2xl font-medium text-black`}>
