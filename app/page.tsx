@@ -53,6 +53,7 @@ type TranslationEntry = {
   rsvpSubtitle: string;
   rsvpBody: string;
   rsvpButton: string;
+  updatesButton: string;
   countdownDays: string;
   countdownHours: string;
   countdownMinutes: string;
@@ -73,6 +74,8 @@ type TranslationEntry = {
   attireSubtitle: string;
   weddingAttireTitle: string;
   weddingAttireText: string;
+  womenAttireText: string;
+  menAttireText: string;
   fridayAttireTitle: string;
   fridayAttireText: string;
   sundayAttireTitle: string;
@@ -172,6 +175,7 @@ const translations: Record<'en' | 'de' | 'es', TranslationEntry> = {
     rsvpSubtitle: 'RSVP details will be shared closer to the wedding date.',
     rsvpBody: 'Please check back later for updates.',
     rsvpButton: 'RSVP',
+    updatesButton: 'Opt In for Updates',
     countdownDays: 'Days',
     countdownHours: 'Hours',
     countdownMinutes: 'Minutes',
@@ -193,14 +197,17 @@ attireTitle: 'Attire',
 attireSubtitle:
   'Dress code details for each event throughout the wedding weekend.',
 weddingAttireTitle: 'Wedding Day',
-weddingAttireText:
-  'Black Tie Optional. We invite guests to dress in formal evening attire. Floor-length gowns, elegant midi dresses, and elevated cocktail dresses are all lovely options. Suits are absolutely appropriate, and tuxedos are certainly encouraged. Please also keep in mind that portions of the celebration will take place outdoors on grass, gravel, and stone pathways.',
+weddingAttireText: '',
+womenAttireText:
+  'Floor-length gowns are preferred. Think elegant fabrics, timeless silhouettes, and rich, solid colors. Please also keep in mind that portions of the celebration will take place outdoors on grass, gravel, and stone pathways.',
+menAttireText:
+  'Tuxedos or dark suits with a tie or bow tie are preferred.',
 fridayAttireTitle: 'Friday Pizza Party',
 fridayAttireText:
-  'Casual, but polished. Think relaxed and stylish dinner attire that feels comfortable for a Tuscan evening.',
+  'Dressy Casual. A relaxed Tuscan evening calls for attire that is polished yet comfortable.',
 sundayAttireTitle: 'Sunday Pool Party',
 sundayAttireText:
-  'Pool party / resort casual. Swimwear, cover-ups, linen, sundresses, sandals, and easy warm-weather pieces are all perfect.',
+  'Casual. Relaxed, vacation-ready attire is encouraged for an afternoon of sunshine, poolside lounging, and celebrating together one last time.',
 travelTag: 'Travel & Stay',
     travelTitle: 'Getting there',
     accommodationTag: 'Accommodations',
@@ -384,6 +391,14 @@ travelNotes: [
         a: 'A rental car is recommended if you plan to explore Tuscany during your stay. Otherwise, we suggest arranging private transportation through your hotel or a local transfer company for travel between the airport and San Gimignano.',
       },
       {
+        q: 'What will the weather be like?',
+        a: 'Mid-May in Tuscany is typically mild and beautiful, with daytime temperatures around 65–75°F (18–24°C). Evenings can be cooler, so bringing a light wrap or jacket is recommended.',
+      },
+      {
+        q: 'Will the events be indoors or outdoors?',
+        a: 'Our wedding weekend events will take place outdoors. While we have contingency plans in the event of inclement weather, we recommend bringing appropriate footwear, a light layer for cooler evenings, and sunglasses for daytime events.',
+      },
+      {
         q: 'When will RSVP be due?',
         a: 'An RSVP deadline will be shared once formal invitations have been sent.',
       },
@@ -409,6 +424,7 @@ travelNotes: [
     rsvpSubtitle: 'Die RSVP-Details werden näher am Hochzeitstermin bekannt gegeben.',
     rsvpBody: 'Bitte schauen Sie später noch einmal vorbei, um Updates zu erhalten.',
     rsvpButton: 'Antwort',
+    updatesButton: 'Updates erhalten',
     countdownDays: 'Tage',
     countdownHours: 'Stunden',
     countdownMinutes: 'Minuten',
@@ -430,8 +446,11 @@ attireTitle: 'Dresscode',
 attireSubtitle:
   'Hier findet ihr die Dresscode-Infos für die einzelnen Veranstaltungen des Hochzeitswochenendes.',
 weddingAttireTitle: 'Hochzeitstag',
-weddingAttireText:
-  'Black Tie Optional. Wir freuen uns über elegante Abendgarderobe. Bodenlange Kleider, elegante Midikleider oder sehr festliche Cocktailkleider passen wunderbar. Anzüge sind absolut passend, Smokings ebenfalls sehr willkommen. Bitte beachtet außerdem, dass Teile der Feier im Freien auf Rasen, Kies und Steinwegen stattfinden.',
+weddingAttireText: '',
+womenAttireText:
+  'Bodenlange Kleider werden bevorzugt. Denkt an elegante Stoffe, zeitlose Silhouetten und satte, einfarbige Töne. Bitte beachtet außerdem, dass Teile der Feier im Freien auf Rasen, Kies und Steinwegen stattfinden.',
+menAttireText:
+  'Smokings oder dunkle Anzüge mit Krawatte oder Fliege werden bevorzugt.',
 fridayAttireTitle: 'Freitag · Pizza Party',
 fridayAttireText:
   'Casual, aber gepflegt. Denkt an ein entspanntes, stilvolles Dinner-Outfit, das zu einem toskanischen Abend passt.',
@@ -648,6 +667,7 @@ travelNotes: [
     rsvpSubtitle: 'Los detalles para confirmar asistencia se compartirán más cerca de la fecha de la boda.',
     rsvpBody: 'Por favor, vuelve a consultar más adelante para ver actualizaciones.',
     rsvpButton: 'RSVP',
+    updatesButton: 'Recibir actualizaciones',
     countdownDays: 'Días',
     countdownHours: 'Horas',
     countdownMinutes: 'Minutos',
@@ -669,8 +689,11 @@ attireTitle: 'Vestimenta',
 attireSubtitle:
   'Aquí encontrarán el código de vestimenta para cada evento del fin de semana de la boda.',
 weddingAttireTitle: 'Día de la Boda',
-weddingAttireText:
-  'Black Tie Optional. Los invitamos a vestirse con atuendo formal de noche. Los vestidos largos, vestidos midi elegantes y vestidos de cóctel muy arreglados son excelentes opciones. Los trajes son completamente apropiados y los esmóquines son más que bienvenidos. También tengan en cuenta que parte de la celebración será al aire libre sobre césped, grava y caminos de piedra.',
+weddingAttireText: '',
+womenAttireText:
+  'Se prefieren vestidos largos. Piensen en telas elegantes, siluetas atemporales y colores sólidos intensos. También tengan en cuenta que parte de la celebración será al aire libre sobre césped, grava y caminos de piedra.',
+menAttireText:
+  'Se prefieren esmóquines o trajes oscuros con corbata o pajarita.',
 fridayAttireTitle: 'Viernes · Pizza Party',
 fridayAttireText:
   'Casual, pero arreglado. Piensen en un look relajado y con estilo para una cena cómoda en una noche toscana.',
@@ -1111,13 +1134,22 @@ case 'home':
 </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-4">
-<a
-  href="#rsvp"
-  className="inline-flex items-center justify-center rounded-sm border border-black bg-black px-6 py-3 text-sm font-medium tracking-[0.08em] text-white transition hover:opacity-90"
->
-  {t.rsvpButton}
-</a>
-            </div>
+  <a
+    href="#rsvp"
+    className="inline-flex items-center justify-center rounded-sm border border-black bg-black px-6 py-3 text-sm font-medium tracking-[0.08em] text-white transition hover:opacity-90"
+  >
+    {t.rsvpButton}
+  </a>
+
+  <a
+    href="https://chat.whatsapp.com/Do0n8ZnFsNs5idxasXJitn"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center justify-center rounded-sm border border-black bg-black px-6 py-3 text-sm font-medium tracking-[0.08em] text-white transition hover:opacity-90"
+  >
+    {t.updatesButton}
+  </a>
+</div>
 
             <div className="mt-8">
               <div className="grid max-w-[420px] grid-cols-4 gap-3">
@@ -1321,16 +1353,24 @@ case 'attire':
             <h2 className={`${cormorant.className} text-3xl font-medium text-black md:text-4xl`}>
               {t.weddingAttireTitle}
             </h2>
-            <p className="mt-5 leading-7 text-black/70">
-              {t.weddingAttireText}
+            <p className="mt-4 text-sm uppercase tracking-[0.3em] text-black/45">
+              Black Tie Optional
             </p>
+            <ul className="mt-5 list-disc space-y-3 pl-6 leading-7 text-black/70 marker:text-black/60">
+              <li>
+                <span className="font-medium text-black">Women:</span> {t.womenAttireText}
+              </li>
+              <li>
+                <span className="font-medium text-black">Men:</span> {t.menAttireText}
+              </li>
+            </ul>
           </div>
 
-          <div className="rounded-sm bg-[#F7F7F5] p-3">
+          <div className="overflow-hidden rounded-sm bg-[#F7F7F5]">
             <img
               src="/attire.jpg"
               alt="Wedding attire inspiration"
-              className="h-[260px] w-full rounded-sm object-cover [object-position:center] md:h-[400px]"
+              className="h-[260px] w-full object-cover object-center md:h-[320px]"
             />
           </div>
         </div>
