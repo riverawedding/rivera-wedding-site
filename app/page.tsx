@@ -590,7 +590,7 @@ travelNotes: [
     venue: 'Antica Fattoria di Paterno',
     address: 'Via Paterno 48 - 50025 Montespertoli (Toskana)',
     addressUrl: 'https://maps.google.com/?q=Via+Paterno+48,+50025+Montespertoli,+Toscana,+Italy',
-    time: 'Früher Abend',
+    time: 'Später Nachmittag',
     description:
       'Unsere Hochzeitsfeier findet in der Antica Fattoria di Paterno bei Montespertoli statt. Anschließend folgen Trauung, Aperitif, Dinner und Tanz.',
   },
@@ -840,7 +840,7 @@ travelNotes: [
     venue: 'Antica Fattoria di Paterno',
     address: 'Via Paterno 48 - 50025 Montespertoli (Toscana)',
     addressUrl: 'https://maps.google.com/?q=Via+Paterno+48,+50025+Montespertoli,+Toscana,+Italy',
-    time: 'A primeras horas de la noche',
+    time: 'A última hora de la tarde',
     description:
       'Nuestra celebración de boda tendrá lugar en Antica Fattoria di Paterno, cerca de Montespertoli. Después seguirán la ceremonia, los cócteles, la cena y el baile.',
   },
