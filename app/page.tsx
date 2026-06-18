@@ -208,10 +208,10 @@ menAttireText:
   'Tuxedos or dark suits with a tie or bow tie are preferred.',
 fridayAttireTitle: 'Friday Welcome Dinner',
 fridayAttireText:
-  'Dressy Casual. A relaxed Tuscan evening calls for attire that is polished yet comfortable.',
-sundayAttireTitle: 'Sunday Pool Party',
+  'Casual. A relaxed Tuscan evening calls for attire that is polished yet comfortable.',
+sundayAttireTitle: 'Pool Party',
 sundayAttireText:
-  'Casual. Relaxed, vacation-ready attire is encouraged for an afternoon of sunshine, poolside lounging, and celebrating together one last time.',
+  'Casual / Relaxed. Relaxed, vacation-ready attire is encouraged for an afternoon of sunshine, poolside lounging, and celebrating together one last time.',
 travelTag: 'Travel & Stay',
     travelTitle: 'Getting there',
     accommodationTag: 'Accommodations',
@@ -459,10 +459,10 @@ menAttireText:
   'Smokings oder dunkle Anzüge mit Krawatte oder Fliege werden bevorzugt.',
 fridayAttireTitle: 'Freitag · Willkommensdinner',
 fridayAttireText:
-  'Casual, aber gepflegt. Denkt an ein entspanntes, stilvolles Dinner-Outfit, das zu einem toskanischen Abend passt.',
-sundayAttireTitle: 'Sonntag · Pool Party',
+  'Casual. Ein entspannter toskanischer Abend verlangt nach einem Look, der gepflegt und zugleich bequem ist.',
+sundayAttireTitle: 'Pool Party',
 sundayAttireText:
-  'Pool Party / Resort Casual. Badesachen, Cover-ups, Leinen, Sommerkleider, Sandalen und luftige Outfits sind ideal.',
+  'Casual / Entspannt. Entspannte, urlaubsgeeignete Kleidung ist ideal für einen sonnigen Nachmittag am Pool und ein letztes gemeinsames Feiern.',
 travelTag: 'Reise & Aufenthalt',
     travelTitle: 'Anreise',
     accommodationTag: 'Unterkünfte',
@@ -712,10 +712,10 @@ menAttireText:
   'Se prefieren esmóquines o trajes oscuros con corbata o pajarita.',
 fridayAttireTitle: 'Viernes · Cena de Bienvenida',
 fridayAttireText:
-  'Casual, pero arreglado. Piensen en un look relajado y con estilo para una cena cómoda en una noche toscana.',
-sundayAttireTitle: 'Domingo · Pool Party',
+  'Casual. Una relajada noche toscana pide un look cómodo pero arreglado.',
+sundayAttireTitle: 'Pool Party',
 sundayAttireText:
-  'Pool party / resort casual. Trajes de baño, salidas de playa, lino, vestidos frescos, sandalias y prendas ligeras son perfectos.',
+  'Casual / Relajado. Se recomienda ropa relajada y lista para vacaciones para una tarde de sol, descanso junto a la piscina y una última celebración juntos.',
 travelTag: 'Viaje y estadía',
     travelTitle: 'Cómo llegar',
     accommodationTag: 'Alojamiento',
