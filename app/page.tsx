@@ -211,7 +211,7 @@ fridayAttireText:
   'Casual, Dressy. A relaxed Tuscan evening calls for attire that is polished yet comfortable.',
 sundayAttireTitle: 'Sunday: Pool Party',
 sundayAttireText:
-  'Casual / Relaxed. Vacation-ready attire is encouraged for an afternoon of sunshine, poolside lounging, and celebrating together one last time.',travelTag: 'Travel & Stay',
+  'Casual, Relaxed. Vacation-ready attire is encouraged for an afternoon of sunshine, poolside lounging, and celebrating together one last time.',travelTag: 'Travel & Stay',
     travelTitle: 'Getting there',
     accommodationTag: 'Accommodations',
     accommodationTitle: 'Hotel details coming soon',
@@ -461,7 +461,7 @@ fridayAttireText:
   'Casual, gepflegt. Ein entspannter toskanischer Abend verlangt nach einem Look, der gepflegt und zugleich bequem ist.',
 sundayAttireTitle: 'Sonntag: Pool Party',
 sundayAttireText:
-  'Casual / Entspannt. Urlaubsgeeignete Kleidung ist ideal für einen sonnigen Nachmittag am Pool und ein letztes gemeinsames Feiern.',
+  'Casual, Entspannt. Urlaubsgeeignete Kleidung ist ideal für einen sonnigen Nachmittag am Pool und ein letztes gemeinsames Feiern.',
     travelTag: 'Reise & Aufenthalt',
     travelTitle: 'Anreise',
     accommodationTag: 'Unterkünfte',
@@ -714,7 +714,7 @@ fridayAttireText:
   'Casual, arreglado. Una relajada noche toscana pide un look cómodo pero arreglado.',
 sundayAttireTitle: 'Domingo: Pool Party',
 sundayAttireText:
-  'Casual / Relajado. Se recomienda ropa lista para vacaciones para una tarde de sol, descanso junto a la piscina y una última celebración juntos.',
+  'Casual, Relajado. Se recomienda ropa lista para vacaciones para una tarde de sol, descanso junto a la piscina y una última celebración juntos.',
   travelTag: 'Viaje y estadía',
     travelTitle: 'Cómo llegar',
     accommodationTag: 'Alojamiento',
