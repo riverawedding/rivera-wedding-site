@@ -74,6 +74,8 @@ type TranslationEntry = {
   attireSubtitle: string;
   weddingAttireTitle: string;
   weddingAttireText: string;
+  womenLabel: string;
+  menLabel: string;
   womenAttireText: string;
   menAttireText: string;
   fridayAttireTitle: string;
@@ -198,6 +200,8 @@ attireSubtitle:
   'Dress code details for each event throughout the wedding weekend.',
 weddingAttireTitle: 'Wedding Day',
 weddingAttireText: '',
+womenLabel: 'Women',
+menLabel: 'Men',
 womenAttireText:
   'Floor-length gowns are preferred. Think elegant fabrics, timeless silhouettes, and rich, solid colors. Please also keep in mind that portions of the celebration will take place outdoors on grass, gravel, and stone pathways.',
 menAttireText:
@@ -447,6 +451,8 @@ attireSubtitle:
   'Hier findet ihr die Dresscode-Infos für die einzelnen Veranstaltungen des Hochzeitswochenendes.',
 weddingAttireTitle: 'Hochzeitstag',
 weddingAttireText: '',
+womenLabel: 'Damen',
+menLabel: 'Herren',
 womenAttireText:
   'Bodenlange Kleider werden bevorzugt. Denkt an elegante Stoffe, zeitlose Silhouetten und satte, einfarbige Töne. Bitte beachtet außerdem, dass Teile der Feier im Freien auf Rasen, Kies und Steinwegen stattfinden.',
 menAttireText:
@@ -698,6 +704,8 @@ attireSubtitle:
   'Aquí encontrarán el código de vestimenta para cada evento del fin de semana de la boda.',
 weddingAttireTitle: 'Día de la Boda',
 weddingAttireText: '',
+womenLabel: 'Mujeres',
+menLabel: 'Hombres',
 womenAttireText:
   'Se prefieren vestidos largos. Piensen en telas elegantes, siluetas atemporales y colores sólidos intensos. También tengan en cuenta que parte de la celebración será al aire libre sobre césped, grava y caminos de piedra.',
 menAttireText:
@@ -1374,11 +1382,11 @@ case 'attire':
     </p>
     <ul className="mt-5 list-disc space-y-3 pl-6 leading-7 text-black/70 marker:text-black/60">
       <li>
-        <span className="font-medium text-black">Women:</span> {t.womenAttireText}
-      </li>
-      <li>
-        <span className="font-medium text-black">Men:</span> {t.menAttireText}
-      </li>
+  <span className="font-medium text-black">{t.womenLabel}:</span> {t.womenAttireText}
+</li>
+<li>
+  <span className="font-medium text-black">{t.menLabel}:</span> {t.menAttireText}
+</li>
     </ul>
   </div>
 
