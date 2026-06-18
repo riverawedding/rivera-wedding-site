@@ -459,7 +459,7 @@ menAttireText:
 fridayAttireTitle: 'Freitag: Willkommensdinner',
 fridayAttireText:
   'Casual, gepflegt. Ein entspannter toskanischer Abend verlangt nach einem Look, der gepflegt und zugleich bequem ist.',
-sundayAttireTitle: 'Sonntag: Pool Party',
+sundayAttireTitle: 'Sonntag: Poolparty',
 sundayAttireText:
   'Casual, Entspannt. Urlaubsgeeignete Kleidung ist ideal für einen sonnigen Nachmittag am Pool und ein letztes gemeinsames Feiern.',
     travelTag: 'Reise & Aufenthalt',
@@ -497,7 +497,7 @@ bookingInstructionsText:
       'Am Hochzeitstag wird ein kostenloser Shuttle zwischen dem Cappuccina Country Resort & Spa und Antica Fattoria di Paterno angeboten.',
     weekendEventsTitle: 'Wochenendveranstaltungen',
     weekendEventsText:
-      'Unsere Welcome Party und Pool Party finden in der Nähe statt, sodass das Cappuccina Country Resort & Spa die bequemste Unterkunft für das gesamte Hochzeitswochenende ist.',
+      'Unsere Welcome Party und Poolparty finden in der Nähe statt, sodass das Cappuccina Country Resort & Spa die bequemste Unterkunft für das gesamte Hochzeitswochenende ist.',
     plannedAdditions: 'Geplante Ergänzungen',
     anchorHotel: 'Haupthotel',
     overflowOptions: 'Weitere Optionen',
@@ -581,12 +581,12 @@ travelNotes: [
 ],   events: [
   {
     day: 'Freitag',
-    title: 'Welcome Dinner',
+    title: 'Willkommensdinner',
     date: '14. Mai 2027',
     venue: 'San Gimignano',
     time: 'Abend',
     description:
-      'Gemeinsam starten wir mit einem entspannten Welcome Dinner in das Hochzeitswochenende. Freut euch auf gutes Essen, Getränke und die Gelegenheit, Familie und Freunde vor dem großen Tag wiederzusehen.',
+      'Gemeinsam starten wir mit einem entspannten Willkommensdinner in das Hochzeitswochenende. Freut euch auf gutes Essen, Getränke und die Gelegenheit, Familie und Freunde vor dem großen Tag wiederzusehen.',
   },
   {
     day: 'Samstag',
@@ -601,7 +601,7 @@ travelNotes: [
   },
   {
     day: 'Sonntag',
-    title: 'Farewell Lunch & Pool Party',
+    title: 'Abschiedsessen & Poolparty',
     date: '16. Mai 2027',
     venue: 'San Gimignano',
     time: 'Früher Nachmittag',
@@ -620,11 +620,11 @@ travelNotes: [
       },
       {
         q: 'Wann sollten wir anreisen?',
-        a: 'Wir empfehlen eine Anreise bis Freitagnachmittag, damit ihr am Abend beim Welcome Dinner dabei sein könnt.',
+        a: 'Wir empfehlen eine Anreise bis Freitagnachmittag, damit ihr am Abend beim Willkommensdinner dabei sein könnt.',
       },
       {
         q: 'Wann sollten wir abreisen?',
-        a: 'Unser Farewell Lunch & Pool Party findet am Sonntag statt. Wenn es euer Zeitplan zulässt, empfehlen wir daher eine Abreise am Montag.',
+        a: 'Unser Abschiedsessen & Poolparty findet am Sonntag statt. Wenn es euer Zeitplan zulässt, empfehlen wir daher eine Abreise am Montag.',
       },
       {
         q: 'Wo sollten wir übernachten?',
@@ -712,7 +712,7 @@ menAttireText:
 fridayAttireTitle: 'Viernes: Cena de Bienvenida',
 fridayAttireText:
   'Casual, arreglado. Una relajada noche toscana pide un look cómodo pero arreglado.',
-sundayAttireTitle: 'Domingo: Pool Party',
+sundayAttireTitle: 'Domingo: Fiesta en la piscina',
 sundayAttireText:
   'Casual, Relajado. Se recomienda ropa lista para vacaciones para una tarde de sol, descanso junto a la piscina y una última celebración juntos.',
   travelTag: 'Viaje y estadía',
@@ -750,7 +750,7 @@ bookingInstructionsText:
       'Se ofrecerán traslados de cortesía entre Cappuccina Country Resort & Spa y Antica Fattoria di Paterno el día de la boda.',
     weekendEventsTitle: 'Eventos del Fin de Semana',
     weekendEventsText:
-      'Nuestra Fiesta de Bienvenida y Pool Party se llevarán a cabo cerca, lo que convierte a Cappuccina Country Resort & Spa en el lugar más conveniente para hospedarse durante todo el fin de semana de la boda.',
+      'Nuestra Fiesta de Bienvenida y Fiesta en la piscina se llevarán a cabo cerca, lo que convierte a Cappuccina Country Resort & Spa en el lugar más conveniente para hospedarse durante todo el fin de semana de la boda.',
     plannedAdditions: 'Próximamente',
     anchorHotel: 'Hotel principal',
     overflowOptions: 'Opciones adicionales',
@@ -853,7 +853,7 @@ travelNotes: [
   },
   {
     day: 'Domingo',
-    title: 'Almuerzo de Despedida y Pool Party',
+    title: 'Almuerzo de Despedida y Fiesta en la piscina',
     date: '16 de Mayo de 2027',
     venue: 'San Gimignano',
     time: 'A primeras horas de la tarde',
@@ -876,7 +876,7 @@ travelNotes: [
       },
       {
         q: '¿Cuándo deberíamos regresar?',
-        a: 'Nuestro Almuerzo de Despedida y Pool Party será el domingo, por lo que recomendamos regresar el lunes si su horario se lo permite.',
+        a: 'Nuestro Almuerzo de Despedida y Fiesta en la piscina será el domingo, por lo que recomendamos regresar el lunes si su horario se lo permite.',
       },
       {
         q: '¿Dónde deberíamos hospedarnos?',
