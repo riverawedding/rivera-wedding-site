@@ -198,7 +198,7 @@ scheduleSubtitle:
 attireTitle: 'Attire',
 attireSubtitle:
   'Dress code details for each event throughout the wedding weekend.',
-weddingAttireTitle: 'Wedding Day',
+weddingAttireTitle: 'Saturday: Wedding Day',
 weddingAttireText: '',
 womenLabel: 'Women',
 menLabel: 'Men',
@@ -206,13 +206,12 @@ womenAttireText:
   'Floor-length gowns are preferred. Think elegant fabrics, timeless silhouettes, and rich, solid colors. Please also keep in mind that portions of the celebration will take place outdoors on grass, gravel, and stone pathways.',
 menAttireText:
   'Tuxedos or dark suits with a tie or bow tie are preferred.',
-fridayAttireTitle: 'Friday Welcome Dinner',
+fridayAttireTitle: 'Friday: Welcome Dinner',
 fridayAttireText:
-  'Casual. A relaxed Tuscan evening calls for attire that is polished yet comfortable.',
-sundayAttireTitle: 'Pool Party',
+  'Casual, Dressy. A relaxed Tuscan evening calls for attire that is polished yet comfortable.',
+sundayAttireTitle: 'Sunday: Pool Party',
 sundayAttireText:
-  'Casual / Relaxed. Relaxed, vacation-ready attire is encouraged for an afternoon of sunshine, poolside lounging, and celebrating together one last time.',
-travelTag: 'Travel & Stay',
+  'Casual / Relaxed. Vacation-ready attire is encouraged for an afternoon of sunshine, poolside lounging, and celebrating together one last time.',travelTag: 'Travel & Stay',
     travelTitle: 'Getting there',
     accommodationTag: 'Accommodations',
     accommodationTitle: 'Hotel details coming soon',
@@ -449,7 +448,7 @@ scheduleSubtitle:
 attireTitle: 'Dresscode',
 attireSubtitle:
   'Hier findet ihr die Dresscode-Infos für die einzelnen Veranstaltungen des Hochzeitswochenendes.',
-weddingAttireTitle: 'Hochzeitstag',
+weddingAttireTitle: 'Samstag: Hochzeitstag',
 weddingAttireText: '',
 womenLabel: 'Damen',
 menLabel: 'Herren',
@@ -457,13 +456,13 @@ womenAttireText:
   'Bodenlange Kleider werden bevorzugt. Denkt an elegante Stoffe, zeitlose Silhouetten und satte, einfarbige Töne. Bitte beachtet außerdem, dass Teile der Feier im Freien auf Rasen, Kies und Steinwegen stattfinden.',
 menAttireText:
   'Smokings oder dunkle Anzüge mit Krawatte oder Fliege werden bevorzugt.',
-fridayAttireTitle: 'Freitag · Willkommensdinner',
+fridayAttireTitle: 'Freitag: Willkommensdinner',
 fridayAttireText:
-  'Casual. Ein entspannter toskanischer Abend verlangt nach einem Look, der gepflegt und zugleich bequem ist.',
-sundayAttireTitle: 'Pool Party',
+  'Casual, gepflegt. Ein entspannter toskanischer Abend verlangt nach einem Look, der gepflegt und zugleich bequem ist.',
+sundayAttireTitle: 'Sonntag: Pool Party',
 sundayAttireText:
-  'Casual / Entspannt. Entspannte, urlaubsgeeignete Kleidung ist ideal für einen sonnigen Nachmittag am Pool und ein letztes gemeinsames Feiern.',
-travelTag: 'Reise & Aufenthalt',
+  'Casual / Entspannt. Urlaubsgeeignete Kleidung ist ideal für einen sonnigen Nachmittag am Pool und ein letztes gemeinsames Feiern.',
+    travelTag: 'Reise & Aufenthalt',
     travelTitle: 'Anreise',
     accommodationTag: 'Unterkünfte',
     accommodationTitle: 'Hoteldetails folgen',
@@ -666,7 +665,7 @@ travelNotes: [
     names: 'Daniella & Victor',
     togetherWith: 'Junto con sus familias',
     gettingMarried: 'se casan en la Toscana',
-    dateVenue: '15 de mayo de 2027 · Antica Fattoria di Paterno',
+    dateVenue: '15 de Mayo de 2027 · Antica Fattoria di Paterno',
     viewSchedule: 'Ver itinerario',
     travelInfo: 'Información de viaje',
     celebrationTag: 'Nuestra celebración',
@@ -691,7 +690,7 @@ travelNotes: [
     venue: 'Lugar',
     location: 'Ubicación',
     weekendStyle: 'Estilo del fin de semana',
-    dateValue: 'Sábado, 15 de mayo de 2027',
+    dateValue: 'Sábado, 15 de Mayo de 2027',
     venueValue: 'Antica Fattoria di Paterno',
     locationValue: 'Toscana, Italia',
     weekendStyleValue: 'Boda destino con varios eventos',
@@ -702,7 +701,7 @@ scheduleSubtitle:
 attireTitle: 'Vestimenta',
 attireSubtitle:
   'Aquí encontrarán el código de vestimenta para cada evento del fin de semana de la boda.',
-weddingAttireTitle: 'Día de la Boda',
+weddingAttireTitle: 'Sábado: Día de la Boda',
 weddingAttireText: '',
 womenLabel: 'Mujeres',
 menLabel: 'Hombres',
@@ -710,13 +709,13 @@ womenAttireText:
   'Se prefieren vestidos largos. Piensen en telas elegantes, siluetas atemporales y colores sólidos intensos. También tengan en cuenta que parte de la celebración será al aire libre sobre césped, grava y caminos de piedra.',
 menAttireText:
   'Se prefieren esmóquines o trajes oscuros con corbata o pajarita.',
-fridayAttireTitle: 'Viernes · Cena de Bienvenida',
+fridayAttireTitle: 'Viernes: Cena de Bienvenida',
 fridayAttireText:
-  'Casual. Una relajada noche toscana pide un look cómodo pero arreglado.',
-sundayAttireTitle: 'Pool Party',
+  'Casual, arreglado. Una relajada noche toscana pide un look cómodo pero arreglado.',
+sundayAttireTitle: 'Domingo: Pool Party',
 sundayAttireText:
-  'Casual / Relajado. Se recomienda ropa relajada y lista para vacaciones para una tarde de sol, descanso junto a la piscina y una última celebración juntos.',
-travelTag: 'Viaje y estadía',
+  'Casual / Relajado. Se recomienda ropa lista para vacaciones para una tarde de sol, descanso junto a la piscina y una última celebración juntos.',
+  travelTag: 'Viaje y estadía',
     travelTitle: 'Cómo llegar',
     accommodationTag: 'Alojamiento',
     accommodationTitle: 'Próximamente detalles del hotel',
@@ -768,7 +767,7 @@ registryButton: 'Ver Nuestra Mesa de Regalos',
     weddingPartyPlaceholder: 'Próximamente',
     weddingPartyBioPlaceholder: 'Espacio para foto y breve descripción.',
     galleryTag: 'Galería',
-    galleryTitle: 'Algunos momentos de nosotros',
+    galleryTitle: 'Momentos Capturados',
     galleryText:
       'Agrega fotos de compromiso, recuerdos de viajes o imágenes espontáneas favoritas para que el sitio se sienta más personal.',
      thingsToDoTag: 'Qué Hacer',
@@ -811,7 +810,7 @@ registryButton: 'Ver Nuestra Mesa de Regalos',
     drinksText:
       'Chianti Classico, Vernaccia di San Gimignano, spritzes y Negronis', questionsTag:'Preguntas',
     questionsTitle: 'Preguntas frecuentes',
-    footerLeft: 'Daniella & Victor · 15 de mayo de 2027',
+    footerLeft: 'Daniella & Victor · 15 de Mayo de 2027',
     footerRight:
       'Pronto compartiremos más detalles a medida que se finalice la planificación del fin de semana.',
 nav: {
@@ -835,7 +834,7 @@ travelNotes: [
   {
     day: 'Viernes',
     title: 'Cena de Bienvenida',
-    date: '14 de mayo de 2027',
+    date: '14 de Mayo de 2027',
     venue: 'San Gimignano',
     time: 'Por la noche',
     description:
@@ -844,7 +843,7 @@ travelNotes: [
   {
     day: 'Sábado',
     title: 'Día de la Boda',
-    date: '15 de mayo de 2027',
+    date: '15 de Mayo de 2027',
     venue: 'Antica Fattoria di Paterno',
     address: 'Via Paterno 48 - 50025 Montespertoli (Toscana)',
     addressUrl: 'https://maps.google.com/?q=Via+Paterno+48,+50025+Montespertoli,+Toscana,+Italy',
@@ -855,7 +854,7 @@ travelNotes: [
   {
     day: 'Domingo',
     title: 'Almuerzo de Despedida y Pool Party',
-    date: '16 de mayo de 2027',
+    date: '16 de Mayo de 2027',
     venue: 'San Gimignano',
     time: 'A primeras horas de la tarde',
     description:
@@ -901,7 +900,7 @@ travelNotes: [
       },
       {
         q: '¿Cómo será el clima?',
-        a: 'A mediados de mayo, el clima en la Toscana suele ser templado y muy agradable, con temperaturas durante el día de aproximadamente 18–24 °C (65–75 °F). Por la noche puede refrescar, así que recomendamos llevar un chal, una capa ligera o una chaqueta.',
+        a: 'A mediados de Mayo, el clima en la Toscana suele ser templado y muy agradable, con temperaturas durante el día de aproximadamente 18–24 °C (65–75 °F). Por la noche puede refrescar, así que recomendamos llevar un chal, una capa ligera o una chaqueta.',
       },
       {
         q: '¿Los eventos serán al aire libre o en interiores?',
