@@ -202,7 +202,7 @@ womenAttireText:
   'Floor-length gowns are preferred. Think elegant fabrics, timeless silhouettes, and rich, solid colors. Please also keep in mind that portions of the celebration will take place outdoors on grass, gravel, and stone pathways.',
 menAttireText:
   'Tuxedos or dark suits with a tie or bow tie are preferred.',
-fridayAttireTitle: 'Friday Pizza Party',
+fridayAttireTitle: 'Friday Welcome Dinner',
 fridayAttireText:
   'Dressy Casual. A relaxed Tuscan evening calls for attire that is polished yet comfortable.',
 sundayAttireTitle: 'Sunday Pool Party',
@@ -451,7 +451,7 @@ womenAttireText:
   'Bodenlange Kleider werden bevorzugt. Denkt an elegante Stoffe, zeitlose Silhouetten und satte, einfarbige Töne. Bitte beachtet außerdem, dass Teile der Feier im Freien auf Rasen, Kies und Steinwegen stattfinden.',
 menAttireText:
   'Smokings oder dunkle Anzüge mit Krawatte oder Fliege werden bevorzugt.',
-fridayAttireTitle: 'Freitag · Pizza Party',
+fridayAttireTitle: 'Freitag · Willkommensdinner',
 fridayAttireText:
   'Casual, aber gepflegt. Denkt an ein entspanntes, stilvolles Dinner-Outfit, das zu einem toskanischen Abend passt.',
 sundayAttireTitle: 'Sonntag · Pool Party',
@@ -702,7 +702,7 @@ womenAttireText:
   'Se prefieren vestidos largos. Piensen en telas elegantes, siluetas atemporales y colores sólidos intensos. También tengan en cuenta que parte de la celebración será al aire libre sobre césped, grava y caminos de piedra.',
 menAttireText:
   'Se prefieren esmóquines o trajes oscuros con corbata o pajarita.',
-fridayAttireTitle: 'Viernes · Pizza Party',
+fridayAttireTitle: 'Viernes · Cena de Bienvenida',
 fridayAttireText:
   'Casual, pero arreglado. Piensen en un look relajado y con estilo para una cena cómoda en una noche toscana.',
 sundayAttireTitle: 'Domingo · Pool Party',
