@@ -361,7 +361,7 @@ travelNotes: [
     faqs: [
       {
         q: 'Can I bring my children?',
-        a: 'While we love your little ones, our wedding weekend will be adults-only, with the exception of children in the wedding party. Thank you so much for understanding.',
+        a: 'While we love your little ones, our wedding weekend will be adults-only due to limitations from the venue. Thank you so much for understanding.',
       },
       {
         q: 'Can I bring a plus one?',
@@ -489,13 +489,13 @@ sundayAttireText:
     whyStayTitle: 'Warum hier übernachten?',
     specialRatesTitle: 'Sonderkonditionen für Gäste',
     specialRatesText:
-  'Wir haben für unsere Gäste spezielle Sonderkonditionen vereinbart. Unser Zimmerkontingent ist bis zum 31. Oktober 2026 verfügbar. Nach diesem Datum können verfügbare Zimmer weiterhin über das Buchungsformular angefragt oder direkt über die Website des Hotels unten gebucht werden.',
-bookingFormLinkLabel: 'Cappuccina Country Resort Buchungsformular',
-hotelWebsiteLinkLabel: 'Cappuccina Country Resort Website',
-  shinweise',
-bookingInstructionsText:
-  'Bitte füllt das untenstehende Reservierungsformular aus und sendet es ab, um euer Zimmer zum Hochzeitsrabatt zu sichern.',    brochureLinkLabel: 'Cappuccina Country Resort Broschüre',
+      'Wir haben für unsere Gäste spezielle Sonderkonditionen vereinbart. Unser Zimmerkontingent ist bis zum 31. Oktober 2026 verfügbar. Nach diesem Datum können verfügbare Zimmer weiterhin über das Buchungsformular angefragt oder direkt über die Website des Hotels unten gebucht werden.',
+    bookingInstructionsTitle: 'Buchungshinweise',
+    bookingInstructionsText:
+      'Bitte füllt das untenstehende Reservierungsformular aus und sendet es ab, um euer Zimmer zum Hochzeitsrabatt zu sichern.',
+    brochureLinkLabel: 'Cappuccina Country Resort Broschüre',
     bookingFormLinkLabel: 'Cappuccina Country Resort Buchungsformular',
+    hotelWebsiteLinkLabel: 'Cappuccina Country Resort Website',
     weddingTransportationTitle: 'Hochzeitstransport',
     weddingTransportationText:
       'Am Hochzeitstag wird ein kostenloser Shuttle zwischen dem Cappuccina Country Resort & Spa und Antica Fattoria di Paterno angeboten.',
@@ -616,7 +616,7 @@ travelNotes: [
     faqs: [
       {
         q: 'Können wir unsere Kinder mitbringen?',
-        a: 'So sehr wir eure Kleinen auch mögen, unser Hochzeitswochenende wird – mit Ausnahme der Kinder in der Hochzeitsgesellschaft – adults-only sein. Vielen Dank für euer Verständnis.',
+        a: 'So sehr wir eure Kleinen auch mögen, unser Hochzeitswochenende wird aufgrund der Vorgaben der Location nur für Erwachsene sein. Vielen Dank für euer Verständnis.',
       },
       {
         q: 'Darf ich eine Begleitperson mitbringen?',
@@ -744,13 +744,13 @@ sundayAttireText:
     whyStayTitle: '¿Por Qué Hospedarse Aquí?',
     specialRatesTitle: 'Tarifas Especiales para Invitados',
     specialRatesText:
-  'Hemos conseguido tarifas especiales para nuestros invitados. Nuestro bloque de habitaciones estará disponible hasta el 31 de octubre de 2026. Después de esa fecha, si todavía hay habitaciones disponibles, podrán solicitar una reserva mediante el formulario o reservar directamente a través del sitio web del hotel que aparece a continuación.',
-  bookingFormLinkLabel: 'Formulario de Reserva de Cappuccina Country Resort',
-hotelWebsiteLinkLabel: 'Sitio Web de Cappuccina Country Resort',
+      'Hemos conseguido tarifas especiales para nuestros invitados. Nuestro bloque de habitaciones estará disponible hasta el 31 de octubre de 2026. Después de esa fecha, si todavía hay habitaciones disponibles, podrán solicitar una reserva mediante el formulario o reservar directamente a través del sitio web del hotel que aparece a continuación.',
     bookingInstructionsTitle: 'Instrucciones de Reserva',
-bookingInstructionsText:
-  'Por favor completen y envíen el formulario de reserva que aparece a continuación para asegurar su habitación con la tarifa de la boda.',    brochureLinkLabel: 'Folleto de Cappuccina Country Resort',
+    bookingInstructionsText:
+      'Por favor completen y envíen el formulario de reserva que aparece a continuación para asegurar su habitación con la tarifa de la boda.',
+    brochureLinkLabel: 'Folleto de Cappuccina Country Resort',
     bookingFormLinkLabel: 'Formulario de Reserva de Cappuccina Country Resort',
+    hotelWebsiteLinkLabel: 'Sitio Web de Cappuccina Country Resort',
     weddingTransportationTitle: 'Transporte para la Boda',
     weddingTransportationText:
       'Se ofrecerán traslados de cortesía entre Cappuccina Country Resort & Spa y Antica Fattoria di Paterno el día de la boda.',
@@ -870,7 +870,7 @@ travelNotes: [
     faqs: [
       {
         q: '¿Puedo llevar a mis hijos?',
-        a: 'Aunque queremos mucho a sus pequeños, nuestro fin de semana de boda será solo para adultos, con la excepción de los niños que formen parte del cortejo nupcial. Muchas gracias por su comprensión.',
+        a: 'Aunque queremos mucho a sus pequeños, nuestro fin de semana de boda será solo para adultos debido a las restricciones del lugar. Muchas gracias por su comprensión.',
       },
       {
         q: '¿Puedo llevar acompañante?',
@@ -1326,23 +1326,23 @@ case 'home':
                         >
                           {t.brochureLinkLabel}
                         </a>
-                        <a
-  href="/Cappuccina Country Resort Booking Form.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-sm underline underline-offset-4 text-black/80 hover:text-black"
->
-  {t.bookingFormLinkLabel}
-</a>
 
-<a
-  href="https://www.cappuccinacountryresort.com"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-sm underline underline-offset-4 text-black/80 hover:text-black"
->
-  {t.hotelWebsiteLinkLabel}
-</a>
+                        <a
+                          href="/Cappuccina Country Resort Booking Form.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm underline underline-offset-4 text-black/80 hover:text-black"
+                        >
+                          {t.bookingFormLinkLabel}
+                        </a>
+
+                        <a
+                          href="https://www.cappuccinacountryresort.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm underline underline-offset-4 text-black/80 hover:text-black"
+                        >
+                          {t.hotelWebsiteLinkLabel}
                         </a>
                       </div>
                     </div>
