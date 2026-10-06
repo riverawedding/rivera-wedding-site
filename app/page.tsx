@@ -100,9 +100,10 @@ accommodationSectionTitle: string;  hotelName: string;
   specialRatesText: string;
   bookingInstructionsTitle: string;
   bookingInstructionsText: string;
-  brochureLinkLabel: string;
-  bookingFormLinkLabel: string;
-  weddingTransportationTitle: string;
+brochureLinkLabel: string;
+bookingFormLinkLabel: string;
+hotelWebsiteLinkLabel: string;
+weddingTransportationTitle: string;
   weddingTransportationText: string;
   weekendEventsTitle: string;
   weekendEventsText: string;
@@ -236,11 +237,12 @@ sundayAttireText:
     whyStayTitle: 'Why Stay Here?',
     specialRatesTitle: 'Special Guest Rates',
     specialRatesText:
-      'We have secured special negotiated rates for our guests. Rooms are available on a first-come, first-served basis, so we encourage booking early.',
+  'We have secured special negotiated rates for our guests. Our room block is available through October 31, 2026. After that date, if rooms are still available, you may submit a reservation request using the booking form or book directly through the hotel’s website below.',
     bookingInstructionsTitle: 'Booking Instructions',
 bookingInstructionsText:
   'Please complete and submit the reservation form provided below to secure your room at the wedding rate.',    brochureLinkLabel: 'Cappuccina Country Resort Brochure',
     bookingFormLinkLabel: 'Cappuccina Country Resort Booking Form',
+    hotelWebsiteLinkLabel: 'Cappuccina Country Resort Website',
     weddingTransportationTitle: 'Wedding Transportation',
     weddingTransportationText:
       'Complimentary shuttles will be provided between Cappuccina Country Resort & Spa and Antica Fattoria di Paterno on the wedding day.',
@@ -487,8 +489,10 @@ sundayAttireText:
     whyStayTitle: 'Warum hier übernachten?',
     specialRatesTitle: 'Sonderkonditionen für Gäste',
     specialRatesText:
-      'Wir haben für unsere Gäste spezielle ausgehandelte Raten gesichert. Die Zimmer werden nach dem Prinzip „first come, first served“ vergeben, daher empfehlen wir eine frühzeitige Buchung.',
-    bookingInstructionsTitle: 'Buchungshinweise',
+  'Wir haben für unsere Gäste spezielle Sonderkonditionen vereinbart. Unser Zimmerkontingent ist bis zum 31. Oktober 2026 verfügbar. Nach diesem Datum können verfügbare Zimmer weiterhin über das Buchungsformular angefragt oder direkt über die Website des Hotels unten gebucht werden.',
+bookingFormLinkLabel: 'Cappuccina Country Resort Buchungsformular',
+hotelWebsiteLinkLabel: 'Cappuccina Country Resort Website',
+  shinweise',
 bookingInstructionsText:
   'Bitte füllt das untenstehende Reservierungsformular aus und sendet es ab, um euer Zimmer zum Hochzeitsrabatt zu sichern.',    brochureLinkLabel: 'Cappuccina Country Resort Broschüre',
     bookingFormLinkLabel: 'Cappuccina Country Resort Buchungsformular',
@@ -740,7 +744,9 @@ sundayAttireText:
     whyStayTitle: '¿Por Qué Hospedarse Aquí?',
     specialRatesTitle: 'Tarifas Especiales para Invitados',
     specialRatesText:
-      'Hemos conseguido tarifas especiales negociadas para nuestros invitados. Las habitaciones estarán disponibles por orden de reserva, por lo que recomendamos reservar con anticipación.',
+  'Hemos conseguido tarifas especiales para nuestros invitados. Nuestro bloque de habitaciones estará disponible hasta el 31 de octubre de 2026. Después de esa fecha, si todavía hay habitaciones disponibles, podrán solicitar una reserva mediante el formulario o reservar directamente a través del sitio web del hotel que aparece a continuación.',
+  bookingFormLinkLabel: 'Formulario de Reserva de Cappuccina Country Resort',
+hotelWebsiteLinkLabel: 'Sitio Web de Cappuccina Country Resort',
     bookingInstructionsTitle: 'Instrucciones de Reserva',
 bookingInstructionsText:
   'Por favor completen y envíen el formulario de reserva que aparece a continuación para asegurar su habitación con la tarifa de la boda.',    brochureLinkLabel: 'Folleto de Cappuccina Country Resort',
@@ -1321,12 +1327,22 @@ case 'home':
                           {t.brochureLinkLabel}
                         </a>
                         <a
-                          href="/Cappuccina Country Resort Booking Form.pdf"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm underline underline-offset-4 text-black/80 hover:text-black"
-                        >
-                          {t.bookingFormLinkLabel}
+  href="/Cappuccina Country Resort Booking Form.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-sm underline underline-offset-4 text-black/80 hover:text-black"
+>
+  {t.bookingFormLinkLabel}
+</a>
+
+<a
+  href="https://www.cappuccinacountryresort.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-sm underline underline-offset-4 text-black/80 hover:text-black"
+>
+  {t.hotelWebsiteLinkLabel}
+</a>
                         </a>
                       </div>
                     </div>
