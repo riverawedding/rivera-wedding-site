@@ -237,7 +237,7 @@ sundayAttireText:
     whyStayTitle: 'Why Stay Here?',
     specialRatesTitle: 'Special Guest Rates',
     specialRatesText:
-  'We have secured special negotiated rates for our guests. Our room block is available through October 31, 2026. After that date, if rooms are still available, you may submit a reservation request using the booking form or book directly through the hotel’s website below.',
+      'We have secured special negotiated rates for our guests. Our room block is available through October 31, 2026.\n\nAfter this date, if rooms are still available, you may submit a reservation request directly using the hotel’s website below.',
     bookingInstructionsTitle: 'Booking Instructions',
 bookingInstructionsText:
   'Please complete and submit the reservation form provided below to secure your room at the wedding rate.',    brochureLinkLabel: 'Cappuccina Country Resort Brochure',
@@ -489,7 +489,7 @@ sundayAttireText:
     whyStayTitle: 'Warum hier übernachten?',
     specialRatesTitle: 'Sonderkonditionen für Gäste',
     specialRatesText:
-      'Wir haben für unsere Gäste spezielle Sonderkonditionen vereinbart. Unser Zimmerkontingent ist bis zum 31. Oktober 2026 verfügbar. Nach diesem Datum können verfügbare Zimmer weiterhin über das Buchungsformular angefragt oder direkt über die Website des Hotels unten gebucht werden.',
+      'Wir haben für unsere Gäste spezielle Sonderkonditionen vereinbart. Unser Zimmerkontingent ist bis zum 31. Oktober 2026 verfügbar.\n\nNach diesem Datum könnt ihr, sofern noch Zimmer verfügbar sind, direkt über die untenstehende Website des Hotels eine Reservierungsanfrage stellen.',
     bookingInstructionsTitle: 'Buchungshinweise',
     bookingInstructionsText:
       'Bitte füllt das untenstehende Reservierungsformular aus und sendet es ab, um euer Zimmer zum Hochzeitsrabatt zu sichern.',
@@ -744,7 +744,7 @@ sundayAttireText:
     whyStayTitle: '¿Por Qué Hospedarse Aquí?',
     specialRatesTitle: 'Tarifas Especiales para Invitados',
     specialRatesText:
-      'Hemos conseguido tarifas especiales para nuestros invitados. Nuestro bloque de habitaciones estará disponible hasta el 31 de octubre de 2026. Después de esa fecha, si todavía hay habitaciones disponibles, podrán solicitar una reserva mediante el formulario o reservar directamente a través del sitio web del hotel que aparece a continuación.',
+      'Hemos conseguido tarifas especiales para nuestros invitados. Nuestro bloque de habitaciones estará disponible hasta el 31 de octubre de 2026.\n\nDespués de esa fecha, si todavía hay habitaciones disponibles, podrán solicitar una reserva directamente a través del sitio web del hotel que aparece a continuación.',
     bookingInstructionsTitle: 'Instrucciones de Reserva',
     bookingInstructionsText:
       'Por favor completen y envíen el formulario de reserva que aparece a continuación para asegurar su habitación con la tarifa de la boda.',
@@ -1301,7 +1301,19 @@ case 'home':
                       <p className="text-sm uppercase tracking-[0.2em] text-black/45">
                         {t.specialRatesTitle}
                       </p>
-                      <p className="mt-3 leading-7 text-black/70">{t.specialRatesText}</p>
+
+                      <p className="mt-3 whitespace-pre-line leading-7 text-black/70">
+                        {t.specialRatesText}
+                      </p>
+
+                      <a
+                        href="https://www.cappuccinacountryresort.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-4 inline-block text-sm underline underline-offset-4 text-black/80 hover:text-black"
+                      >
+                        {t.hotelWebsiteLinkLabel}
+                      </a>
                     </div>
 
                     <div className="border-b border-black/10 pb-5">
@@ -1336,14 +1348,7 @@ case 'home':
                           {t.bookingFormLinkLabel}
                         </a>
 
-                        <a
-                          href="https://www.cappuccinacountryresort.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm underline underline-offset-4 text-black/80 hover:text-black"
-                        >
-                          {t.hotelWebsiteLinkLabel}
-                        </a>
+
                       </div>
                     </div>
                   </div>
